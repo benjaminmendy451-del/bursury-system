@@ -14,6 +14,7 @@ running `runserver`, so you can test with no setup. Set the EMAIL_* variables
 SMS: uses Africa's Talking. Switched on only when AT_USERNAME and AT_API_KEY
 are set; otherwise SMS is silently skipped.
 """
+import json
 import logging
 import urllib.error
 import urllib.parse
@@ -56,13 +57,13 @@ def send_email(to_addresses, subject, body):
         return False
 
 
-def send_sms(phone, message):
+def send_sms_detailed(phone, message):
+    """Send an SMS through Africa's Talking. Returns (sent, explanation)."""
     if not getattr(settings, "SMS_ENABLED", False):
-        return False
+        return False, "SMS is switched off (AT_USERNAME and AT_API_KEY are not set)."
     to = normalize_phone(phone)
     if not to.startswith("+"):
-        logger.warning("Skipping SMS: '%s' is not a usable phone number", phone)
-        return False
+        return False, f"'{phone}' is not a usable phone number."
 
     host = "api.sandbox.africastalking.com" if settings.AT_USERNAME == "sandbox" else "api.africastalking.com"
     payload = {"username": settings.AT_USERNAME, "to": to, "message": message}
@@ -79,11 +80,32 @@ def send_sms(phone, message):
     )
     try:
         with urllib.request.urlopen(request, timeout=10) as response:
-            response.read()
-        return True
-    except (urllib.error.URLError, OSError):
-        logger.exception("Could not send SMS to %s", to)
+            raw = response.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", "replace")[:300]
+        return False, f"Africa's Talking rejected the request (HTTP {exc.code}): {body}"
+    except (urllib.error.URLError, OSError) as exc:
+        return False, f"Could not reach Africa's Talking: {exc}"
+
+    try:
+        data = json.loads(raw)["SMSMessageData"]
+    except (ValueError, KeyError, TypeError):
+        return False, f"Unexpected reply from Africa's Talking: {raw[:300]}"
+    recipients = data.get("Recipients") or []
+    if recipients and recipients[0].get("status") == "Success":
+        return True, "Accepted by Africa's Talking."
+    status = recipients[0].get("status") if recipients else data.get("Message", "unknown")
+    return False, f"Africa's Talking said: {status}"
+
+
+def send_sms(phone, message):
+    """Send an SMS if SMS is configured. Failures are logged, never raised."""
+    if not getattr(settings, "SMS_ENABLED", False):
         return False
+    sent, detail = send_sms_detailed(phone, message)
+    if not sent:
+        logger.warning("SMS to %s was not sent: %s", phone, detail)
+    return sent
 
 
 # --------------------------------------------------------------------------

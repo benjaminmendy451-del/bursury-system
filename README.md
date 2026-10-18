@@ -75,16 +75,18 @@ Students are notified when:
 
 **Testing with no setup:** by default emails are printed in the terminal that runs `python manage.py runserver`. Register a student *with an email address*, apply, then approve in `/admin/` and watch the terminal.
 
-**Real emails (Gmail example):** turn on 2-step verification, create an *App password*, and set the `EMAIL_*` variables from `.env.example`. In PowerShell, for the current terminal only:
+**Real emails and SMS:** create a file named `.env` next to `manage.py` and copy the *Notifications* section of `.env.example` into it (never the Production section). Fill in your Gmail address, a Gmail *App password* (needs 2-Step Verification) and, for SMS, your Africa's Talking username and API key. `.env` is ignored by Git, so passwords are not uploaded. Restart the server after editing it.
+
+**Check your settings with a test message:**
 
 ```powershell
-$env:EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-$env:EMAIL_HOST_USER="your.address@gmail.com"
-$env:EMAIL_HOST_PASSWORD="your-app-password"
-python manage.py runserver
+python manage.py test_notifications --email you@example.com
+python manage.py test_notifications --phone 0712345678
 ```
 
-**SMS:** create an Africa's Talking account, then set `AT_USERNAME` and `AT_API_KEY` (use `AT_USERNAME=sandbox` to test for free). SMS is skipped automatically while these are empty. Kenyan numbers such as `0712 345 678` are converted to `+254712345678`.
+If something is wrong, the command prints the exact reason (wrong password, no SMS credit, invalid number).
+
+SMS is skipped automatically while `AT_USERNAME` and `AT_API_KEY` are empty. Kenyan numbers such as `0712 345 678` are converted to `+254712345678`. With `AT_USERNAME=sandbox`, messages appear in the Africa's Talking simulator, not on real phones.
 
 A failed email or SMS is logged but never stops an application from being saved. The code is in `bursary/notifications.py`.
 

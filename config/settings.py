@@ -9,6 +9,27 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+def _load_env_file(path):
+    """Read KEY=value lines from a private .env file into the environment.
+
+    Real environment variables always win. The .env file is listed in
+    .gitignore, so passwords placed there are never uploaded to GitHub.
+    """
+    try:
+        with open(path, encoding="utf-8-sig") as env_file:
+            for line in env_file:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, value = line.partition("=")
+                os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+    except FileNotFoundError:
+        pass
+
+
+_load_env_file(BASE_DIR / ".env")
+
 # --- Security -------------------------------------------------------------
 # For local development a throwaway key is used. In production set
 # DJANGO_SECRET_KEY, DJANGO_DEBUG=False and DJANGO_ALLOWED_HOSTS.
@@ -126,6 +147,7 @@ EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", "django.core.mail.backends.conso
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
 EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "True").lower() == "true"
+EMAIL_TIMEOUT = 15  # seconds, so a bad connection cannot freeze a page
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", EMAIL_HOST_USER or "bursary@localhost")
