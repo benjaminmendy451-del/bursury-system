@@ -1,0 +1,15 @@
+{% extends "bursary/base.html" %}
+{% block title %}Apply - {{ round.name }}{% endblock %}
+{% block content %}
+<h1>Apply: {{ round.name }}</h1>
+<p class="muted">Closes on {{ round.closes_on|date:"j F Y" }}. Fill in the form, then you will be asked to upload your documents.</p>
+<div class="card">
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Submit application</button>
+    <a class="btn secondary" href="{% url 'dashboard' %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

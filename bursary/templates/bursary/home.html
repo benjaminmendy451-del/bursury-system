@@ -1,0 +1,22 @@
+{% extends "bursary/base.html" %}
+{% block content %}
+<h1>Apply for a bursary</h1>
+<p class="muted">Register, choose an open bursary round, submit your application and upload your supporting documents. You can follow the decision from your dashboard.</p>
+
+<h2>Open bursary rounds</h2>
+{% for r in rounds %}
+  <div class="card">
+    <h2>{{ r.name }}</h2>
+    {% if r.description %}<p>{{ r.description|linebreaksbr }}</p>{% endif %}
+    <p class="muted">Closes on {{ r.closes_on|date:"j F Y" }}{% if r.max_award_per_student %} &middot; Maximum award KES {{ r.max_award_per_student }}{% endif %}</p>
+    {% if user.is_authenticated %}
+      <a class="btn" href="{% url 'apply' r.id %}">Apply now</a>
+    {% else %}
+      <a class="btn" href="{% url 'register' %}">Register to apply</a>
+      <a class="btn secondary" href="{% url 'login' %}">I already have an account</a>
+    {% endif %}
+  </div>
+{% empty %}
+  <div class="card"><p class="muted">There are no bursary rounds open right now. Please check back later.</p></div>
+{% endfor %}
+{% endblock %}

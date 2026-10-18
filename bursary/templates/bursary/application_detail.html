@@ -1,0 +1,49 @@
+{% extends "bursary/base.html" %}
+{% block title %}Application - {{ application.bursary_round.name }}{% endblock %}
+{% block content %}
+<h1>{{ application.bursary_round.name }}</h1>
+<p><span class="badge {{ application.status }}">{{ application.get_status_display }}</span>
+   <span class="muted">Submitted {{ application.submitted_at|date:"j F Y, H:i" }}</span></p>
+
+{% if application.status == "approved" %}
+  <div class="card"><h2>Congratulations</h2>
+    <p>You have been awarded <strong>KES {{ application.amount_awarded }}</strong>.</p></div>
+{% endif %}
+{% if application.committee_notes and application.status != "submitted" %}
+  <div class="card"><h2>Committee feedback</h2><p>{{ application.committee_notes|linebreaksbr }}</p></div>
+{% endif %}
+
+<div class="card">
+  <h2>Your application</h2>
+  <table>
+    <tr><th>Amount requested</th><td>KES {{ application.amount_requested }}</td></tr>
+    <tr><th>Total fees / paid / balance</th><td>KES {{ application.total_fees }} / KES {{ application.fees_paid }} / KES {{ application.fee_balance }}</td></tr>
+    <tr><th>Annual family income</th><td>KES {{ application.annual_family_income }}</td></tr>
+    <tr><th>Siblings/dependants in school</th><td>{{ application.dependants_in_school }}</td></tr>
+    <tr><th>Parental status</th><td>{{ application.get_orphan_status_display }}</td></tr>
+    <tr><th>Disability in household</th><td>{{ application.has_disability|yesno:"Yes,No" }}</td></tr>
+    <tr><th>Reason</th><td>{{ application.reason|linebreaksbr }}</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Supporting documents</h2>
+  {% for d in application.documents.all %}
+    <p><a href="{% url 'download_document' d.pk %}" target="_blank" rel="noopener">{{ d.get_kind_display }}</a>
+       <span class="muted">uploaded {{ d.uploaded_at|date:"j M Y" }}</span></p>
+  {% empty %}
+    <p class="muted">No documents uploaded yet. Please add your ID, fee statement and admission letter.</p>
+  {% endfor %}
+
+  {% if can_edit %}
+  <hr>
+  <form method="post" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    {{ doc_form.as_p }}
+    <p class="muted">PDF, JPG or PNG, up to 5 MB each.</p>
+    <button class="btn" type="submit">Upload document</button>
+  </form>
+  {% endif %}
+</div>
+<a href="{% url 'dashboard' %}">&larr; Back to my applications</a>
+{% endblock %}

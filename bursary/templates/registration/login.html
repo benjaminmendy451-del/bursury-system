@@ -1,0 +1,15 @@
+{% extends "bursary/base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<h1>Log in</h1>
+<div class="card">
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button class="btn" type="submit">Log in</button>
+  </form>
+  <p class="muted">New here? <a href="{% url 'register' %}">Create a student account</a>.</p>
+</div>
+{% endblock %}

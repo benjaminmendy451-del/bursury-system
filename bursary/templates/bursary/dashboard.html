@@ -1,0 +1,39 @@
+{% extends "bursary/base.html" %}
+{% block title %}My applications{% endblock %}
+{% block content %}
+<h1>Hello, {{ profile.full_name }}</h1>
+<p class="muted">{{ profile.institution }} &middot; {{ profile.course_or_form }} &middot; Admission no. {{ profile.admission_number }}</p>
+
+{% if available_rounds %}
+<div class="card">
+  <h2>Bursaries you can apply for</h2>
+  {% for r in available_rounds %}
+    <p><strong>{{ r.name }}</strong> <span class="muted">(closes {{ r.closes_on|date:"j F Y" }})</span>
+       <a class="btn" href="{% url 'apply' r.id %}">Apply</a></p>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>My applications</h2>
+  {% if applications %}
+  <table>
+    <thead><tr><th>Round</th><th>Submitted</th><th>Requested</th><th>Status</th><th>Awarded</th><th></th></tr></thead>
+    <tbody>
+    {% for a in applications %}
+      <tr>
+        <td>{{ a.bursary_round.name }}</td>
+        <td>{{ a.submitted_at|date:"j M Y" }}</td>
+        <td>KES {{ a.amount_requested }}</td>
+        <td><span class="badge {{ a.status }}">{{ a.get_status_display }}</span></td>
+        <td>{% if a.status == "approved" %}KES {{ a.amount_awarded }}{% else %}&mdash;{% endif %}</td>
+        <td><a href="{% url 'application_detail' a.pk %}">View</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p class="muted">You have not applied for any bursary yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
