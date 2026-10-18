@@ -136,6 +136,19 @@ LOGOUT_REDIRECT_URL = "home"
 # Upload limits
 MAX_UPLOAD_MB = 5
 
+# --- Need scoring ---------------------------------------------------------
+# The system suggests a 0-100 "need score" for each application (committee
+# members still decide). The defaults live in bursary/scoring.py. To use your
+# own committee's criteria, uncomment and edit this block. Keep the weights
+# adding up to 100.
+#
+# NEED_SCORING = {
+#     "weights": {"income": 40, "orphan": 20, "dependants": 15, "disability": 10, "fee_balance": 15},
+#     "income_full_points_at_or_below": 100_000,   # KES per year
+#     "income_zero_points_at_or_above": 600_000,   # KES per year
+#     "dependants_for_full_points": 4,
+# }
+
 # --- Notifications --------------------------------------------------------
 # Public address of the site, used for links inside emails.
 SITE_URL = os.environ.get("SITE_URL", "http://127.0.0.1:8000")

@@ -90,24 +90,33 @@ SMS is skipped automatically while `AT_USERNAME` and `AT_API_KEY` are empty. Ken
 
 A failed email or SMS is logged but never stops an application from being saved. The code is in `bursary/notifications.py`.
 
-## 5. Privacy
+## 5. Need scoring
+
+Every application gets a **suggested score from 0 to 100**, shown in the committee's Applications list (click the column to rank) and, with a line-by-line breakdown, on each application. Points come from family income (lower = more), parental status, dependants in school, disability, and the share of fees still unpaid.
+
+- It is only a guide. People decide, and the committee can type their own **Need score**. Students never see the suggested score.
+- The default weights are a starting point. Agree your committee's criteria, then edit the `NEED_SCORING` block in `config/settings.py` and run `python manage.py rescore_applications`.
+- Bulk actions in the list: *Use the suggested score as the committee score* and *Recalculate suggested scores*.
+- After updating to this version run `python manage.py makemigrations bursary`, `python manage.py migrate` and `python manage.py rescore_applications`.
+- `python manage.py test` runs the scoring checks.
+
+## 6. Privacy
 
 The system stores national IDs, phone numbers, family income and ID documents. In Kenya this falls under the Data Protection Act, 2019: collect only what you need, restrict access to the committee, keep the site on HTTPS, and register with the Office of the Data Protection Commissioner if your organisation is required to. Documents here are only served through a login-protected URL, not a public folder.
 
-## 6. Project layout
+## 7. Project layout
 
 ```
 config/            settings and root URLs
 bursary/models.py  BursaryRound, StudentProfile, Application, Document
 bursary/admin.py   committee review screen, bulk actions, CSV export
+bursary/scoring.py  suggested need score rules
 bursary/forms.py   registration + application forms with validation
 bursary/views.py   student pages (home, register, dashboard, apply, detail, document download)
 bursary/templates/ HTML pages
 ```
 
-## 7. Good next steps
+## 8. Good next steps
 
-- Reports page with totals per round, county and ward
-- Automatic need-scoring from income, orphan status and dependants
-- Per-ward/county quotas and a reports page with totals
-- Automated tests (`bursary/tests.py`) run by GitHub Actions on every push
+- A reports page with totals per round, county and ward, and per-area quotas
+- Run `bursary/tests.py` automatically with GitHub Actions on every push

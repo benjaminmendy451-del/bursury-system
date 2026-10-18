@@ -7,6 +7,8 @@ from django.db import models
 from django.db.models import Sum
 from django.utils import timezone
 
+from .scoring import compute_need_score
+
 
 class BursaryRound(models.Model):
     """A funding window, e.g. "2026 Term 1 Bursary", with a budget and deadline."""
@@ -112,6 +114,9 @@ class Application(models.Model):
     # What the committee provides
     status = models.CharField(max_length=15, choices=Status.choices, default=Status.SUBMITTED)
     need_score = models.PositiveSmallIntegerField(null=True, blank=True, help_text="Committee score, 0-100.")
+    suggested_score = models.PositiveSmallIntegerField(
+        null=True, blank=True, editable=False,
+        help_text="Automatic 0-100 suggestion from the application facts. Only a guide for the committee.")
     amount_awarded = models.DecimalField(max_digits=10, decimal_places=2, default=0,
                                          validators=[MinValueValidator(0)])
     committee_notes = models.TextField(blank=True, help_text="Visible to the student as feedback.")
@@ -130,6 +135,12 @@ class Application(models.Model):
 
     def __str__(self):
         return f"{self.student.full_name} - {self.bursary_round.name}"
+
+    def save(self, *args, **kwargs):
+        # Keep the automatic suggestion up to date whenever the whole record is saved.
+        if kwargs.get("update_fields") is None:
+            self.suggested_score = compute_need_score(self)[0]
+        super().save(*args, **kwargs)
 
     @property
     def fee_balance(self):
