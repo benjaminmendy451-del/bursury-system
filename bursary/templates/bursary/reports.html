@@ -1,0 +1,49 @@
+{% extends "bursary/base.html" %}
+{% block title %}Reports{% endblock %}
+{% block content %}
+<h1>Reports</h1>
+
+<div class="card">
+  <form method="get" style="display:flex;gap:12px;align-items:end;flex-wrap:wrap">
+    <p style="margin:0;flex:1;min-width:220px">
+      <label for="round">Bursary round</label>
+      <select name="round" id="round">
+        <option value="all"{% if not selected_round %} selected{% endif %}>All rounds</option>
+        {% for r in rounds %}
+          <option value="{{ r.pk }}"{% if selected_round and r.pk == selected_round.pk %} selected{% endif %}>{{ r.name }}</option>
+        {% endfor %}
+      </select>
+    </p>
+    <button class="btn" type="submit">Show</button>
+    <a class="btn secondary" href="{% url 'reports_csv' %}?round={{ round_param }}">Download CSV</a>
+  </form>
+</div>
+
+<div class="grid">
+  <div class="card"><div class="muted">Applications</div><h1>{{ report.summary.applications }}</h1></div>
+  <div class="card"><div class="muted">Requested</div><h1>KES {{ report.summary.requested|floatformat:"0g" }}</h1></div>
+  <div class="card"><div class="muted">Awarded</div><h1>KES {{ report.summary.awarded|floatformat:"0g" }}</h1></div>
+  <div class="card"><div class="muted">Budget remaining</div><h1>KES {{ report.summary.remaining|floatformat:"0g" }}</h1></div>
+</div>
+
+<div class="card">
+  <h2>Budget used</h2>
+  <div style="background:#eef1f4;border-radius:999px;height:14px;overflow:hidden">
+    <div style="background:var(--brand);height:14px;width:{{ report.summary.bar_width|floatformat:1 }}%"></div>
+  </div>
+  <p class="muted">KES {{ report.summary.awarded|floatformat:"0g" }} of KES {{ report.summary.budget|floatformat:"0g" }}
+     ({{ report.summary.percent_used|floatformat:0 }}%)</p>
+</div>
+
+<div class="card">
+  <h2>Applications by status</h2>
+  <p>{% for label, count in report.statuses %}<span class="badge">{{ label }}: {{ count }}</span> {% endfor %}</p>
+</div>
+
+{% include "bursary/_report_table.html" with title="By county" first_label="County" rows=report.counties totals=report.counties_total %}
+{% include "bursary/_report_table.html" with title="By ward" first_label="County, ward" rows=report.wards totals=report.wards_total %}
+{% include "bursary/_report_table.html" with title="By school / college (top 15)" first_label="Institution" rows=report.institutions|slice:":15" totals=report.institutions_total note="The totals cover every institution. The download lists them all." %}
+
+<p class="muted">Counties, wards and institutions are grouped ignoring capital letters and extra spaces, so
+"Nairobi" and "nairobi " count together. Awarded amounts include approved applications only.</p>
+{% endblock %}

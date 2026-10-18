@@ -12,4 +12,6 @@ urlpatterns = [
     path("apply/<int:round_id>/", views.apply, name="apply"),
     path("applications/<int:pk>/", views.application_detail, name="application_detail"),
     path("documents/<int:pk>/", views.download_document, name="download_document"),
+    path("reports/", views.reports, name="reports"),
+    path("reports/export/", views.reports_csv, name="reports_csv"),
 ]

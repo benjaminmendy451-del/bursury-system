@@ -1,13 +1,16 @@
+import csv
+
 from django.contrib import messages
 from django.contrib.auth import login
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.db import IntegrityError
-from django.http import FileResponse, Http404
+from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import ApplicationForm, DocumentForm, StudentRegistrationForm
 from .models import Application, BursaryRound, Document, StudentProfile
 from .notifications import notify_submitted
+from .reports import build_report
 
 EDITABLE_STATUSES = (Application.Status.SUBMITTED, Application.Status.UNDER_REVIEW)
 
@@ -115,3 +118,64 @@ def download_document(request, pk):
     if not (is_owner or request.user.is_staff):
         raise Http404
     return FileResponse(doc.file.open("rb"), as_attachment=False)
+
+
+# --- Committee reports -------------------------------------------------------
+def _report_scope(request):
+    """Which round the report covers. Returns (all_rounds, selected_round_or_None, round_param)."""
+    rounds = list(BursaryRound.objects.all())  # newest first
+    raw = request.GET.get("round", "")
+    if raw == "all":
+        return rounds, None, "all"
+    if raw.isdigit():
+        for bursary_round in rounds:
+            if bursary_round.pk == int(raw):
+                return rounds, bursary_round, str(bursary_round.pk)
+    if rounds:
+        return rounds, rounds[0], str(rounds[0].pk)
+    return rounds, None, "all"
+
+
+@login_required
+@permission_required("bursary.view_application", raise_exception=True)
+def reports(request):
+    """Totals for the committee. Students do not have this permission, so they get a 403."""
+    rounds, selected_round, round_param = _report_scope(request)
+    return render(request, "bursary/reports.html", {
+        "rounds": rounds, "selected_round": selected_round, "round_param": round_param,
+        "report": build_report(selected_round),
+    })
+
+
+@login_required
+@permission_required("bursary.view_application", raise_exception=True)
+def reports_csv(request):
+    _, selected_round, _ = _report_scope(request)
+    report = build_report(selected_round)
+
+    response = HttpResponse(content_type="text/csv")
+    response["Content-Disposition"] = 'attachment; filename="bursary-report.csv"'
+    writer = csv.writer(response)
+    writer.writerow(["Bursary report", selected_round.name if selected_round else "All rounds"])
+    summary = report["summary"]
+    writer.writerow(["Applications", summary["applications"]])
+    writer.writerow(["Requested (KES)", summary["requested"]])
+    writer.writerow(["Awarded (KES)", summary["awarded"]])
+    writer.writerow(["Budget (KES)", summary["budget"]])
+    writer.writerow(["Budget remaining (KES)", summary["remaining"]])
+
+    sections = [
+        ("By county", "County", report["counties"], report["counties_total"]),
+        ("By ward", "County, ward", report["wards"], report["wards_total"]),
+        ("By institution", "Institution", report["institutions"], report["institutions_total"]),
+    ]
+    for title, first_column, rows, total in sections:
+        writer.writerow([])
+        writer.writerow([title])
+        writer.writerow([first_column, "Applications", "Approved", "Requested (KES)", "Awarded (KES)"])
+        for row in rows:
+            writer.writerow([row["label"], row["applications"], row["approved"],
+                             row["requested"], row["awarded"]])
+        writer.writerow(["Total", total["applications"], total["approved"],
+                         total["requested"], total["awarded"]])
+    return response

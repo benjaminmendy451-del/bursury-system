@@ -1,0 +1,23 @@
+<div class="card">
+  <h2>{{ title }}</h2>
+  {% if rows %}
+  <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th>{{ first_label }}</th><th>Applications</th><th>Approved</th><th>Requested (KES)</th><th>Awarded (KES)</th></tr>
+      </thead>
+      <tbody>
+      {% for r in rows %}
+        <tr><td>{{ r.label }}</td><td>{{ r.applications }}</td><td>{{ r.approved }}</td><td>{{ r.requested|floatformat:"0g" }}</td><td>{{ r.awarded|floatformat:"0g" }}</td></tr>
+      {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr><th>Total</th><th>{{ totals.applications }}</th><th>{{ totals.approved }}</th><th>{{ totals.requested|floatformat:"0g" }}</th><th>{{ totals.awarded|floatformat:"0g" }}</th></tr>
+      </tfoot>
+    </table>
+  </div>
+  {% if note %}<p class="muted">{{ note }}</p>{% endif %}
+  {% else %}
+    <p class="muted">No applications yet.</p>
+  {% endif %}
+</div>
