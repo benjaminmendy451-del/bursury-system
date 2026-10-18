@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db import transaction
 
 from .counties import COUNTY_CHOICES
-from .models import Application, Document, StudentProfile
+from .models import Application, Document, Institution, StudentProfile, Ward
 
 
 class StudentRegistrationForm(UserCreationForm):
@@ -17,6 +17,8 @@ class StudentRegistrationForm(UserCreationForm):
     county = forms.ChoiceField(choices=COUNTY_CHOICES)
     ward = forms.CharField(max_length=80, required=False)
     institution = forms.CharField(max_length=200, label="School / College / University")
+    institution_other = forms.CharField(
+        max_length=200, required=False, label="Name of your school / college (only if not listed)")
     admission_number = forms.CharField(max_length=50)
     course_or_form = forms.CharField(max_length=120, label="Course or class/form")
     year_of_study = forms.IntegerField(min_value=1, max_value=10, initial=1)
@@ -24,6 +26,44 @@ class StudentRegistrationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
         fields = ("username", "email")
+
+    OTHER = "__other__"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Wards: a dropdown grouped by county, once the committee has loaded the list.
+        wards = {}
+        for county, name in Ward.objects.values_list("county", "name"):
+            wards.setdefault(county, []).append((name, name))
+        self.has_ward_list = bool(wards)
+        if wards:
+            grouped = [(county, wards[county]) for county in sorted(wards)]
+            self.fields["ward"] = forms.ChoiceField(
+                choices=[("", "Select your ward")] + grouped, required=False)
+        # Institutions: a dropdown plus "not listed", once the list is loaded.
+        names = list(Institution.objects.values_list("name", flat=True))
+        self.has_institution_list = bool(names)
+        if names:
+            self.fields["institution"] = forms.ChoiceField(
+                label="School / College / University",
+                choices=[("", "Select your school / college")] + [(n, n) for n in names]
+                        + [(self.OTHER, "My school / college is not listed")])
+        else:
+            del self.fields["institution_other"]
+
+    def clean(self):
+        cleaned = super().clean()
+        county, ward = cleaned.get("county"), cleaned.get("ward")
+        if self.has_ward_list and ward and county:
+            if not Ward.objects.filter(county=county, name=ward).exists():
+                self.add_error("ward", "This ward is not in the county you selected.")
+        if self.has_institution_list and cleaned.get("institution") == self.OTHER:
+            other = (cleaned.get("institution_other") or "").strip()
+            if not other:
+                self.add_error("institution_other", "Please type the name of your school or college.")
+            else:
+                cleaned["institution"] = other
+        return cleaned
 
     def clean_national_id(self):
         value = self.cleaned_data["national_id"].strip()

@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.utils import timezone
 from django.utils.html import format_html, format_html_join
 
-from .models import Application, BursaryRound, Document, StudentProfile
+from .models import Application, BursaryRound, Document, Institution, StudentProfile, Ward
 from .notifications import notify_status_change
 from .scoring import compute_need_score
 
@@ -32,6 +32,19 @@ class StudentProfileAdmin(admin.ModelAdmin):
     list_display = ("full_name", "national_id", "institution", "county", "ward", "phone")
     search_fields = ("full_name", "national_id", "institution", "admission_number")
     list_filter = ("county",)
+
+
+@admin.register(Ward)
+class WardAdmin(admin.ModelAdmin):
+    list_display = ("name", "county")
+    list_filter = ("county",)
+    search_fields = ("name", "county")
+
+
+@admin.register(Institution)
+class InstitutionAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ("name",)
 
 
 @admin.register(Application)

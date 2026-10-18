@@ -70,6 +70,32 @@ class StudentProfile(models.Model):
         return f"{self.full_name} ({self.admission_number})"
 
 
+class Ward(models.Model):
+    """A ward inside a county. Loaded by the committee so students pick from a list."""
+
+    county = models.CharField(max_length=80)
+    name = models.CharField(max_length=80)
+
+    class Meta:
+        ordering = ["county", "name"]
+        constraints = [models.UniqueConstraint(fields=["county", "name"], name="unique_ward_per_county")]
+
+    def __str__(self):
+        return f"{self.name} ({self.county})"
+
+
+class Institution(models.Model):
+    """A school, college or university students can choose from."""
+
+    name = models.CharField(max_length=200, unique=True)
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return self.name
+
+
 def document_upload_path(instance, filename):
     # Keep each student's documents under their own folder.
     return f"documents/user_{instance.application.student.user_id}/{filename}"

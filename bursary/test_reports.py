@@ -97,3 +97,35 @@ class CountyTests(TestCase):
         form = StudentRegistrationForm(data={"county": "Atlantis"})
         form.is_valid()
         self.assertIn("county", form.errors)
+
+
+class ReferenceListTests(TestCase):
+    base = {"username": "kim", "email": "kim@example.com", "password1": "Str0ng-pass-99",
+            "password2": "Str0ng-pass-99", "full_name": "Kim", "national_id": "1", "phone": "0712345678",
+            "county": "Nairobi", "admission_number": "A1", "course_or_form": "Form 4", "year_of_study": 1}
+
+    def form(self, **extra):
+        from .forms import StudentRegistrationForm
+        return StudentRegistrationForm(data={**self.base, **extra})
+
+    def test_free_text_still_works_before_lists_are_loaded(self):
+        self.assertTrue(self.form(institution="Any School", ward="Anywhere").is_valid())
+
+    def test_ward_must_belong_to_the_chosen_county(self):
+        from .models import Ward
+        Ward.objects.create(county="Kiambu", name="Ruiru")
+        Ward.objects.create(county="Nairobi", name="Kileleshwa")
+        self.assertTrue(self.form(institution="S", ward="Kileleshwa").is_valid())
+        wrong = self.form(institution="S", ward="Ruiru")
+        self.assertFalse(wrong.is_valid())
+        self.assertIn("ward", wrong.errors)
+
+    def test_institution_dropdown_and_not_listed_option(self):
+        from .models import Institution
+        Institution.objects.create(name="Alliance High School")
+        self.assertTrue(self.form(institution="Alliance High School").is_valid())
+        self.assertFalse(self.form(institution="Made up School").is_valid())
+        self.assertFalse(self.form(institution="__other__").is_valid())  # needs a name
+        ok = self.form(institution="__other__", institution_other="Small Academy")
+        self.assertTrue(ok.is_valid())
+        self.assertEqual(ok.cleaned_data["institution"], "Small Academy")
