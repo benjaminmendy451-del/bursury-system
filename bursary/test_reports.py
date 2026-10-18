@@ -76,3 +76,24 @@ class ReportAccessTests(TestCase):
         csv_response = self.client.get(reverse("reports_csv"))
         self.assertEqual(csv_response.status_code, 200)
         self.assertEqual(csv_response["Content-Type"], "text/csv")
+
+
+class CountyTests(TestCase):
+    def test_typed_names_map_to_official_spelling(self):
+        from .counties import canonical_county
+        self.assertEqual(canonical_county(" kiambu COUNTY "), "Kiambu")
+        self.assertEqual(canonical_county("Muranga"), "Murang'a")
+        self.assertEqual(canonical_county("trans-nzoia"), "Trans Nzoia")
+        self.assertEqual(canonical_county("Taita Taveta"), "Taita-Taveta")
+        self.assertIsNone(canonical_county("Atlantis"))
+
+    def test_there_are_47_counties(self):
+        from .counties import COUNTIES
+        self.assertEqual(len(COUNTIES), 47)
+        self.assertEqual(len(set(COUNTIES)), 47)
+
+    def test_registration_rejects_unlisted_county(self):
+        from .forms import StudentRegistrationForm
+        form = StudentRegistrationForm(data={"county": "Atlantis"})
+        form.is_valid()
+        self.assertIn("county", form.errors)

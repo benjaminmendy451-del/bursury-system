@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db import transaction
 
+from .counties import COUNTY_CHOICES
 from .models import Application, Document, StudentProfile
 
 
@@ -13,7 +14,7 @@ class StudentRegistrationForm(UserCreationForm):
     email = forms.EmailField()
     national_id = forms.CharField(max_length=20, label="National ID / Birth certificate no.")
     phone = forms.CharField(max_length=20)
-    county = forms.CharField(max_length=80)
+    county = forms.ChoiceField(choices=COUNTY_CHOICES)
     ward = forms.CharField(max_length=80, required=False)
     institution = forms.CharField(max_length=200, label="School / College / University")
     admission_number = forms.CharField(max_length=50)
