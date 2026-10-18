@@ -88,13 +88,26 @@ WSGI_APPLICATION = "config.wsgi.application"
 # --- Database -------------------------------------------------------------
 # SQLite for development. For production set DATABASE_URL-style variables
 # (see README) and switch to PostgreSQL.
-if os.environ.get("POSTGRES_DB"):
+if os.environ.get("MYSQL_DB"):
+    # MySQL (for example the one installed with MySQL Workbench). Set the MYSQL_* values in .env.
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": os.environ["MYSQL_DB"],
+            "USER": os.environ.get("MYSQL_USER", "root"),
+            "PASSWORD": os.environ.get("MYSQL_PASSWORD", ""),
+            "HOST": os.environ.get("MYSQL_HOST", "127.0.0.1"),
+            "PORT": os.environ.get("MYSQL_PORT", "3306"),
+            "OPTIONS": {"charset": "utf8mb4"},
+        }
+    }
+elif os.environ.get("POSTGRES_DB"):
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.environ["POSTGRES_DB"],
             "USER": os.environ.get("POSTGRES_USER", ""),
-            "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
+            "PASSWORD": os.environ.get("POSTGRES_10452356", ""),
             "HOST": os.environ.get("POSTGRES_HOST", "localhost"),
             "PORT": os.environ.get("POSTGRES_PORT", "5432"),
         }

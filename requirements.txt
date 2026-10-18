@@ -1,5 +1,6 @@
 Django>=5.2,<6.0
 Pillow>=10.0
-# Needed only when you deploy with PostgreSQL / gunicorn:
+# Needed only for MySQL (pip install mysqlclient), or PostgreSQL / gunicorn:
+# mysqlclient>=2.2
 # psycopg[binary]>=3.1
 # gunicorn>=22.0
