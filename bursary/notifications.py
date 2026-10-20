@@ -127,7 +127,7 @@ def _status_content(application):
             f"Bursary approved: {round_name}",
             [f"Congratulations! Your application for {round_name} has been APPROVED.",
              f"Amount awarded: KES {amount:,.2f}"],
-            f"Bursary: your application for {round_name} is APPROVED. KES {amount:,.0f} awarded. "
+            f"BursaryNexa: your application for {round_name} is APPROVED. KES {amount:,.0f} awarded. "
             f"Log in for details.",
         )
     if status == S.REJECTED:
@@ -135,7 +135,7 @@ def _status_content(application):
             f"Bursary decision: {round_name}",
             [f"Thank you for applying for {round_name}. After careful review, we are sorry to say "
              f"your application was not successful this time."],
-            f"Bursary: your application for {round_name} was not successful this time. "
+            f"BursaryNexa: your application for {round_name} was not successful this time. "
             f"Log in for feedback.",
         )
     if status == S.WAITLISTED:
@@ -143,14 +143,14 @@ def _status_content(application):
             f"Bursary update: {round_name}",
             [f"Your application for {round_name} has been placed on the WAITLIST. "
              f"We will contact you if funds become available."],
-            f"Bursary: your application for {round_name} is on the waitlist. "
+            f"BursaryNexa: your application for {round_name} is on the waitlist. "
             f"We will contact you if funds become available.",
         )
     # Under review
     return (
         f"Bursary update: {round_name}",
         [f"Your application for {round_name} is now UNDER REVIEW by the committee."],
-        f"Bursary: your application for {round_name} is now under review.",
+        f"BursaryNexa: your application for {round_name} is now under review.",
     )
 
 
@@ -169,11 +169,11 @@ def notify_submitted(application):
         f"Amount requested: KES {application.amount_requested:,.2f}\n\n"
         f"Please make sure you have uploaded your supporting documents. "
         f"You can follow the progress here:\n{_application_url(application)}\n\n"
-        f"Bursary Committee"
+        f"BursaryNexa Committee"
     )
     send_email([student.user.email], f"Application received: {round_name}", body)
     send_sms(student.phone,
-             f"Bursary: we received your application for {round_name}. Ref #{application.pk}.")
+             f"BursaryNexa: we received your application for {round_name}. Ref #{application.pk}.")
 
     committee = getattr(settings, "COMMITTEE_EMAILS", [])
     if committee:
@@ -198,7 +198,7 @@ def notify_status_change(application):
     body = f"Hello {student.full_name},\n\n" + "\n".join(lines) + "\n"
     if application.committee_notes:
         body += f"\nMessage from the committee:\n{application.committee_notes}\n"
-    body += f"\nView your application:\n{_application_url(application)}\n\nBursary Committee"
+    body += f"\nView your application:\n{_application_url(application)}\n\nBursaryNexa Committee"
 
     send_email([student.user.email], subject, body)
     send_sms(student.phone, sms_text)

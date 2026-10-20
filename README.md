@@ -1,4 +1,4 @@
-# Bursary Management System
+# BursaryNexa
 
 A Django web app where students apply for bursaries and a committee reviews, scores and approves them.
 

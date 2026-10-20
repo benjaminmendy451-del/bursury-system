@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import include, path
 
-admin.site.site_header = "Bursary Committee"
-admin.site.site_title = "Bursary Management"
+admin.site.site_header = "BursaryNexa Committee"
+admin.site.site_title = "BursaryNexa"
 admin.site.index_title = "Review applications and manage bursary rounds"
 
 # Uploaded documents hold personal data (IDs, family income), so they are NOT

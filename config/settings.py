@@ -1,5 +1,5 @@
 """
-Django settings for the Bursary Management System.
+Django settings for BursaryNexa.
 
 Secrets and deployment switches come from environment variables so that
 nothing sensitive is committed to GitHub. See .env.example.
@@ -107,7 +107,7 @@ elif os.environ.get("POSTGRES_DB"):
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.environ["POSTGRES_DB"],
             "USER": os.environ.get("POSTGRES_USER", ""),
-            "PASSWORD": os.environ.get("POSTGRES_10452356", ""),
+            "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
             "HOST": os.environ.get("POSTGRES_HOST", "localhost"),
             "PORT": os.environ.get("POSTGRES_PORT", "5432"),
         }
