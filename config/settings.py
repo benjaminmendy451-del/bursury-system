@@ -187,3 +187,16 @@ AT_USERNAME = os.environ.get("AT_USERNAME", "")
 AT_API_KEY = os.environ.get("AT_API_KEY", "")
 AT_SENDER_ID = os.environ.get("AT_SENDER_ID", "")
 SMS_ENABLED = bool(AT_USERNAME and AT_API_KEY)
+
+import socket
+from django.core.mail.utils import DNS_NAME
+
+# Gmail hangs up on a computer name with no dot. Copy what plain Python does:
+# use the computer's numeric address in square brackets.
+_name = socket.getfqdn()
+if "." not in _name:
+    try:
+        _name = "[%s]" % socket.gethostbyname(socket.gethostname())
+    except OSError:
+        _name = "[127.0.0.1]"
+DNS_NAME._fqdn = _name
