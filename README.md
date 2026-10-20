@@ -1,22 +1,44 @@
 # BursaryNexa
 
-A Django web app where students apply for bursaries and a committee reviews, scores and approves them.
+BursaryNexa is a web-based bursary management system. Students register and apply for an open bursary round, upload supporting documents and are notified of the decision by email. The committee reviews applications with an automatic **need score**, approves awards within the round budget, and sees **reports by county, ward and school**.
 
-**Students can:** register, apply to an open bursary round, upload documents (ID, fee statement, admission letter, proof of income) and track the decision.
+Built with Django (Python). It runs on SQLite out of the box and can use MySQL or PostgreSQL.
 
-**The committee can** (in `/admin/`): create bursary rounds with a budget and deadline, review applications side by side with their documents, score need, approve with an amount (the system blocks awards that exceed the round budget or per-student cap), reject, and export to CSV.
+## Features
 
-## 1. Run it on your computer (VS Code)
+**For students**
+- Register with a county and ward chosen from dropdown lists, and a school, college or university chosen from a list (or typed in if not listed).
+- Apply to any open bursary round, with checks on fees and the maximum award.
+- Upload documents (PDF, JPG, PNG, up to 5 MB). Documents are only served through a login-protected link.
+- Follow the status of each application and receive email notifications.
 
-Open this folder in VS Code (`File > Open Folder`), then open the terminal (`` Ctrl+` ``):
+**For the committee** (the `/admin/` area)
+- Create bursary rounds with a budget, a per-student cap and open and close dates.
+- Review applications side by side with their documents, and see a **suggested need score** (0 to 100) with a line-by-line breakdown.
+- Approve with an amount. The system blocks awards that exceed the round budget or the cap.
+- Bulk actions: mark under review, reject, use the suggested score, recalculate scores, export to CSV.
+- A **Reports** page: totals, budget used, applications by status, and tables by county, ward and school, with a CSV download. Students cannot open it.
 
-```bash
-python -m venv venv
-venv\Scripts\activate            # Windows
-# source venv/bin/activate       # Mac / Linux
+**Notifications:** email (and optional SMS through Africa's Talking) when an application is received, goes under review, is approved, waitlisted or rejected.
+
+<!--
+Screenshots: save images in docs/screenshots and uncomment the lines below.
+![Home](docs/screenshots/home.png)
+![Application form](docs/screenshots/apply.png)
+![Committee review](docs/screenshots/review.png)
+![Reports](docs/screenshots/reports.png)
+-->
+
+## 1. Run it on your computer
+
+Open the folder in VS Code (`File > Open Folder`), then open a terminal (`` Ctrl+` ``):
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1          # Windows PowerShell
+# source .venv/bin/activate         # Mac / Linux
 pip install -r requirements.txt
 
-python manage.py makemigrations bursary
 python manage.py migrate
 python manage.py setup_committee
 python manage.py createsuperuser
@@ -24,99 +46,105 @@ python manage.py runserver
 ```
 
 - Student site: http://127.0.0.1:8000/
-- Committee/admin site: http://127.0.0.1:8000/admin/ (log in with the superuser you just created)
+- Committee site: http://127.0.0.1:8000/admin/ (log in with the superuser you created)
 
-> `makemigrations bursary` is needed once because this starter ships without migration files. Commit the generated `bursary/migrations/0001_initial.py` to GitHub afterwards.
+If the repository has no `bursary/migrations/` files yet, run `python manage.py makemigrations bursary` before `migrate`, and commit the generated files.
 
-### First-time walkthrough
+### Load the county, ward and school lists
 
-1. Log in at `/admin/`, open **Bursary rounds**, add one (opening date today or earlier, closing date in the future, a budget).
-2. Open a private browser window, go to `/register/` and create a student account.
-3. Apply for the round and upload a PDF or image.
-4. Back in `/admin/` open **Applications**, review it, set the status to *Approved* with an amount, and save.
-5. Refresh the student dashboard to see the decision.
+Counties are built in. Wards and schools are loaded from CSV files so students pick from a list. Until you load them, the form accepts typed text.
+
+```powershell
+python manage.py import_reference_data --wards kenya-wards.csv --institutions kenya-universities.csv
+```
+
+- `--wards` expects columns `county,ward`. `--institutions` expects a column `name` (use `--column "School Name"` for a different column title).
+- Running it again is safe; existing rows are skipped.
+- Fix counties typed before the dropdown existed: `python manage.py tidy_counties`.
+- Wards come from the IEBC county, constituency and ward listing (via the open-source `nicanor-korir/kenya-regions` dataset). The university list should be checked against the current CUE list.
+
+### Use MySQL instead of SQLite
+
+1. Create a database, for example `CREATE DATABASE bursary CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`.
+2. `pip install mysqlclient`.
+3. Add these lines to your `.env` file (see `.env.example`): `MYSQL_DB`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_HOST`, `MYSQL_PORT`.
+4. Run `python manage.py migrate` and create the superuser again.
+
+The MySQL tables (`bursary_application`, `bursary_studentprofile` and so on) can be read by MySQL Workbench or Power BI. Change a table's structure through `models.py` and `makemigrations`, not in Workbench.
 
 ### Adding committee members
 
-In `/admin/` > **Users** > add user, tick **Staff status**, and put them in the **Committee** group (created by `setup_committee`). They can review applications but cannot delete data or manage users.
+In `/admin/` > **Users** > add user, tick **Staff status**, and put them in the **Committee** group (created by `setup_committee`). They can review applications and see reports but cannot delete data or manage users.
 
-## 2. Put it on GitHub
+## 2. Notifications
 
-```bash
-git init
-git add .
-git commit -m "Initial bursary system"
-git branch -M main
-git remote add origin https://github.com/<your-username>/bursary-system.git
-git push -u origin main
-```
+By default, emails are printed in the terminal that runs `runserver`. For real email, create a file named `.env` next to `manage.py` and copy the *Notifications* section of `.env.example` into it. Use a Gmail address with a 16-letter App password (2-Step Verification is required), typed without spaces. `.env` is ignored by Git.
 
-(Or use VS Code's **Source Control** panel: *Initialize Repository*, commit, then *Publish to GitHub*.)
-
-Habits that will save you later:
-- Work on a branch per feature (`git checkout -b feature/reports`), then open a Pull Request.
-- `.gitignore` already excludes `db.sqlite3`, `media/` (student documents) and `.env`. Never commit those.
-
-## 3. Deploy
-
-On Render, Railway or PythonAnywhere, connect your GitHub repo and set the environment variables from `.env.example`. Before going live:
-
-1. `DJANGO_DEBUG=False` and a long random `DJANGO_SECRET_KEY`.
-2. Use PostgreSQL (set the `POSTGRES_*` variables, `pip install "psycopg[binary]"`).
-3. Run `python manage.py collectstatic` and `python manage.py migrate` on the server.
-4. Serve with gunicorn (`gunicorn config.wsgi`) behind HTTPS.
-5. Uploaded documents are saved to `media/`. On hosts with temporary disks, switch to persistent storage (for example a mounted volume or private S3 bucket) or documents will be lost on redeploy.
-
-## 4. Notifications (email and SMS)
-
-Students are notified when:
-- their application is received (the committee can also be emailed, see `COMMITTEE_EMAILS`)
-- the committee marks it Under review, Approved, Waitlisted or Rejected, or corrects an approved amount
-
-**Testing with no setup:** by default emails are printed in the terminal that runs `python manage.py runserver`. Register a student *with an email address*, apply, then approve in `/admin/` and watch the terminal.
-
-**Real emails and SMS:** create a file named `.env` next to `manage.py` and copy the *Notifications* section of `.env.example` into it (never the Production section). Fill in your Gmail address, a Gmail *App password* (needs 2-Step Verification) and, for SMS, your Africa's Talking username and API key. `.env` is ignored by Git, so passwords are not uploaded. Restart the server after editing it.
-
-**Check your settings with a test message:**
+Check your settings:
 
 ```powershell
 python manage.py test_notifications --email you@example.com
-python manage.py test_notifications --phone 0712345678
 ```
 
-If something is wrong, the command prints the exact reason (wrong password, no SMS credit, invalid number).
+Notes:
+- Real environment variables override `.env`. If email fails with an old password, check for leftover variables with `Get-ChildItem Env: | Where-Object Name -like 'EMAIL*'`.
+- SMS is skipped while `AT_USERNAME` and `AT_API_KEY` are empty. Kenyan numbers like `0712 345 678` become `+254712345678`.
+- A failed email or SMS is logged but never stops an application from being saved. See `bursary/notifications.py`.
 
-SMS is skipped automatically while `AT_USERNAME` and `AT_API_KEY` are empty. Kenyan numbers such as `0712 345 678` are converted to `+254712345678`. With `AT_USERNAME=sandbox`, messages appear in the Africa's Talking simulator, not on real phones.
+## 3. Need scoring
 
-A failed email or SMS is logged but never stops an application from being saved. The code is in `bursary/notifications.py`.
+Each application gets a suggested score from 0 to 100: family income (40), parental status (20), dependants in school (15), disability (10) and unpaid fee share (15). It is a guide only. The committee decides and can enter its own score. Students never see it.
 
-## 5. Need scoring
+Edit the `NEED_SCORING` block in `config/settings.py` to change the weights, then run `python manage.py rescore_applications`.
 
-Every application gets a **suggested score from 0 to 100**, shown in the committee's Applications list (click the column to rank) and, with a line-by-line breakdown, on each application. Points come from family income (lower = more), parental status, dependants in school, disability, and the share of fees still unpaid.
+## 4. Tests
 
-- It is only a guide. People decide, and the committee can type their own **Need score**. Students never see the suggested score.
-- The default weights are a starting point. Agree your committee's criteria, then edit the `NEED_SCORING` block in `config/settings.py` and run `python manage.py rescore_applications`.
-- Bulk actions in the list: *Use the suggested score as the committee score* and *Recalculate suggested scores*.
-- After updating to this version run `python manage.py makemigrations bursary`, `python manage.py migrate` and `python manage.py rescore_applications`.
-- `python manage.py test` runs the scoring checks.
+```powershell
+python manage.py test
+```
 
-## 6. Privacy
+Covers the scoring rules, report totals, county and ward checks, and report access (anonymous visitors are redirected, students get 403, the committee gets the page and the CSV).
 
-The system stores national IDs, phone numbers, family income and ID documents. In Kenya this falls under the Data Protection Act, 2019: collect only what you need, restrict access to the committee, keep the site on HTTPS, and register with the Office of the Data Protection Commissioner if your organisation is required to. Documents here are only served through a login-protected URL, not a public folder.
+## 5. Scaling to a county (500,000+ applications)
+
+The project runs well for a school or a class demo. A county-wide deployment needs these changes first:
+
+| Area | Now | For a county |
+|---|---|---|
+| Database | SQLite or a single MySQL | PostgreSQL or managed MySQL with indexes and daily backups |
+| Documents | Files on the server's disk | Private cloud storage (S3-type bucket) |
+| Email and SMS | Gmail, sent while the user waits | A bulk email service and a background job queue |
+| Servers | One development server | Several app servers behind a load balancer, HTTPS, `DEBUG=False` |
+| Admin screens | Simple lists | Paging, search and filters tuned for large data |
+| Testing | Unit tests | Load tests that simulate a rush near the deadline |
+
+## 6. Privacy and security
+
+The system stores national IDs, phone numbers, family income and ID documents. In Kenya this falls under the Data Protection Act, 2019: collect only what you need, restrict access to the committee, use HTTPS, and register with the Office of the Data Protection Commissioner when required.
+
+- Never commit `.env`, `db.sqlite3`, `media/` or the virtual environment. `.gitignore` already excludes them.
+- If a password or App password is ever shared by accident, delete it and create a new one.
 
 ## 7. Project layout
 
 ```
-config/            settings and root URLs
-bursary/models.py  BursaryRound, StudentProfile, Application, Document
-bursary/admin.py   committee review screen, bulk actions, CSV export
-bursary/scoring.py  suggested need score rules
-bursary/forms.py   registration + application forms with validation
-bursary/views.py   student pages (home, register, dashboard, apply, detail, document download)
-bursary/templates/ HTML pages
+config/               settings and root URLs
+bursary/models.py     BursaryRound, StudentProfile, Application, Document, Ward, Institution
+bursary/admin.py      committee review screen, bulk actions, CSV export
+bursary/scoring.py    suggested need score rules
+bursary/reports.py    totals by county, ward and school
+bursary/counties.py   the 47 counties
+bursary/forms.py      registration and application forms with validation
+bursary/views.py      student pages, document download, reports
+bursary/notifications.py   email and SMS messages
+bursary/management/commands/   setup_committee, import_reference_data, tidy_counties,
+                               rescore_applications, test_notifications
+bursary/templates/    HTML pages
 ```
 
-## 8. Good next steps
+## 8. Possible next steps
 
-- A reports page with totals per round, county and ward, and per-area quotas
-- Run `bursary/tests.py` automatically with GitHub Actions on every push
+- Per-county or per-ward quotas
+- A background job queue for notifications
+- Student-facing explanation of why an application was waitlisted or rejected
+- GitHub Actions to run `python manage.py test` on every push
