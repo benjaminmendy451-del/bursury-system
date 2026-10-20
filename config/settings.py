@@ -99,6 +99,7 @@ if os.environ.get("MYSQL_DB"):
             "HOST": os.environ.get("MYSQL_HOST", "127.0.0.1"),
             "PORT": os.environ.get("MYSQL_PORT", "3306"),
             "OPTIONS": {"charset": "utf8mb4"},
+            "TIME_ZONE": "Africa/Nairobi",
         }
     }
 elif os.environ.get("POSTGRES_DB"):
