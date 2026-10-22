@@ -99,6 +99,8 @@ if os.environ.get("MYSQL_DB"):
             "HOST": os.environ.get("MYSQL_HOST", "127.0.0.1"),
             "PORT": os.environ.get("MYSQL_PORT", "3306"),
             "OPTIONS": {"charset": "utf8mb4"},
+            # Store times in the project time zone so MySQL needs no time zone tables
+            # (otherwise date filters in the admin fail with "invalid datetime value").
             "TIME_ZONE": "Africa/Nairobi",
         }
     }
@@ -189,11 +191,11 @@ AT_API_KEY = os.environ.get("AT_API_KEY", "")
 AT_SENDER_ID = os.environ.get("AT_SENDER_ID", "")
 SMS_ENABLED = bool(AT_USERNAME and AT_API_KEY)
 
+# Gmail hangs up on a computer name with no dot. Copy what plain Python does:
+# use the computer's numeric address in square brackets.
 import socket
 from django.core.mail.utils import DNS_NAME
 
-# Gmail hangs up on a computer name with no dot. Copy what plain Python does:
-# use the computer's numeric address in square brackets.
 _name = socket.getfqdn()
 if "." not in _name:
     try:
