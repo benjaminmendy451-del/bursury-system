@@ -18,7 +18,14 @@ EDITABLE_STATUSES = (Application.Status.SUBMITTED, Application.Status.UNDER_REVI
 
 def home(request):
     rounds = [r for r in BursaryRound.objects.filter(is_active=True) if r.is_open]
-    return render(request, "bursary/home.html", {"rounds": rounds})
+    stats = {
+        "open_rounds": len(rounds),
+        "budget": sum(r.budget for r in rounds),
+        "applications": Application.objects.count(),
+    }
+    return render(request, "bursary/home.html", {
+        "rounds": rounds, "stats": stats, "contact_email": settings.DEFAULT_FROM_EMAIL,
+    })
 
 
 def register(request):

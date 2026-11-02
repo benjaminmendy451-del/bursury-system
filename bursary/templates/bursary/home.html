@@ -1,22 +1,67 @@
 {% extends "bursary/base.html" %}
+{% block title %}BursaryNexa &middot; Home{% endblock %}
 {% block content %}
-<h1>Apply for a bursary</h1>
-<p class="muted">Register, choose an open bursary round, submit your application and upload your supporting documents. You can follow the decision from your dashboard.</p>
-
-<h2>Open bursary rounds</h2>
-{% for r in rounds %}
-  <div class="card">
-    <h2>{{ r.name }}</h2>
-    {% if r.description %}<p>{{ r.description|linebreaksbr }}</p>{% endif %}
-    <p class="muted">Closes on {{ r.closes_on|date:"j F Y" }}{% if r.max_award_per_student %} &middot; Maximum award KES {{ r.max_award_per_student }}{% endif %}</p>
+<section class="hero">
+  {% include "bursary/_logo.html" %}
+  <div>
+    <h1>Welcome to BursaryNexa{% if user.is_authenticated %}, {{ user.first_name|default:user.username }}{% endif %}! &#128075;</h1>
+    <p>Apply for a bursary online, upload your documents and follow your decision from one place.</p>
     {% if user.is_authenticated %}
-      <a class="btn" href="{% url 'apply' r.id %}">Apply now</a>
+      <a class="btn secondary" href="{% url 'dashboard' %}">Go to my dashboard</a>
     {% else %}
-      <a class="btn" href="{% url 'register' %}">Register to apply</a>
-      <a class="btn secondary" href="{% url 'login' %}">I already have an account</a>
+      <a class="btn secondary" href="{% url 'register' %}">Register</a>
+      <a class="btn" href="{% url 'login' %}" style="border:1px solid #fff">Log in</a>
     {% endif %}
   </div>
-{% empty %}
-  <div class="card"><p class="muted">There are no bursary rounds open right now. Please check back later.</p></div>
-{% endfor %}
+</section>
+
+<div class="tiles" style="margin-bottom:20px">
+  <div class="stat"><b>{{ stats.open_rounds }}</b>Open bursary round{{ stats.open_rounds|pluralize }}</div>
+  <div class="stat"><b>KES {{ stats.budget|floatformat:"0g" }}</b>Total budget available</div>
+  <div class="stat"><b>{{ stats.applications|floatformat:"0g" }}</b>Applications received</div>
+</div>
+
+<div class="panel">
+  <h2>Open bursary rounds</h2>
+  <div class="tiles">
+  {% for r in rounds %}
+    <div class="tile">
+      <div class="t">{{ r.name }}</div>
+      {% if r.description %}<p>{{ r.description|linebreaksbr }}</p>{% endif %}
+      <div class="when">Closes {{ r.closes_on|date:"l, j F Y" }}{% if r.max_award_per_student %} &middot; Max award KES {{ r.max_award_per_student|floatformat:"0g" }}{% endif %}</div>
+      <p>
+      {% if user.is_authenticated %}
+        <a class="btn" href="{% url 'apply' r.id %}">Apply now</a>
+      {% else %}
+        <a class="btn" href="{% url 'register' %}">Register to apply</a>
+        <a class="btn secondary" href="{% url 'login' %}">I have an account</a>
+      {% endif %}
+      </p>
+    </div>
+  {% empty %}
+    <p class="muted">There are no bursary rounds open right now. Please check back later.</p>
+  {% endfor %}
+  </div>
+</div>
+
+<div class="grid">
+  <div class="panel">
+    <h2>Documents you need</h2>
+    <ul>
+      <li>ID or birth certificate</li>
+      <li>Fee statement or fee structure</li>
+      <li>Admission letter</li>
+      <li>Proof of income or chief&rsquo;s letter</li>
+    </ul>
+    <p class="muted">Upload PDF, JPG or PNG files.</p>
+  </div>
+  <div class="panel">
+    <h2>Who can apply</h2>
+    <p>Students who need financial help with school fees. Applications are scored on family income, orphan status, number of dependants, disability and the fee balance owed. The committee then decides within the round&rsquo;s budget.</p>
+  </div>
+  <div class="panel">
+    <h2>Contact and help</h2>
+    <p>Questions about your application? Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
+  </div>
+</div>
 {% endblock %}

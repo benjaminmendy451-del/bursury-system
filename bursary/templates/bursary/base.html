@@ -13,10 +13,12 @@
     header a { color:#fff; text-decoration:none; }
     header .brand { font-weight:700; font-size:1.15rem; display:inline-flex; align-items:center; gap:10px; }
     header .brand svg { width:34px; height:34px; flex:none; }
-    nav a { color:#c9cdf5; padding:4px 2px; } nav a:hover, nav a.active { color:#fff; }
-    nav { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
+    nav { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
     nav form { display:inline; margin:0; }
-    nav button { background:none; border:0; color:#fff; font:inherit; cursor:pointer; padding:0; text-decoration:underline; }
+    nav a.tab { color:#c9cdf5; padding:8px 14px; border-radius:8px; font-weight:500; } nav a.tab:hover { background:rgba(255,255,255,.1); color:#fff; } nav a.tab.active { background:rgba(255,255,255,.18); color:#fff; }
+    .userchip { display:inline-flex; align-items:center; gap:8px; color:#fff; font-weight:600; padding-left:6px; border-left:1px solid rgba(255,255,255,.25); margin-left:6px; }
+    .avatar { width:30px; height:30px; border-radius:50%; background:var(--brand); border:2px solid #fff; display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; text-transform:uppercase; }
+    nav .logout { background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; font:inherit; cursor:pointer; padding:7px 16px; border-radius:8px; } nav .logout:hover { background:#fff; color:var(--nav); }
     main { max-width:1100px; margin:24px auto; padding:0 20px 48px; }
     .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:20px; margin-bottom:16px; }
     h1 { font-size:2rem; font-weight:800; margin:0 0 6px; } .greet { font-size:1.25rem; font-weight:700; margin:0 0 22px; }
@@ -36,6 +38,11 @@
     input[type=text], input[type=email], input[type=password], input[type=number], select, textarea { width:100%; padding:9px 10px; border:1px solid #b8c2cc; border-radius:8px; font:inherit; background:#fff; }
     .errorlist { color:#9b1c1c; list-style:none; padding:0; margin:0 0 4px; font-size:.9rem; }
     .helptext { color:var(--muted); font-size:.85rem; display:block; }
+    .hero { background:linear-gradient(120deg,#14532d 0%,#1f1a14 100%); color:#fff; border-radius:14px; padding:40px 32px; margin-bottom:20px; display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+    .hero svg { width:88px; height:88px; flex:none; } .hero h1 { color:#fff; font-size:2.2rem; margin:0 0 6px; } .hero p { margin:0 0 16px; color:#d6e5db; max-width:560px; }
+    .hero .btn.secondary { background:#fff; color:var(--brand); }
+    .stat { flex:1 1 180px; background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px; text-align:center; } .stat b { display:block; font-size:1.6rem; color:var(--brand); }
+    footer { text-align:center; color:var(--muted); font-size:.9rem; padding:24px 20px 40px; }
     .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
   </style>
 </head>
@@ -44,15 +51,22 @@
   <div class="bar">
     <a class="brand" href="{% url 'home' %}">{% include "bursary/_logo.html" %}<span>BursaryNexa</span></a>
     <nav>
+      {% with n=request.resolver_match.url_name %}
+      <a class="tab {% if n == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
       {% if user.is_authenticated %}
-        <a href="{% url 'home' %}">Home</a>
-        {% if not user.is_staff %}<a href="{% url 'dashboard' %}">Dashboard</a>{% endif %}
-        {% if user.is_staff %}<a href="{% url 'admin:index' %}">Committee</a> <a href="{% url 'reports' %}">Reports</a> <a href="{% url 'analytics' %}">Analytics</a>{% endif %}
-        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button type="submit">Log out ({{ user.username }})</button></form>
+        {% if not user.is_staff %}<a class="tab {% if n == 'dashboard' or n == 'apply' or n == 'application_detail' %}active{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>{% endif %}
+        {% if user.is_staff %}
+          <a class="tab" href="{% url 'admin:index' %}">Committee</a>
+          <a class="tab {% if n == 'reports' %}active{% endif %}" href="{% url 'reports' %}">Reports</a>
+          <a class="tab {% if n == 'analytics' %}active{% endif %}" href="{% url 'analytics' %}">Analytics</a>
+        {% endif %}
+        <span class="userchip"><span class="avatar">{{ user.username|slice:":1" }}</span>{{ user.username }}</span>
+        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="logout" type="submit">Log out</button></form>
       {% else %}
-        <a href="{% url 'login' %}">Log in</a>
-        <a href="{% url 'register' %}">Register</a>
+        <a class="tab {% if n == 'login' %}active{% endif %}" href="{% url 'login' %}">Log in</a>
+        <a class="tab {% if n == 'register' %}active{% endif %}" href="{% url 'register' %}">Register</a>
       {% endif %}
+      {% endwith %}
     </nav>
   </div>
 </header>
@@ -60,5 +74,6 @@
   {% if messages %}<ul class="messages">{% for m in messages %}<li class="{{ m.tags }}">{{ m }}</li>{% endfor %}</ul>{% endif %}
   {% block content %}{% endblock %}
 </main>
+<footer>&copy; 2026 BursaryNexa &middot; Bursary management system</footer>
 </body>
 </html>

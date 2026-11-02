@@ -28,9 +28,9 @@
       <tr>
         <td>{{ a.bursary_round.name }}</td>
         <td>{{ a.submitted_at|date:"j M Y" }}</td>
-        <td>KES {{ a.amount_requested }}</td>
+        <td>KES {{ a.amount_requested|floatformat:"0g" }}</td>
         <td><span class="badge {{ a.status }}">{{ a.get_status_display }}</span></td>
-        <td>{% if a.status == "approved" %}KES {{ a.amount_awarded }}{% else %}&mdash;{% endif %}</td>
+        <td>{% if a.status == "approved" %}KES {{ a.amount_awarded|floatformat:"0g" }}{% else %}&mdash;{% endif %}</td>
         <td><a href="{% url 'application_detail' a.pk %}">View</a></td>
       </tr>
     {% endfor %}
