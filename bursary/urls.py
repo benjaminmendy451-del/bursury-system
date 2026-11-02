@@ -14,4 +14,5 @@ urlpatterns = [
     path("documents/<int:pk>/", views.download_document, name="download_document"),
     path("reports/", views.reports, name="reports"),
     path("reports/export/", views.reports_csv, name="reports_csv"),
+    path("analytics/", views.analytics, name="analytics"),
 ]

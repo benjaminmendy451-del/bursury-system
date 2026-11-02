@@ -1,20 +1,24 @@
 {% extends "bursary/base.html" %}
 {% block title %}My applications{% endblock %}
 {% block content %}
-<h1>Hello, {{ profile.full_name }}</h1>
+<h1>Dashboard</h1>
+<p class="greet">Hi, {{ profile.full_name }}! &#128075;</p>
 <p class="muted">{{ profile.institution }} &middot; {{ profile.course_or_form }} &middot; Admission no. {{ profile.admission_number }}</p>
 
 {% if available_rounds %}
-<div class="card">
-  <h2>Bursaries you can apply for</h2>
+<div class="panel">
+  <h2>Open bursaries</h2>
+  <div class="tiles">
   {% for r in available_rounds %}
-    <p><strong>{{ r.name }}</strong> <span class="muted">(closes {{ r.closes_on|date:"j F Y" }})</span>
-       <a class="btn" href="{% url 'apply' r.id %}">Apply</a></p>
+    <div class="tile"><div class="t">{{ r.name }}</div>
+      <div class="when">Closes {{ r.closes_on|date:"l, j F Y" }}</div>
+      <p><a class="btn" href="{% url 'apply' r.id %}">Apply now</a></p></div>
   {% endfor %}
+  </div>
 </div>
 {% endif %}
 
-<div class="card">
+<div class="panel">
   <h2>My applications</h2>
   {% if applications %}
   <table>

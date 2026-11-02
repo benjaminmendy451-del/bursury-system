@@ -1,5 +1,6 @@
 import csv
 
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required, permission_required
@@ -179,3 +180,13 @@ def reports_csv(request):
         writer.writerow(["Total", total["applications"], total["approved"],
                          total["requested"], total["awarded"]])
     return response
+
+
+@login_required
+@permission_required("bursary.view_application", raise_exception=True)
+def analytics(request):
+    """Committee-only page that shows the Power BI report inside the site."""
+    url = settings.POWERBI_EMBED_URL
+    if not url.startswith("https://"):
+        url = ""  # only ever embed secure addresses
+    return render(request, "bursary/analytics.html", {"embed_url": url})

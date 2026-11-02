@@ -191,6 +191,9 @@ AT_API_KEY = os.environ.get("AT_API_KEY", "")
 AT_SENDER_ID = os.environ.get("AT_SENDER_ID", "")
 SMS_ENABLED = bool(AT_USERNAME and AT_API_KEY)
 
+# Power BI report shown on the committee "Dashboard" page (leave empty to show setup help).
+POWERBI_EMBED_URL = os.environ.get("POWERBI_EMBED_URL", "").strip()
+
 # Gmail hangs up on a computer name with no dot. Copy what plain Python does:
 # use the computer's numeric address in square brackets.
 import socket

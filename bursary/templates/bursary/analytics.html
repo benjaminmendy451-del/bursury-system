@@ -1,0 +1,20 @@
+{% extends "bursary/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+{% if embed_url %}
+  <p class="muted">Power BI report. It shows the data as of the last time the report was published.
+     <a href="{{ embed_url }}" target="_blank" rel="noopener">Open in a new tab</a></p>
+  <div class="card" style="padding:0;overflow:hidden">
+    <iframe title="BursaryNexa Power BI dashboard" src="{{ embed_url }}"
+            style="width:100%;height:70vh;min-height:480px;border:0" allowfullscreen="true"></iframe>
+  </div>
+{% else %}
+  <div class="card">
+    <h2>The dashboard is not connected yet</h2>
+    <p>Publish your Power BI report, copy its https address, and add this line to the <code>.env</code> file:</p>
+    <p><code>POWERBI_EMBED_URL=https://app.powerbi.com/view?r=...</code></p>
+    <p class="muted">Then restart the server. In the meantime the <a href="{% url 'reports' %}">Reports</a> page shows live totals.</p>
+  </div>
+{% endif %}
+{% endblock %}

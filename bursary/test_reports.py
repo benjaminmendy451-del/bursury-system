@@ -129,3 +129,22 @@ class ReferenceListTests(TestCase):
         ok = self.form(institution="__other__", institution_other="Small Academy")
         self.assertTrue(ok.is_valid())
         self.assertEqual(ok.cleaned_data["institution"], "Small Academy")
+
+
+class AnalyticsPageTests(TestCase):
+    def test_access_rules(self):
+        self.assertEqual(self.client.get(reverse("analytics")).status_code, 302)
+        make_student(1, "Nairobi")
+        self.client.login(username="student1", password="pass12345")
+        self.assertEqual(self.client.get(reverse("analytics")).status_code, 403)
+
+    def test_committee_sees_setup_help_then_the_embed(self):
+        from django.test import override_settings
+        User.objects.create_superuser("boss", "boss@example.com", "pass12345")
+        self.client.login(username="boss", password="pass12345")
+        page = self.client.get(reverse("analytics"))
+        self.assertContains(page, "not connected yet")
+        with override_settings(POWERBI_EMBED_URL="https://app.powerbi.com/view?r=abc"):
+            self.assertContains(self.client.get(reverse("analytics")), "<iframe")
+        with override_settings(POWERBI_EMBED_URL="http://insecure.example.com"):
+            self.assertContains(self.client.get(reverse("analytics")), "not connected yet")
