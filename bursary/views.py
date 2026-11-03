@@ -1,4 +1,6 @@
 import csv
+import os
+from email.utils import parseaddr
 
 from django.conf import settings
 from django.contrib import messages
@@ -16,6 +18,14 @@ from .reports import build_report
 EDITABLE_STATUSES = (Application.Status.SUBMITTED, Application.Status.UNDER_REVIEW)
 
 
+def _contact_email():
+    """A real address for the help section: CONTACT_EMAIL, else the sender address; blank if unusable."""
+    raw = os.environ.get("CONTACT_EMAIL") or settings.DEFAULT_FROM_EMAIL
+    addr = parseaddr(raw)[1]
+    domain = addr.rpartition("@")[2]
+    return addr if "." in domain else ""
+
+
 def home(request):
     rounds = [r for r in BursaryRound.objects.filter(is_active=True) if r.is_open]
     stats = {
@@ -24,7 +34,8 @@ def home(request):
         "applications": Application.objects.count(),
     }
     return render(request, "bursary/home.html", {
-        "rounds": rounds, "stats": stats, "contact_email": settings.DEFAULT_FROM_EMAIL,
+        "rounds": rounds, "stats": stats if request.user.is_staff else None,
+        "contact_email": _contact_email(),
     })
 
 
