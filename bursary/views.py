@@ -6,9 +6,11 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.paginator import Paginator
 from django.db import IntegrityError
 from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 
 from .forms import ApplicationForm, DocumentForm, StudentRegistrationForm
 from .models import Application, BursaryRound, Document, StudentProfile
@@ -69,8 +71,9 @@ def dashboard(request):
     open_rounds = [r for r in BursaryRound.objects.filter(is_active=True) if r.is_open]
     applied_ids = set(applications.values_list("bursary_round_id", flat=True))
     available = [r for r in open_rounds if r.id not in applied_ids]
+    page = Paginator(applications, 10).get_page(request.GET.get("page"))
     return render(request, "bursary/dashboard.html", {
-        "profile": profile, "applications": applications, "available_rounds": available,
+        "profile": profile, "applications": page, "available_rounds": available,
     })
 
 
@@ -126,6 +129,20 @@ def application_detail(request, pk):
             return redirect("application_detail", pk=application.pk)
     return render(request, "bursary/application_detail.html", {
         "application": application, "doc_form": doc_form, "can_edit": can_edit,
+    })
+
+
+@login_required
+def award_letter(request, pk):
+    """A printable award letter. Only for approved applications; the owner or committee may open it."""
+    application = get_object_or_404(Application.objects.select_related("student", "bursary_round"), pk=pk)
+    is_owner = application.student.user_id == request.user.id
+    if not (is_owner or request.user.has_perm("bursary.view_application")):
+        raise Http404
+    if application.status != Application.Status.APPROVED:
+        raise Http404
+    return render(request, "bursary/award_letter.html", {
+        "application": application, "issued_on": timezone.localdate(),
     })
 
 

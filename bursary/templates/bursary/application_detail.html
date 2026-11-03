@@ -7,7 +7,8 @@
 
 {% if application.status == "approved" %}
   <div class="card"><h2>Congratulations</h2>
-    <p>You have been awarded <strong>KES {{ application.amount_awarded|floatformat:"0g" }}</strong>.</p></div>
+    <p>You have been awarded <strong>KES {{ application.amount_awarded|floatformat:"0g" }}</strong>.</p>
+    <p><a class="btn" href="{% url 'award_letter' application.pk %}" target="_blank" rel="noopener">Open award letter</a></p></div>
 {% endif %}
 {% if application.committee_notes and application.status != "submitted" %}
   <div class="card"><h2>Committee feedback</h2><p>{{ application.committee_notes|linebreaksbr }}</p></div>

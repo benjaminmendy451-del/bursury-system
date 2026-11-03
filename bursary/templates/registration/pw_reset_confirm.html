@@ -1,0 +1,17 @@
+{% extends "bursary/base.html" %}
+{% block title %}Choose a new password{% endblock %}
+{% block content %}
+<h1>Choose a new password</h1>
+<div class="card">
+  {% if validlink %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Save new password</button>
+  </form>
+  {% else %}
+  <p>This reset link is not valid. It may have been used already or it may have expired.</p>
+  <p><a class="btn" href="{% url 'password_reset' %}">Ask for a new link</a></p>
+  {% endif %}
+</div>
+{% endblock %}

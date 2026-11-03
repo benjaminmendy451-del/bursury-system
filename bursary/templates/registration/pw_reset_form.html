@@ -1,0 +1,14 @@
+{% extends "bursary/base.html" %}
+{% block title %}Reset password{% endblock %}
+{% block content %}
+<h1>Forgot your password?</h1>
+<div class="card">
+  <p>Enter the email address you registered with. We will email you a link to choose a new password.</p>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Send reset link</button>
+  </form>
+  <p class="muted"><a href="{% url 'login' %}">&larr; Back to log in</a></p>
+</div>
+{% endblock %}

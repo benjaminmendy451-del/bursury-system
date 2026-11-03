@@ -1,0 +1,9 @@
+{% extends "bursary/base.html" %}
+{% block title %}No access{% endblock %}
+{% block content %}
+<div class="panel">
+  <h1>You don't have access to this page</h1>
+  <p class="muted">This page is for committee members. If you think you should have access, please contact the bursary office.</p>
+  <p><a class="btn" href="{% url 'home' %}">Go to Home</a></p>
+</div>
+{% endblock %}

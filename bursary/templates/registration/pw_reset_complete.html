@@ -1,0 +1,9 @@
+{% extends "bursary/base.html" %}
+{% block title %}Password changed{% endblock %}
+{% block content %}
+<h1>Password changed</h1>
+<div class="card">
+  <p>Your password has been changed. You can now log in.</p>
+  <p><a class="btn" href="{% url 'login' %}">Log in</a></p>
+</div>
+{% endblock %}

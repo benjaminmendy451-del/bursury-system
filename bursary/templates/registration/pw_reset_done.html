@@ -1,0 +1,9 @@
+{% extends "bursary/base.html" %}
+{% block title %}Check your email{% endblock %}
+{% block content %}
+<h1>Check your email</h1>
+<div class="card">
+  <p>If an account exists for that email address, we have sent a link to reset the password. It can take a minute or two to arrive. Please also check your spam folder.</p>
+  <p><a class="btn" href="{% url 'login' %}">Back to log in</a></p>
+</div>
+{% endblock %}

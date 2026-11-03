@@ -1,0 +1,10 @@
+{% autoescape off %}Hello {{ user.get_username }},
+
+You asked to reset your BursaryNexa password. Open this link to choose a new one:
+
+{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+
+If you did not ask for this, ignore this email and your password will stay the same.
+
+BursaryNexa Committee
+{% endautoescape %}

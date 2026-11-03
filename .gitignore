@@ -20,3 +20,7 @@ media/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Database backups contain personal data - NEVER commit these
+backups/
+*.sql

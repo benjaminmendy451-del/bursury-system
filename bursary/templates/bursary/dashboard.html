@@ -36,6 +36,13 @@
     {% endfor %}
     </tbody>
   </table>
+  {% if applications.has_other_pages %}
+  <p class="muted">
+    {% if applications.has_previous %}<a href="?page={{ applications.previous_page_number }}">&larr; Newer</a>{% endif %}
+    Page {{ applications.number }} of {{ applications.paginator.num_pages }}
+    {% if applications.has_next %}<a href="?page={{ applications.next_page_number }}">Older &rarr;</a>{% endif %}
+  </p>
+  {% endif %}
   {% else %}
     <p class="muted">You have not applied for any bursary yet.</p>
   {% endif %}

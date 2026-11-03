@@ -63,6 +63,12 @@ class StudentRegistrationForm(UserCreationForm):
                 self.add_error("institution_other", "Please type the name of your school or college.")
             else:
                 cleaned["institution"] = other
+        institution = cleaned.get("institution")
+        admission = (cleaned.get("admission_number") or "").strip()
+        if institution and admission and StudentProfile.objects.filter(
+                institution__iexact=institution, admission_number__iexact=admission).exists():
+            self.add_error("admission_number",
+                           "A student with this admission number is already registered at this institution.")
         return cleaned
 
     def clean_national_id(self):
