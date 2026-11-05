@@ -42,6 +42,12 @@
     .hero svg { width:88px; height:88px; flex:none; } .hero h1 { color:#fff; font-size:2.2rem; margin:0 0 6px; } .hero p { margin:0 0 16px; color:#d6e5db; max-width:560px; }
     .hero .btn.secondary { background:#fff; color:var(--brand); }
     .stat { flex:1 1 180px; background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px; text-align:center; } .stat b { display:block; font-size:1.6rem; color:var(--brand); }
+    .notice { background:#fff6dc; border:1px solid #f0d58a; border-radius:8px; padding:10px 14px; margin-bottom:12px; }
+    .steps { display:flex; gap:4px; min-width:230px; } .steps span { flex:1; font-size:.72rem; text-align:center; padding:4px 6px; border-radius:6px; background:#e5e9ec; color:#616e7c; }
+    .steps.s1 span:nth-child(-n+1), .steps.s2 span:nth-child(-n+2), .steps.s3 span { background:var(--brand); color:#fff; }
+    .steps.rejected span:nth-child(3) { background:#9b1c1c; } .steps.waitlisted span:nth-child(3) { background:#2a3f8f; }
+    .profile { display:grid; gap:6px 24px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); } .profile div span { display:block; color:var(--muted); font-size:.8rem; }
+    .due { color:#7a5200; font-weight:600; }
     footer { text-align:center; color:var(--muted); font-size:.9rem; padding:24px 20px 40px; }
     .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
   </style>
@@ -61,7 +67,7 @@
           <a class="tab {% if n == 'analytics' %}active{% endif %}" href="{% url 'analytics' %}">Analytics</a>
         {% endif %}
         <span class="userchip"><span class="avatar">{{ user.username|slice:":1" }}</span>{{ user.username }}</span>
-        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="logout" type="submit">Log out</button></form>
+        <form method="post" action="{% url 'logout' %}" onsubmit="return confirm('Are you sure you want to log out?');">{% csrf_token %}<button class="logout" type="submit">Log out</button></form>
       {% else %}
         <a class="tab {% if n == 'login' %}active{% endif %}" href="{% url 'login' %}">Log in</a>
         <a class="tab {% if n == 'register' %}active{% endif %}" href="{% url 'register' %}">Register</a>

@@ -5,7 +5,9 @@ from email.utils import parseaddr
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import login
+from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.cache import cache
 from django.core.paginator import Paginator
 from django.db import IntegrityError
 from django.http import FileResponse, Http404, HttpResponse
@@ -26,6 +28,36 @@ def _contact_email():
     addr = parseaddr(raw)[1]
     domain = addr.rpartition("@")[2]
     return addr if "." in domain else ""
+
+
+MAX_LOGIN_ATTEMPTS = 5
+LOCKOUT_SECONDS = 5 * 60
+
+
+def _login_key(request, username):
+    return f"login-fail:{(username or '').strip().lower()}:{request.META.get('REMOTE_ADDR', '?')}"
+
+
+class LockoutLoginView(LoginView):
+    """Normal login, but five wrong passwords in a row lock that username for five minutes."""
+
+    def post(self, request, *args, **kwargs):
+        if cache.get(_login_key(request, request.POST.get("username")), 0) >= MAX_LOGIN_ATTEMPTS:
+            form = self.get_form_class()(request=request)
+            response = self.render_to_response(self.get_context_data(
+                form=form, locked_message="Too many failed attempts. Please wait 5 minutes and try again."))
+            response.status_code = 429
+            return response
+        return super().post(request, *args, **kwargs)
+
+    def form_invalid(self, form):
+        key = _login_key(self.request, form.data.get("username"))
+        cache.set(key, cache.get(key, 0) + 1, LOCKOUT_SECONDS)
+        return super().form_invalid(form)
+
+    def form_valid(self, form):
+        cache.delete(_login_key(self.request, form.data.get("username")))
+        return super().form_valid(form)
 
 
 def home(request):
@@ -67,11 +99,26 @@ def dashboard(request):
     if profile is None:
         # Committee/staff members have no student profile; send them to the admin site.
         return redirect("admin:index")
-    applications = profile.applications.select_related("bursary_round")
+    applications = profile.applications.select_related("bursary_round").prefetch_related("documents")
     open_rounds = [r for r in BursaryRound.objects.filter(is_active=True) if r.is_open]
     applied_ids = set(applications.values_list("bursary_round_id", flat=True))
     available = [r for r in open_rounds if r.id not in applied_ids]
     page = Paginator(applications, 10).get_page(request.GET.get("page"))
+
+    # Extra facts the dashboard shows for each application: progress step and missing documents.
+    labels = dict(Document.Kind.choices)
+    required = [k for k in labels if k != Document.Kind.OTHER]
+    items = list(page.object_list)
+    for a in items:
+        have = {d.kind for d in a.documents.all()}
+        a.step = {Application.Status.SUBMITTED: 1, Application.Status.UNDER_REVIEW: 2}.get(a.status, 3)
+        a.missing_docs = ([labels[k] for k in required if k not in have]
+                          if a.status in EDITABLE_STATUSES else [])
+    page.object_list = items
+
+    today = timezone.localdate()
+    for r in available:
+        r.days_left = (r.closes_on - today).days
     return render(request, "bursary/dashboard.html", {
         "profile": profile, "applications": page, "available_rounds": available,
     })

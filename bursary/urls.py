@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
     path("", views.home, name="home"),
     path("register/", views.register, name="register"),
-    path("login/", auth_views.LoginView.as_view(), name="login"),
+    path("login/", views.LockoutLoginView.as_view(), name="login"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
     # Password reset (emails a one-time link; uses the same email settings as notifications)
     path("password-reset/", auth_views.PasswordResetView.as_view(
@@ -19,6 +19,10 @@ urlpatterns = [
         template_name="registration/pw_reset_confirm.html"), name="password_reset_confirm"),
     path("reset/done/", auth_views.PasswordResetCompleteView.as_view(
         template_name="registration/pw_reset_complete.html"), name="password_reset_complete"),
+    path("password-change/", auth_views.PasswordChangeView.as_view(
+        template_name="registration/pw_change_form.html"), name="password_change"),
+    path("password-change/done/", auth_views.PasswordChangeDoneView.as_view(
+        template_name="registration/pw_change_done.html"), name="password_change_done"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("applications/<int:pk>/award-letter/", views.award_letter, name="award_letter"),
     path("apply/<int:round_id>/", views.apply, name="apply"),

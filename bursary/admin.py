@@ -5,21 +5,13 @@ from django.contrib.admin.models import LogEntry
 from django.db.models.functions import Coalesce
 from django.http import HttpResponse
 from django.utils import timezone
+from django.urls import reverse
 from django.utils.html import format_html, format_html_join
+from django.utils.safestring import mark_safe
 
 from .models import Application, BursaryRound, Document, Institution, StudentProfile, Ward
 from .notifications import notify_status_change
 from .scoring import compute_need_score
-
-
-class DocumentInline(admin.TabularInline):
-    model = Document
-    extra = 0
-    readonly_fields = ("kind", "file", "uploaded_at")
-    can_delete = False
-
-    def has_add_permission(self, request, obj=None):
-        return False
 
 
 class ScoreBandFilter(admin.SimpleListFilter):
@@ -85,24 +77,36 @@ class ApplicationAdmin(admin.ModelAdmin):
     list_per_page = 50
     list_select_related = ("student", "bursary_round")
     date_hierarchy = "submitted_at"
-    inlines = [DocumentInline]
     actions = ["mark_under_review", "reject_selected", "use_suggested_score", "recalculate_scores",
                "export_csv"]
 
     readonly_fields = ("student", "bursary_round", "annual_family_income", "dependants_in_school",
                        "orphan_status", "has_disability", "total_fees", "fees_paid", "amount_requested",
                        "reason", "submitted_at", "reviewed_by", "reviewed_at",
-                       "suggested_score", "score_breakdown")
+                       "suggested_score", "score_breakdown", "documents_summary")
 
     fieldsets = (
         ("Applicant", {"fields": ("student", "bursary_round", "submitted_at")}),
         ("Student's submission", {"fields": ("annual_family_income", "dependants_in_school", "orphan_status",
                                               "has_disability", "total_fees", "fees_paid",
                                               "amount_requested", "reason")}),
-        ("Committee decision", {"fields": ("suggested_score", "score_breakdown", "need_score", "status",
+        ("Committee decision", {"fields": ("documents_summary", "suggested_score", "score_breakdown", "need_score", "status",
                                             "amount_awarded", "committee_notes",
                                             "reviewed_by", "reviewed_at")}),
     )
+
+    @admin.display(description="Supporting documents")
+    def documents_summary(self, obj):
+        if obj is None or obj.pk is None:
+            return "-"
+        documents = list(obj.documents.all())
+        if not documents:
+            return format_html("<strong style='color:#b42318'>{}</strong>", "No documents uploaded yet.")
+        # Files are private: they open only through the login-protected download page.
+        return format_html_join(
+            mark_safe("<br>"), "<a href='{}' target='_blank' rel='noopener'>{}</a> (uploaded {})",
+            ((reverse("download_document", args=[d.pk]), d.get_kind_display(),
+              d.uploaded_at.strftime("%d %b %Y")) for d in documents))
 
     @admin.display(description="How the suggestion was worked out")
     def score_breakdown(self, obj):

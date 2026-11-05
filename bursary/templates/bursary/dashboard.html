@@ -3,7 +3,17 @@
 {% block content %}
 <h1>Dashboard</h1>
 <p class="greet">Hi, {{ profile.full_name }}! &#128075;</p>
-<p class="muted">{{ profile.institution }} &middot; {{ profile.course_or_form }} &middot; Admission no. {{ profile.admission_number }}</p>
+
+<div class="panel">
+  <h2>My profile</h2>
+  <div class="profile">
+    <div><span>Institution</span>{{ profile.institution }}</div>
+    <div><span>Course / class</span>{{ profile.course_or_form }}</div>
+    <div><span>Admission number</span>{{ profile.admission_number }}</div>
+    <div><span>County / ward</span>{{ profile.county }}{% if profile.ward %} / {{ profile.ward }}{% endif %}</div>
+  </div>
+  <p style="margin:14px 0 0"><a class="btn secondary" href="{% url 'password_change' %}">Change password</a></p>
+</div>
 
 {% if available_rounds %}
 <div class="panel">
@@ -11,7 +21,8 @@
   <div class="tiles">
   {% for r in available_rounds %}
     <div class="tile"><div class="t">{{ r.name }}</div>
-      <div class="when">Closes {{ r.closes_on|date:"l, j F Y" }}</div>
+      <div class="when">Closes {{ r.closes_on|date:"l, j F Y" }}
+        &middot; <span class="due">{% if r.days_left == 0 %}closes today{% elif r.days_left == 1 %}1 day left{% else %}{{ r.days_left }} days left{% endif %}</span></div>
       <p><a class="btn" href="{% url 'apply' r.id %}">Apply now</a></p></div>
   {% endfor %}
   </div>
@@ -20,16 +31,20 @@
 
 <div class="panel">
   <h2>My applications</h2>
+  {% for a in applications %}{% if a.missing_docs %}
+    <div class="notice"><strong>{{ a.bursary_round.name }}:</strong> please upload {{ a.missing_docs|join:", " }}.
+      <a href="{% url 'application_detail' a.pk %}">Upload documents</a></div>
+  {% endif %}{% endfor %}
   {% if applications %}
   <table>
-    <thead><tr><th>Round</th><th>Submitted</th><th>Requested</th><th>Status</th><th>Awarded</th><th></th></tr></thead>
+    <thead><tr><th>Round</th><th>Submitted</th><th>Requested</th><th>Progress</th><th>Awarded</th><th></th></tr></thead>
     <tbody>
     {% for a in applications %}
       <tr>
         <td>{{ a.bursary_round.name }}</td>
         <td>{{ a.submitted_at|date:"j M Y" }}</td>
         <td>KES {{ a.amount_requested|floatformat:"0g" }}</td>
-        <td><span class="badge {{ a.status }}">{{ a.get_status_display }}</span></td>
+        <td><div class="steps s{{ a.step }} {{ a.status }}"><span>Submitted</span><span>Review</span><span>{% if a.step == 3 %}{{ a.get_status_display }}{% else %}Decision{% endif %}</span></div></td>
         <td>{% if a.status == "approved" %}KES {{ a.amount_awarded|floatformat:"0g" }}{% else %}&mdash;{% endif %}</td>
         <td><a href="{% url 'application_detail' a.pk %}">View</a></td>
       </tr>

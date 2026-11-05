@@ -1,3 +1,5 @@
+import re
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -71,8 +73,18 @@ class StudentRegistrationForm(UserCreationForm):
                            "A student with this admission number is already registered at this institution.")
         return cleaned
 
+    def clean_phone(self):
+        digits = re.sub(r"[\s\-]", "", self.cleaned_data["phone"])
+        if not re.fullmatch(r"(?:\+?254|0)[17]\d{8}", digits):
+            raise forms.ValidationError(
+                "Enter a Kenyan phone number such as 0712 345 678 or +254712345678.")
+        return digits
+
     def clean_national_id(self):
         value = self.cleaned_data["national_id"].strip()
+        if not re.fullmatch(r"[A-Za-z0-9/\-]{5,20}", value):
+            raise forms.ValidationError(
+                "Enter a valid ID or birth certificate number: 5 to 20 letters or digits.")
         if StudentProfile.objects.filter(national_id=value).exists():
             raise forms.ValidationError("An account with this ID already exists.")
         return value
