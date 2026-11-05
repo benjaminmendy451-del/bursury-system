@@ -48,6 +48,7 @@
     .steps.rejected span:nth-child(3) { background:#9b1c1c; } .steps.waitlisted span:nth-child(3) { background:#2a3f8f; }
     .profile { display:grid; gap:6px 24px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); } .profile div span { display:block; color:var(--muted); font-size:.8rem; }
     .due { color:#7a5200; font-weight:600; }
+    .pw-toggle { margin-top:6px; background:none; border:0; color:var(--brand); cursor:pointer; font:inherit; text-decoration:underline; padding:0; }
     footer { text-align:center; color:var(--muted); font-size:.9rem; padding:24px 20px 40px; }
     .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
   </style>
@@ -81,5 +82,20 @@
   {% block content %}{% endblock %}
 </main>
 <footer>&copy; 2026 BursaryNexa &middot; Bursary management system</footer>
+<script>
+  // Adds a Show/Hide button under every password box (login, register, reset, change).
+  document.querySelectorAll('input[type=password]').forEach(function (input) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'pw-toggle';
+    button.textContent = 'Show password';
+    button.addEventListener('click', function () {
+      var hidden = input.type === 'password';
+      input.type = hidden ? 'text' : 'password';
+      button.textContent = hidden ? 'Hide password' : 'Show password';
+    });
+    input.insertAdjacentElement('afterend', button);
+  });
+</script>
 </body>
 </html>

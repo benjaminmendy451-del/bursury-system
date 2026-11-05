@@ -206,3 +206,8 @@ class ReviewPageDocumentsTests(TestCase):
                 file=SimpleUploadedFile("id.pdf", b"%PDF-1.4 test", content_type="application/pdf"))
             page = self.client.get(reverse("admin:bursary_application_change", args=[application.pk]))
             self.assertContains(page, reverse("download_document", args=[doc.pk]))
+
+
+class ShowPasswordTests(TestCase):
+    def test_login_page_has_the_show_password_button_script(self):
+        self.assertContains(self.client.get(reverse("login")), "pw-toggle")

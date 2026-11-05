@@ -39,10 +39,16 @@ ALLOWED_HOSTS = [h for h in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,lo
 CSRF_TRUSTED_ORIGINS = [o for o in os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",") if o]
 
 if not DEBUG:
+    # Refuse to start a live site with the throwaway development key.
+    if SECRET_KEY == "dev-only-insecure-key-change-me":
+        from django.core.exceptions import ImproperlyConfigured
+        raise ImproperlyConfigured("Set DJANGO_SECRET_KEY before running with DJANGO_DEBUG=False.")
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    # Tell browsers to use HTTPS only. One hour to start; raise it once everything works.
+    SECURE_HSTS_SECONDS = 3600
 
 # --- Apps -----------------------------------------------------------------
 INSTALLED_APPS = [
@@ -137,6 +143,17 @@ USE_I18N = True
 USE_TZ = True
 
 # --- Static & uploaded files ---------------------------------------------
+# WhiteNoise serves the site's CSS and images when DEBUG is off. It is switched on
+# only if installed (pip install whitenoise), so local development works either way.
+import importlib.util
+
+if importlib.util.find_spec("whitenoise"):
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+    STORAGES = {
+        "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+        "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+    }
+
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "media/"
