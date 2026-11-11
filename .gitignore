@@ -24,3 +24,5 @@ Thumbs.db
 # Database backups contain personal data - NEVER commit these
 backups/
 *.sql
+bursary_data.json
+bursary_full.json
