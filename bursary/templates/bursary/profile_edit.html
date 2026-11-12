@@ -1,0 +1,15 @@
+{% extends "bursary/base.html" %}
+{% block title %}Edit my details{% endblock %}
+{% block content %}
+<h1>Edit my details</h1>
+<p class="muted">Fixed a typo? Correct it here. You can change your details until the committee has decided your application.</p>
+<div class="card">
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Save changes</button>
+    <a class="btn secondary" href="{% url 'dashboard' %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

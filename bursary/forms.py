@@ -109,6 +109,110 @@ class StudentRegistrationForm(UserCreationForm):
         return user
 
 
+class StudentDetailsForm(forms.Form):
+    """Lets a student correct the details they typed when registering."""
+
+    full_name = forms.CharField(max_length=150)
+    email = forms.EmailField()
+    national_id = forms.CharField(max_length=20, label="National ID / Birth certificate no.")
+    phone = forms.CharField(max_length=20)
+    county = forms.ChoiceField(choices=COUNTY_CHOICES)
+    ward = forms.CharField(max_length=80, required=False)
+    institution = forms.CharField(max_length=200, label="School / College / University")
+    institution_other = forms.CharField(
+        max_length=200, required=False, label="Name of your school / college (only if not listed)")
+    admission_number = forms.CharField(max_length=50)
+    course_or_form = forms.CharField(max_length=120, label="Course or class/form")
+    year_of_study = forms.IntegerField(min_value=1, max_value=10)
+
+    OTHER = "__other__"
+
+    def __init__(self, *args, profile, **kwargs):
+        self.profile = profile
+        initial = {
+            "full_name": profile.full_name, "email": profile.user.email,
+            "national_id": profile.national_id, "phone": profile.phone, "county": profile.county,
+            "ward": profile.ward, "institution": profile.institution,
+            "admission_number": profile.admission_number, "course_or_form": profile.course_or_form,
+            "year_of_study": profile.year_of_study,
+        }
+        super().__init__(*args, initial=initial, **kwargs)
+
+        wards = {}
+        for county, name in Ward.objects.values_list("county", "name"):
+            wards.setdefault(county, []).append((name, name))
+        self.has_ward_list = bool(wards)
+        if wards:
+            grouped = [(county, wards[county]) for county in sorted(wards)]
+            self.fields["ward"] = forms.ChoiceField(
+                choices=[("", "Select your ward")] + grouped, required=False)
+
+        names = list(Institution.objects.values_list("name", flat=True))
+        self.has_institution_list = bool(names)
+        if names:
+            self.fields["institution"] = forms.ChoiceField(
+                label="School / College / University",
+                choices=[("", "Select your school / college")] + [(n, n) for n in names]
+                        + [(self.OTHER, "My school / college is not listed")])
+            if profile.institution not in names:
+                self.initial["institution"] = self.OTHER
+                self.initial["institution_other"] = profile.institution
+        else:
+            del self.fields["institution_other"]
+
+    def clean_phone(self):
+        digits = re.sub(r"[\s\-]", "", self.cleaned_data["phone"])
+        if digits == self.profile.phone:
+            return digits  # unchanged, so do not re-check an older saved value
+        if not re.fullmatch(r"(?:\+?254|0)[17]\d{8}", digits):
+            raise forms.ValidationError(
+                "Enter a Kenyan phone number such as 0712 345 678 or +254712345678.")
+        return digits
+
+    def clean_national_id(self):
+        value = self.cleaned_data["national_id"].strip()
+        if value == self.profile.national_id:
+            return value
+        if not re.fullmatch(r"[A-Za-z0-9/\-]{5,20}", value):
+            raise forms.ValidationError(
+                "Enter a valid ID or birth certificate number: 5 to 20 letters or digits.")
+        if StudentProfile.objects.exclude(pk=self.profile.pk).filter(national_id=value).exists():
+            raise forms.ValidationError("Another account already uses this ID.")
+        return value
+
+    def clean(self):
+        cleaned = super().clean()
+        county, ward = cleaned.get("county"), cleaned.get("ward")
+        if self.has_ward_list and ward and county:
+            if not Ward.objects.filter(county=county, name=ward).exists():
+                self.add_error("ward", "This ward is not in the county you selected.")
+        if self.has_institution_list and cleaned.get("institution") == self.OTHER:
+            other = (cleaned.get("institution_other") or "").strip()
+            if not other:
+                self.add_error("institution_other", "Please type the name of your school or college.")
+            else:
+                cleaned["institution"] = other
+        institution = cleaned.get("institution")
+        admission = (cleaned.get("admission_number") or "").strip()
+        if institution and admission and StudentProfile.objects.exclude(pk=self.profile.pk).filter(
+                institution__iexact=institution, admission_number__iexact=admission).exists():
+            self.add_error("admission_number",
+                           "Another student is already registered with this admission number at this institution.")
+        return cleaned
+
+    @transaction.atomic
+    def save(self):
+        data = self.cleaned_data
+        user = self.profile.user
+        user.email = data["email"]
+        user.save(update_fields=["email"])
+        for field in ("full_name", "national_id", "phone", "county", "ward", "institution",
+                      "admission_number", "course_or_form", "year_of_study"):
+            setattr(self.profile, field, data[field])
+        self.profile.save()
+        return self.profile
+
+
 class ApplicationForm(forms.ModelForm):
     class Meta:
         model = Application

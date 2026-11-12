@@ -211,3 +211,62 @@ class ReviewPageDocumentsTests(TestCase):
 class ShowPasswordTests(TestCase):
     def test_login_page_has_the_show_password_button_script(self):
         self.assertContains(self.client.get(reverse("login")), "pw-toggle")
+
+
+class StudentEditTests(TestCase):
+    def setUp(self):
+        self.round = make_round()
+        self.student = make_student(1, "Nairobi")
+        self.other = make_student(2, "Nairobi")
+        self.application = make_application(self.round, self.student, Application.Status.SUBMITTED, 5000)
+        self.client.login(username="student1", password="pass12345")
+
+    def _details(self, **extra):
+        data = {"full_name": "Student One", "email": "student1@example.com", "national_id": "ID1",
+                "phone": "0712345678", "county": "Nairobi", "ward": "Kileleshwa",
+                "institution": "Test University", "admission_number": "ADM1",
+                "course_or_form": "Course", "year_of_study": 1}
+        data.update(extra)
+        return data
+
+    def test_student_can_correct_their_details_and_it_is_logged(self):
+        response = self.client.post(reverse("edit_profile"), self._details(phone="0722 000 111"))
+        self.assertRedirects(response, reverse("dashboard"))
+        self.student.refresh_from_db()
+        self.assertEqual(self.student.phone, "0722000111")
+        self.assertTrue(LogEntry.objects.filter(object_id=str(self.student.pk),
+                                                change_message__contains="phone").exists())
+
+    def test_admission_number_of_another_student_is_refused(self):
+        response = self.client.post(reverse("edit_profile"), self._details(admission_number="ADM2"))
+        self.assertContains(response, "Another student is already registered")
+        self.student.refresh_from_db()
+        self.assertEqual(self.student.admission_number, "ADM1")
+
+    def test_details_are_locked_after_a_decision(self):
+        self.application.status = Application.Status.APPROVED
+        self.application.amount_awarded = 1000
+        self.application.save()
+        response = self.client.post(reverse("edit_profile"), self._details(phone="0722000111"))
+        self.assertRedirects(response, reverse("dashboard"))
+        self.student.refresh_from_db()
+        self.assertEqual(self.student.phone, "0712345678")
+
+    def test_student_can_edit_a_submitted_application(self):
+        response = self.client.post(reverse("edit_application", args=[self.application.pk]), {
+            "annual_family_income": 50000, "dependants_in_school": 1, "orphan_status": "none",
+            "total_fees": 60000, "fees_paid": 0, "amount_requested": 4000, "reason": "Corrected reason"})
+        self.assertRedirects(response, reverse("application_detail", args=[self.application.pk]))
+        self.application.refresh_from_db()
+        self.assertEqual(self.application.amount_requested, 4000)
+
+    def test_application_cannot_be_edited_once_review_starts(self):
+        self.application.status = Application.Status.UNDER_REVIEW
+        self.application.save()
+        response = self.client.get(reverse("edit_application", args=[self.application.pk]))
+        self.assertRedirects(response, reverse("application_detail", args=[self.application.pk]))
+
+    def test_student_cannot_edit_someone_elses_application(self):
+        self.client.logout()
+        self.client.login(username="student2", password="pass12345")
+        self.assertEqual(self.client.get(reverse("edit_application", args=[self.application.pk])).status_code, 404)

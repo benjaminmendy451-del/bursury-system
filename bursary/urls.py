@@ -23,6 +23,8 @@ urlpatterns = [
         template_name="registration/pw_change_form.html"), name="password_change"),
     path("password-change/done/", auth_views.PasswordChangeDoneView.as_view(
         template_name="registration/pw_change_done.html"), name="password_change_done"),
+    path("profile/edit/", views.edit_profile, name="edit_profile"),
+    path("applications/<int:pk>/edit/", views.edit_application, name="edit_application"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("applications/<int:pk>/award-letter/", views.award_letter, name="award_letter"),
     path("apply/<int:round_id>/", views.apply, name="apply"),

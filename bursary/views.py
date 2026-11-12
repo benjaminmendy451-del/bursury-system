@@ -4,6 +4,7 @@ from email.utils import parseaddr
 
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.admin.models import CHANGE, LogEntry
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required, permission_required
@@ -14,7 +15,7 @@ from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 
-from .forms import ApplicationForm, DocumentForm, StudentRegistrationForm
+from .forms import ApplicationForm, DocumentForm, StudentDetailsForm, StudentRegistrationForm
 from .models import Application, BursaryRound, Document, StudentProfile
 from .notifications import notify_submitted
 from .reports import build_report
@@ -122,6 +123,58 @@ def dashboard(request):
     return render(request, "bursary/dashboard.html", {
         "profile": profile, "applications": page, "available_rounds": available,
     })
+
+
+def _audit(request, obj, message):
+    """Record a student's own edit in the same audit trail the committee uses."""
+    LogEntry.objects.log_actions(request.user.pk, [obj], CHANGE, message)
+
+
+@login_required
+def edit_profile(request):
+    profile = _get_profile(request)
+    if profile is None:
+        messages.error(request, "Only student accounts have details to edit.")
+        return redirect("admin:index")
+    if profile.applications.exclude(status__in=EDITABLE_STATUSES).exists():
+        messages.error(request, "Your application has been decided, so your details are locked. "
+                                "Please contact the bursary office to correct them.")
+        return redirect("dashboard")
+    form = StudentDetailsForm(request.POST or None, profile=profile)
+    if request.method == "POST" and form.is_valid():
+        changed = list(form.changed_data)
+        if changed:
+            form.save()
+            _audit(request, profile, "Student edited their own details: " + ", ".join(changed) + ".")
+            messages.success(request, "Your details have been updated.")
+        else:
+            messages.info(request, "No changes were made.")
+        return redirect("dashboard")
+    return render(request, "bursary/profile_edit.html", {"form": form})
+
+
+@login_required
+def edit_application(request, pk):
+    profile = _get_profile(request)
+    if profile is None:
+        raise Http404
+    application = get_object_or_404(Application, pk=pk, student=profile)
+    if application.status != Application.Status.SUBMITTED:
+        messages.error(request, "This application is already being reviewed or decided, "
+                                "so it can no longer be changed.")
+        return redirect("application_detail", pk=application.pk)
+    form = ApplicationForm(request.POST or None, instance=application,
+                           bursary_round=application.bursary_round)
+    if request.method == "POST" and form.is_valid():
+        changed = list(form.changed_data)
+        if changed:
+            form.save()
+            _audit(request, application, "Student edited their application: " + ", ".join(changed) + ".")
+            messages.success(request, "Your application has been updated.")
+        else:
+            messages.info(request, "No changes were made.")
+        return redirect("application_detail", pk=application.pk)
+    return render(request, "bursary/application_edit.html", {"form": form, "application": application})
 
 
 @login_required

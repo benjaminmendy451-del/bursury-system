@@ -4,6 +4,11 @@
 <h1>Dashboard</h1>
 <p class="greet">Hi, {{ profile.full_name }}! &#128075;</p>
 
+<div class="tiles" style="margin-bottom:22px">
+  <div class="stat"><b>{{ applications.paginator.count }}</b>My application{{ applications.paginator.count|pluralize }}</div>
+  <div class="stat"><b>{{ available_rounds|length }}</b>Open bursar{{ available_rounds|length|pluralize:"y,ies" }}</div>
+</div>
+
 <div class="panel">
   <h2>My profile</h2>
   <div class="profile">
@@ -12,7 +17,8 @@
     <div><span>Admission number</span>{{ profile.admission_number }}</div>
     <div><span>County / ward</span>{{ profile.county }}{% if profile.ward %} / {{ profile.ward }}{% endif %}</div>
   </div>
-  <p style="margin:14px 0 0"><a class="btn secondary" href="{% url 'password_change' %}">Change password</a></p>
+  <p style="margin:14px 0 0"><a class="btn secondary" href="{% url 'edit_profile' %}">Edit my details</a>
+    <a class="btn secondary" href="{% url 'password_change' %}">Change password</a></p>
 </div>
 
 {% if available_rounds %}

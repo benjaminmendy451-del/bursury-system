@@ -1,6 +1,7 @@
 {% extends "bursary/base.html" %}
 {% block title %}Log in{% endblock %}
 {% block content %}
+<div class="narrow">
 <h1>Log in</h1>
 <div class="card">
   <form method="post" novalidate>
@@ -13,5 +14,6 @@
   </form>
   <p class="muted"><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
   <p class="muted">New here? <a href="{% url 'register' %}">Create a student account</a>.</p>
+</div>
 </div>
 {% endblock %}

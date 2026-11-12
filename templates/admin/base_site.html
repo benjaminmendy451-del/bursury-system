@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+{% block extrastyle %}{{ block.super }}
+<style>
+  :root {
+    --primary:#1d7a43; --secondary:#14532d; --accent:#f2b705; --primary-fg:#fff;
+    --header-color:#e8f4ed; --header-branding-color:#fff; --header-bg:#14532d; --header-link-color:#fff;
+    --breadcrumbs-bg:#1d7a43; --breadcrumbs-fg:#e8f4ed; --breadcrumbs-link-fg:#fff;
+    --link-fg:#14532d; --link-hover-color:#1d7a43; --link-selected-fg:#14532d;
+    --button-bg:#14532d; --button-hover-bg:#1d7a43; --default-button-bg:#14532d; --default-button-hover-bg:#1d7a43;
+    --object-tools-bg:#5f6c65; --object-tools-hover-bg:#14532d;
+  }
+  #header { border-bottom:3px solid #f2b705; box-shadow:0 4px 16px rgba(16,35,26,.2); }
+  #site-name a { font-weight:800; letter-spacing:-.01em; }
+  .module { border-radius:10px; overflow:hidden; }
+  .module caption, .module h2 { background:#14532d; color:#fff; }
+  #changelist .paginator, .results { border-radius:8px; }
+</style>
+{% endblock %}
+{% block nav-global %}<a href="/" style="color:#fff;margin-right:18px;font-weight:600">&larr; Back to BursaryNexa site</a>{% endblock %}

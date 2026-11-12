@@ -16,6 +16,8 @@
 
 <div class="card">
   <h2>Your application</h2>
+  {% if application.status == "submitted" %}<p><a class="btn secondary" href="{% url 'edit_application' application.pk %}">Edit my application</a>
+    <span class="muted">You can change it until the committee starts reviewing.</span></p>{% endif %}
   <table>
     <tr><th>Amount requested</th><td>KES {{ application.amount_requested|floatformat:"0g" }}</td></tr>
     <tr><th>Total fees / paid / balance</th><td>KES {{ application.total_fees|floatformat:"0g" }} / KES {{ application.fees_paid|floatformat:"0g" }} / KES {{ application.fee_balance|floatformat:"0g" }}</td></tr>
