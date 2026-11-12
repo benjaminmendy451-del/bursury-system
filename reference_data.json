@@ -1,0 +1,12069 @@
+[
+{
+  "model": "bursary.ward",
+  "pk": 1,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kileleshwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 2,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kilimani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 4,
+  "fields": {
+    "county": "Baringo",
+    "name": "Bartabwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 5,
+  "fields": {
+    "county": "Baringo",
+    "name": "Barwessa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 6,
+  "fields": {
+    "county": "Baringo",
+    "name": "Churo/Amaya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 7,
+  "fields": {
+    "county": "Baringo",
+    "name": "Emining"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 8,
+  "fields": {
+    "county": "Baringo",
+    "name": "Ewalel Chapchap"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 9,
+  "fields": {
+    "county": "Baringo",
+    "name": "Ilchamus"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 10,
+  "fields": {
+    "county": "Baringo",
+    "name": "Kabarnet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 11,
+  "fields": {
+    "county": "Baringo",
+    "name": "Kabartonjo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 12,
+  "fields": {
+    "county": "Baringo",
+    "name": "Kapropita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 13,
+  "fields": {
+    "county": "Baringo",
+    "name": "Kisanana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 14,
+  "fields": {
+    "county": "Baringo",
+    "name": "Koibatek"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 15,
+  "fields": {
+    "county": "Baringo",
+    "name": "Kolowa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 16,
+  "fields": {
+    "county": "Baringo",
+    "name": "Lembus"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 17,
+  "fields": {
+    "county": "Baringo",
+    "name": "Lembus Kwen"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 18,
+  "fields": {
+    "county": "Baringo",
+    "name": "Lembus/Perkerra"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 19,
+  "fields": {
+    "county": "Baringo",
+    "name": "Loiyamorock"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 20,
+  "fields": {
+    "county": "Baringo",
+    "name": "Marigat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 21,
+  "fields": {
+    "county": "Baringo",
+    "name": "Mochongoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 22,
+  "fields": {
+    "county": "Baringo",
+    "name": "Mogotio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 23,
+  "fields": {
+    "county": "Baringo",
+    "name": "Mukutani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 24,
+  "fields": {
+    "county": "Baringo",
+    "name": "Mumberes/Maji Mazuri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 25,
+  "fields": {
+    "county": "Baringo",
+    "name": "Ravine"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 26,
+  "fields": {
+    "county": "Baringo",
+    "name": "Ribkwo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 27,
+  "fields": {
+    "county": "Baringo",
+    "name": "Sacho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 28,
+  "fields": {
+    "county": "Baringo",
+    "name": "Saimo/Kipsaraman"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 29,
+  "fields": {
+    "county": "Baringo",
+    "name": "Saimo/Soi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 30,
+  "fields": {
+    "county": "Baringo",
+    "name": "Silale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 31,
+  "fields": {
+    "county": "Baringo",
+    "name": "Tangulbei/Korossi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 32,
+  "fields": {
+    "county": "Baringo",
+    "name": "Tenges"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 33,
+  "fields": {
+    "county": "Baringo",
+    "name": "Tirioko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 34,
+  "fields": {
+    "county": "Bomet",
+    "name": "Boito"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 35,
+  "fields": {
+    "county": "Bomet",
+    "name": "Chebunyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 36,
+  "fields": {
+    "county": "Bomet",
+    "name": "Chemagel"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 37,
+  "fields": {
+    "county": "Bomet",
+    "name": "Chemaner"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 38,
+  "fields": {
+    "county": "Bomet",
+    "name": "Chepchabas"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 39,
+  "fields": {
+    "county": "Bomet",
+    "name": "Chesoen"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 40,
+  "fields": {
+    "county": "Bomet",
+    "name": "Embomos"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 41,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kapletundo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 42,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kembu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 43,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kimulot"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 44,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kipreres"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 45,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kipsonoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 46,
+  "fields": {
+    "county": "Bomet",
+    "name": "Kong'asis"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 47,
+  "fields": {
+    "county": "Bomet",
+    "name": "Longisa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 48,
+  "fields": {
+    "county": "Bomet",
+    "name": "Merigi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 49,
+  "fields": {
+    "county": "Bomet",
+    "name": "Mogogosiek"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 50,
+  "fields": {
+    "county": "Bomet",
+    "name": "Mutarakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 51,
+  "fields": {
+    "county": "Bomet",
+    "name": "Ndanai/Abosi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 52,
+  "fields": {
+    "county": "Bomet",
+    "name": "Ndaraweta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 53,
+  "fields": {
+    "county": "Bomet",
+    "name": "Nyangores"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 54,
+  "fields": {
+    "county": "Bomet",
+    "name": "Rongena/Manaret"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 55,
+  "fields": {
+    "county": "Bomet",
+    "name": "Sigor"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 56,
+  "fields": {
+    "county": "Bomet",
+    "name": "Silibwet Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 57,
+  "fields": {
+    "county": "Bomet",
+    "name": "Singorwet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 58,
+  "fields": {
+    "county": "Bomet",
+    "name": "Siongiroi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 59,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Bokoli"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 60,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Bukembe East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 61,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Bukembe West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 62,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Bumula"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 63,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Bwake/Luuya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 64,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Cheptais"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 65,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Chepyuk"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 66,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Chesikaki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 67,
+  "fields": {
+    "county": "Bungoma",
+    "name": "East Sang'alo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 68,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Elgon"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 69,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kabuchai/Chwele"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 70,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kabula"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 71,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kamukuywa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 72,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kapkateny"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 73,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kaptama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 74,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Khalaba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 75,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Khasoko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 76,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kibingei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 77,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kimaeti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 78,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Kimilili"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 79,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Lwandanyi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 80,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Maeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 81,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Malakisi/South Kulisiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 82,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Maraka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 83,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Marakaru/Tuuti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 84,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Matulo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 85,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Mbakalo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 86,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Mihuu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 87,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Milima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 88,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Misikhu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 89,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Mukuyuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 90,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Musikoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 91,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Naitiri/Kabuyefwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 92,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Namwela"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 93,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Ndalu/ Tabani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 94,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Ndivisi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 95,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Sang'alo West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 96,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Siboti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 97,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Sitikho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 98,
+  "fields": {
+    "county": "Bungoma",
+    "name": "South Bukusu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 99,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Soysambu/ Mitua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 100,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Tongaren"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 101,
+  "fields": {
+    "county": "Bungoma",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 102,
+  "fields": {
+    "county": "Bungoma",
+    "name": "West Bukusu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 103,
+  "fields": {
+    "county": "Bungoma",
+    "name": "West Nalondo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 104,
+  "fields": {
+    "county": "Busia",
+    "name": "Ageng'a Nanguba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 105,
+  "fields": {
+    "county": "Busia",
+    "name": "Amukura Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 106,
+  "fields": {
+    "county": "Busia",
+    "name": "Amukura East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 107,
+  "fields": {
+    "county": "Busia",
+    "name": "Amukura West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 108,
+  "fields": {
+    "county": "Busia",
+    "name": "Ang'orom"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 109,
+  "fields": {
+    "county": "Busia",
+    "name": "Ang'urai East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 110,
+  "fields": {
+    "county": "Busia",
+    "name": "Ang'urai North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 111,
+  "fields": {
+    "county": "Busia",
+    "name": "Ang'urai South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 112,
+  "fields": {
+    "county": "Busia",
+    "name": "Bukhayo Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 113,
+  "fields": {
+    "county": "Busia",
+    "name": "Bukhayo East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 114,
+  "fields": {
+    "county": "Busia",
+    "name": "Bukhayo North/Waltsi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 115,
+  "fields": {
+    "county": "Busia",
+    "name": "Bukhayo West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 116,
+  "fields": {
+    "county": "Busia",
+    "name": "Bunyala Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 117,
+  "fields": {
+    "county": "Busia",
+    "name": "Bunyala North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 118,
+  "fields": {
+    "county": "Busia",
+    "name": "Bunyala South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 119,
+  "fields": {
+    "county": "Busia",
+    "name": "Bunyala West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 120,
+  "fields": {
+    "county": "Busia",
+    "name": "Burumba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 121,
+  "fields": {
+    "county": "Busia",
+    "name": "Busibwabo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 122,
+  "fields": {
+    "county": "Busia",
+    "name": "Bwiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 123,
+  "fields": {
+    "county": "Busia",
+    "name": "Chakol North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 124,
+  "fields": {
+    "county": "Busia",
+    "name": "Chakol South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 125,
+  "fields": {
+    "county": "Busia",
+    "name": "Elugulu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 126,
+  "fields": {
+    "county": "Busia",
+    "name": "Kingandole"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 127,
+  "fields": {
+    "county": "Busia",
+    "name": "Malaba Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 128,
+  "fields": {
+    "county": "Busia",
+    "name": "Malaba North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 129,
+  "fields": {
+    "county": "Busia",
+    "name": "Malaba South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 130,
+  "fields": {
+    "county": "Busia",
+    "name": "Marachi Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 131,
+  "fields": {
+    "county": "Busia",
+    "name": "Marachi East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 132,
+  "fields": {
+    "county": "Busia",
+    "name": "Marachi North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 133,
+  "fields": {
+    "county": "Busia",
+    "name": "Marachi West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 134,
+  "fields": {
+    "county": "Busia",
+    "name": "Matayos South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 135,
+  "fields": {
+    "county": "Busia",
+    "name": "Mayenje"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 136,
+  "fields": {
+    "county": "Busia",
+    "name": "Nambale Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 137,
+  "fields": {
+    "county": "Busia",
+    "name": "Namboboto Nambuku"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 138,
+  "fields": {
+    "county": "Busia",
+    "name": "Nangina"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 139,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Arror"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 140,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Chepkorio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 141,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Cherang'any/Chebororwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 142,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Embobut / Embulot"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 143,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Emsoo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 144,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Endo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 145,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kabiemit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 146,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kamariny"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 147,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kapchemutwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 148,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kapsowar"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 149,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kaptarakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 150,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Kapyego"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 151,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Lelan"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 152,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Metkei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 153,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Moiben/Kuserwo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 154,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Sambirir"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 155,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Sengwer"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 156,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Soy North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 157,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Soy South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 158,
+  "fields": {
+    "county": "Elgeyo-Marakwet",
+    "name": "Tambach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 159,
+  "fields": {
+    "county": "Embu",
+    "name": "Central Ward"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 160,
+  "fields": {
+    "county": "Embu",
+    "name": "Evurore"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 161,
+  "fields": {
+    "county": "Embu",
+    "name": "Gaturi North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 162,
+  "fields": {
+    "county": "Embu",
+    "name": "Gaturi South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 163,
+  "fields": {
+    "county": "Embu",
+    "name": "Kagaari North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 164,
+  "fields": {
+    "county": "Embu",
+    "name": "Kagaari South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 165,
+  "fields": {
+    "county": "Embu",
+    "name": "Kiambere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 166,
+  "fields": {
+    "county": "Embu",
+    "name": "Kirimari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 167,
+  "fields": {
+    "county": "Embu",
+    "name": "Kithimu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 168,
+  "fields": {
+    "county": "Embu",
+    "name": "Kyeni North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 169,
+  "fields": {
+    "county": "Embu",
+    "name": "Kyeni South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 170,
+  "fields": {
+    "county": "Embu",
+    "name": "Makima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 171,
+  "fields": {
+    "county": "Embu",
+    "name": "Mavuria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 172,
+  "fields": {
+    "county": "Embu",
+    "name": "Mbeti North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 173,
+  "fields": {
+    "county": "Embu",
+    "name": "Mbeti South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 174,
+  "fields": {
+    "county": "Embu",
+    "name": "Muminji"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 175,
+  "fields": {
+    "county": "Embu",
+    "name": "Mwea"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 176,
+  "fields": {
+    "county": "Embu",
+    "name": "Nginda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 177,
+  "fields": {
+    "county": "Embu",
+    "name": "Nthawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 178,
+  "fields": {
+    "county": "Embu",
+    "name": "Ruguru/Ngandori"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 179,
+  "fields": {
+    "county": "Garissa",
+    "name": "Abakaile"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 180,
+  "fields": {
+    "county": "Garissa",
+    "name": "Balambala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 181,
+  "fields": {
+    "county": "Garissa",
+    "name": "Baraki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 182,
+  "fields": {
+    "county": "Garissa",
+    "name": "Benane"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 183,
+  "fields": {
+    "county": "Garissa",
+    "name": "Bura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 184,
+  "fields": {
+    "county": "Garissa",
+    "name": "Dadaab"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 185,
+  "fields": {
+    "county": "Garissa",
+    "name": "Damajale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 186,
+  "fields": {
+    "county": "Garissa",
+    "name": "Danyere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 187,
+  "fields": {
+    "county": "Garissa",
+    "name": "Dekaharia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 188,
+  "fields": {
+    "county": "Garissa",
+    "name": "Dertu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 189,
+  "fields": {
+    "county": "Garissa",
+    "name": "Fafi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 190,
+  "fields": {
+    "county": "Garissa",
+    "name": "Galbet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 191,
+  "fields": {
+    "county": "Garissa",
+    "name": "Goreale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 192,
+  "fields": {
+    "county": "Garissa",
+    "name": "Hulugho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 193,
+  "fields": {
+    "county": "Garissa",
+    "name": "Iftin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 194,
+  "fields": {
+    "county": "Garissa",
+    "name": "Ijara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 195,
+  "fields": {
+    "county": "Garissa",
+    "name": "Jara Jara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 196,
+  "fields": {
+    "county": "Garissa",
+    "name": "Jarajila"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 197,
+  "fields": {
+    "county": "Garissa",
+    "name": "Labasigale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 198,
+  "fields": {
+    "county": "Garissa",
+    "name": "Liboi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 199,
+  "fields": {
+    "county": "Garissa",
+    "name": "Maalimin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 200,
+  "fields": {
+    "county": "Garissa",
+    "name": "Masalani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 201,
+  "fields": {
+    "county": "Garissa",
+    "name": "Modogashe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 202,
+  "fields": {
+    "county": "Garissa",
+    "name": "Nanighi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 203,
+  "fields": {
+    "county": "Garissa",
+    "name": "Sabena"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 204,
+  "fields": {
+    "county": "Garissa",
+    "name": "Saka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 205,
+  "fields": {
+    "county": "Garissa",
+    "name": "Sangailu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 206,
+  "fields": {
+    "county": "Garissa",
+    "name": "Sankuri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 207,
+  "fields": {
+    "county": "Garissa",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 208,
+  "fields": {
+    "county": "Garissa",
+    "name": "Waberi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 209,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 210,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Central Kasipul"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 211,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "East Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 212,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "East Kamagak"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 213,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Gembe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 214,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Gwassi North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 215,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Gwassi South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 216,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Homa Bay Arujo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 217,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Homa Bay Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 218,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Homa Bay East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 219,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Homa Bay West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 220,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kabondo East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 221,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kabondo West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 222,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kabuoch South/Pala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 223,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kagan"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 224,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kaksingri West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 225,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kanyadoto"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 226,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kanyaluo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 227,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kanyamwa Kologi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 228,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kanyamwa Kosewe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 229,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kanyikela"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 230,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kasgunga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 231,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kendu Bay Town"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 232,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kibiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 233,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kochia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 234,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kojwach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 235,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kokwanyo/Kakelo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 236,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Kwabwai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 237,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Lambwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 238,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Mfangano Island"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 239,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "North Kabuoch"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 240,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "North Karachuonyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 241,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Ruma Kaksingri East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 242,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Rusinga Island"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 243,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "South Kasipul"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 244,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "Wangchieng"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 245,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "West Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 246,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "West Kamagak"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 247,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "West Karachuonyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 248,
+  "fields": {
+    "county": "Homa Bay",
+    "name": "West Kasipul"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 249,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Bulla Pesa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 250,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Burat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 251,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Chari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 252,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Cherab"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 253,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Garbatulla"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 254,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Kinna"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 255,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Ngare Mara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 256,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Oldonyiro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 257,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Sericho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 258,
+  "fields": {
+    "county": "Isiolo",
+    "name": "Wabera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 259,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Dalalekutuk"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 260,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Entonet/Lenkisim"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 261,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Ewuaso Oonkidong'i"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 262,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Ildamat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 263,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Iloodokilani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 264,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Imaroro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 265,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Kaputiei North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 266,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Keekonyokie"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 267,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Kenyawa-Poka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 268,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Kimana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 269,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Kitengela"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 270,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Kuku"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 271,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Magadi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 272,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Matapato North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 273,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Matapato South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 274,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Mbirikani/Eselenkei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 275,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Mosiro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 276,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Ngong"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 277,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Nkaimurunya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 278,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Olkeri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 279,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Oloolua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 280,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Oloosirkon/Sholinke"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 281,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Ongata Rongai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 282,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Purko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 283,
+  "fields": {
+    "county": "Kajiado",
+    "name": "Rombo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 284,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Bunyala Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 285,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Bunyala East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 286,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Bunyala West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 287,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Butali/Chegulo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 288,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Butsotso Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 289,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Butsotso East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 290,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Butsotso South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 291,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Chekalini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 292,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Chemuche"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 293,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Chevaywa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 294,
+  "fields": {
+    "county": "Kakamega",
+    "name": "East Kabras"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 295,
+  "fields": {
+    "county": "Kakamega",
+    "name": "East Wanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 296,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Etenje"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 297,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Idakho Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 298,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Idakho East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 299,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Idakho North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 300,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Idakho South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 301,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Ingostse-Mathia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 302,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isongo/Makunga/Malaha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 303,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isukha Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 304,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isukha East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 305,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isukha North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 306,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isukha South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 307,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Isukha West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 308,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Khalaba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 309,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kholera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 310,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kisa Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 311,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kisa East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 312,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kisa North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 313,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kisa West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 314,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Kongoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 315,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Koyonzo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 316,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Likuyani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 317,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Lubinu/Lusheya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 318,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Lugari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 319,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Lumakanda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 320,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Lwandeti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 321,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Mahiakalo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 322,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Manda-Shivanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 323,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Marama Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 324,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Marama North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 325,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Marama South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 326,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Marama West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 327,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Marenyo - Shianda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 328,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Mautuma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 329,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Mayoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 330,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Mumias Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 331,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Mumias North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 332,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Murhanda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 333,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Musanda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 334,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Namamali"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 335,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Nzoia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 336,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Sango"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 337,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Sheywe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 338,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Shinoyi-Shikomari-Esumeyia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 339,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Shirere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 340,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Shirugu-Mugai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 341,
+  "fields": {
+    "county": "Kakamega",
+    "name": "Sinoko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 342,
+  "fields": {
+    "county": "Kakamega",
+    "name": "South Kabras"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 343,
+  "fields": {
+    "county": "Kakamega",
+    "name": "West Kabras"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 344,
+  "fields": {
+    "county": "Kericho",
+    "name": "Ainamoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 345,
+  "fields": {
+    "county": "Kericho",
+    "name": "Chaik"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 346,
+  "fields": {
+    "county": "Kericho",
+    "name": "Cheboin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 347,
+  "fields": {
+    "county": "Kericho",
+    "name": "Chemosot"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 348,
+  "fields": {
+    "county": "Kericho",
+    "name": "Cheplanget"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 349,
+  "fields": {
+    "county": "Kericho",
+    "name": "Chepseon"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 350,
+  "fields": {
+    "county": "Kericho",
+    "name": "Cheptororiet/Seretut"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 351,
+  "fields": {
+    "county": "Kericho",
+    "name": "Chilchila"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 352,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kabianga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 353,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kamasian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 354,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kapkatet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 355,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kapkugerwet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 356,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kaplelartet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 357,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kapsaos"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 358,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kapsoit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 359,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kapsuser"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 360,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kedowa/Kimugul"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 361,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kipchebor"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 362,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kipchimchim"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 363,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kipkelion"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 364,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kisiara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 365,
+  "fields": {
+    "county": "Kericho",
+    "name": "Kunyak"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 366,
+  "fields": {
+    "county": "Kericho",
+    "name": "Litein"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 367,
+  "fields": {
+    "county": "Kericho",
+    "name": "Londiani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 368,
+  "fields": {
+    "county": "Kericho",
+    "name": "Sigowet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 369,
+  "fields": {
+    "county": "Kericho",
+    "name": "Soin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 370,
+  "fields": {
+    "county": "Kericho",
+    "name": "Soliat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 371,
+  "fields": {
+    "county": "Kericho",
+    "name": "Tebesonik"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 372,
+  "fields": {
+    "county": "Kericho",
+    "name": "Tendeno/Sorget"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 373,
+  "fields": {
+    "county": "Kericho",
+    "name": "Waldai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 374,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Biashara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 375,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Bibirioni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 376,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Chania"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 377,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Cianda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 378,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Gatongora"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 379,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Gatuanyaga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 380,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Gitaru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 381,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Githiga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 382,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Githobokoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 383,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Githunguri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 384,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Gitothua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 385,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Gituamba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 386,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Hospital"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 387,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ikinu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 388,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Juja"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 389,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kabete"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 390,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kahawa Sukari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 391,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kahawa Wendani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 392,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kalimoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 393,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kamburu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 394,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kamenu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 395,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Karai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 396,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Karuri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 397,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kiamwangi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 398,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kiganjo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 399,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kihara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 400,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kijabe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 401,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kikuyu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 402,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kinale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 403,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kinoo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 404,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Kiuu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 405,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Komothai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 406,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Lari/Kirenga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 407,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Limuru Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 408,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Limuru East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 409,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Mang'u"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 410,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Muchatha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 411,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Muguga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 412,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Murera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 413,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Mwihoko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 414,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Mwiki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 415,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Nachu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 416,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ndarugu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 417,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ndeiya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 418,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ndenderu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 419,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ndumberi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 420,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ngecha Tigoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 421,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ngenda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 422,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ngewa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 423,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ngoliba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 424,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Nyadhuna"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 425,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Nyanduma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 426,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Riabai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 427,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Sigona"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 428,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Theta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 429,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Ting'ang'a"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 430,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 431,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Uthiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 432,
+  "fields": {
+    "county": "Kiambu",
+    "name": "Witeithie"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 433,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Adu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 434,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Bamba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 435,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Chasimba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 436,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Dabaso"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 437,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Ganda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 438,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Ganze"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 439,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Garashi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 440,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Gongoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 441,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Jaribuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 442,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Jilore"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 443,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Junju"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 444,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Kakuyuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 445,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Kaloleni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 446,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Kambe/Ribe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 447,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Kayafungo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 448,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Kibarani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 449,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Magarini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 450,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Malindi Town"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 451,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Marafa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 452,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mariakani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 453,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Matsangoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 454,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mnarani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 455,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mtepeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 456,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mwanamwinga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 457,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mwarakaya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 458,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Mwawesa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 459,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Rabai/Kisurutini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 460,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Ruruma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 461,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Sabaki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 462,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Shella"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 463,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Shimo la Tewa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 464,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Sokoke"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 465,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Sokoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 466,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Tezo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 467,
+  "fields": {
+    "county": "Kilifi",
+    "name": "Watamu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 468,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Baragwi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 469,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Gathigiriri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 470,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Inoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 471,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kabare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 472,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kangai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 473,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kanyeki-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 474,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kariti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 475,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Karumandi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 476,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kerugoya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 477,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Kiine"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 478,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Mukure"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 479,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Murinduko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 480,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Mutira"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 481,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Mutithi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 482,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Ngariama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 483,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Njukiini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 484,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Nyangati"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 485,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Tebere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 486,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Thiba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 487,
+  "fields": {
+    "county": "Kirinyaga",
+    "name": "Wamumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 488,
+  "fields": {
+    "county": "Kisii",
+    "name": "Birongo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 489,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bobaracho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 490,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bobasi Bogetaorio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 491,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bobasi Boitangare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 492,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bobasi Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 493,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bobasi Chache"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 494,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bogeka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 495,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bogetenga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 496,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bogiakumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 497,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bogusero"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 498,
+  "fields": {
+    "county": "Kisii",
+    "name": "Boikang'a"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 499,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bokimonge"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 500,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bomariba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 501,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bombaba Borabu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 502,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bomorenda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 503,
+  "fields": {
+    "county": "Kisii",
+    "name": "Boochi Borabu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 504,
+  "fields": {
+    "county": "Kisii",
+    "name": "Boochi/Tendere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 505,
+  "fields": {
+    "county": "Kisii",
+    "name": "Borabu / Chitago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 506,
+  "fields": {
+    "county": "Kisii",
+    "name": "Bosoti/Sengera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 507,
+  "fields": {
+    "county": "Kisii",
+    "name": "Gesusu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 508,
+  "fields": {
+    "county": "Kisii",
+    "name": "Getenga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 509,
+  "fields": {
+    "county": "Kisii",
+    "name": "Ibeno"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 510,
+  "fields": {
+    "county": "Kisii",
+    "name": "Ichuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 511,
+  "fields": {
+    "county": "Kisii",
+    "name": "Kegogi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 512,
+  "fields": {
+    "county": "Kisii",
+    "name": "Keumbu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 513,
+  "fields": {
+    "county": "Kisii",
+    "name": "Kiamokama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 514,
+  "fields": {
+    "county": "Kisii",
+    "name": "Kiogoro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 515,
+  "fields": {
+    "county": "Kisii",
+    "name": "Kisii Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 516,
+  "fields": {
+    "county": "Kisii",
+    "name": "Kitutu Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 517,
+  "fields": {
+    "county": "Kisii",
+    "name": "Magenche"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 518,
+  "fields": {
+    "county": "Kisii",
+    "name": "Majoge Basi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 519,
+  "fields": {
+    "county": "Kisii",
+    "name": "Marani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 520,
+  "fields": {
+    "county": "Kisii",
+    "name": "Masige East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 521,
+  "fields": {
+    "county": "Kisii",
+    "name": "Masige West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 522,
+  "fields": {
+    "county": "Kisii",
+    "name": "Masimba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 523,
+  "fields": {
+    "county": "Kisii",
+    "name": "Monyerero"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 524,
+  "fields": {
+    "county": "Kisii",
+    "name": "Moticho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 525,
+  "fields": {
+    "county": "Kisii",
+    "name": "Nyacheki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 526,
+  "fields": {
+    "county": "Kisii",
+    "name": "Nyakoe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 527,
+  "fields": {
+    "county": "Kisii",
+    "name": "Nyamasibi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 528,
+  "fields": {
+    "county": "Kisii",
+    "name": "Nyatieko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 529,
+  "fields": {
+    "county": "Kisii",
+    "name": "Riana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 530,
+  "fields": {
+    "county": "Kisii",
+    "name": "Sameta/Mokwerero"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 531,
+  "fields": {
+    "county": "Kisii",
+    "name": "Sensi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 532,
+  "fields": {
+    "county": "Kisii",
+    "name": "Tabaka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 533,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Ahero"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 534,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Awasi/Onjiko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 535,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Central Kisumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 536,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Central Nyakach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 537,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Central Seme"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 538,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Chemelil"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 539,
+  "fields": {
+    "county": "Kisumu",
+    "name": "East Kano/Wawidhi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 540,
+  "fields": {
+    "county": "Kisumu",
+    "name": "East Seme"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 541,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kabonyo/Kanyagwal"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 542,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kajulu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 543,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kisumu North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 544,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kobura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 545,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kolwa Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 546,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kolwa East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 547,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Kondele"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 548,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Manyatta 'b'"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 549,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Market Milimani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 550,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Masogo/Nyang'oma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 551,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Migosi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 552,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Miwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 553,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Muhoroni/Koru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 554,
+  "fields": {
+    "county": "Kisumu",
+    "name": "North Nyakach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 555,
+  "fields": {
+    "county": "Kisumu",
+    "name": "North Seme"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 556,
+  "fields": {
+    "county": "Kisumu",
+    "name": "North West Kisumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 557,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Nyalenda 'a'"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 558,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Nyalenda B"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 559,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Ombeyi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 560,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Railways"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 561,
+  "fields": {
+    "county": "Kisumu",
+    "name": "Shaurimoyo Kaloleni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 562,
+  "fields": {
+    "county": "Kisumu",
+    "name": "South East Nyakach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 563,
+  "fields": {
+    "county": "Kisumu",
+    "name": "South West Kisumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 564,
+  "fields": {
+    "county": "Kisumu",
+    "name": "South West Nyakach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 565,
+  "fields": {
+    "county": "Kisumu",
+    "name": "West Kisumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 566,
+  "fields": {
+    "county": "Kisumu",
+    "name": "West Nyakach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 567,
+  "fields": {
+    "county": "Kisumu",
+    "name": "West Seme"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 568,
+  "fields": {
+    "county": "Kitui",
+    "name": "Athi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 569,
+  "fields": {
+    "county": "Kitui",
+    "name": "Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 570,
+  "fields": {
+    "county": "Kitui",
+    "name": "Chuluni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 571,
+  "fields": {
+    "county": "Kitui",
+    "name": "Endau/Malalani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 572,
+  "fields": {
+    "county": "Kitui",
+    "name": "Ikanga/Kyatune"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 573,
+  "fields": {
+    "county": "Kitui",
+    "name": "Ikutha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 574,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kanyangi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 575,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kanziko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 576,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kauwi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 577,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kiomo/Kyethani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 578,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kisasi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 579,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kivou"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 580,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kwa Mutonga/Kithumula"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 581,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kwavonza/Yatta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 582,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kyangwithya East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 583,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kyangwithya West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 584,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kyome/Thaana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 585,
+  "fields": {
+    "county": "Kitui",
+    "name": "Kyuso"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 586,
+  "fields": {
+    "county": "Kitui",
+    "name": "Matinyani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 587,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mbitini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 588,
+  "fields": {
+    "county": "Kitui",
+    "name": "Miambani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 589,
+  "fields": {
+    "county": "Kitui",
+    "name": "Migwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 590,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mui"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 591,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mulango"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 592,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mumoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 593,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mutha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 594,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mutito/Kaliku"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 595,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mutomo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 596,
+  "fields": {
+    "county": "Kitui",
+    "name": "Mutonguni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 597,
+  "fields": {
+    "county": "Kitui",
+    "name": "Ngomeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 598,
+  "fields": {
+    "county": "Kitui",
+    "name": "Nguni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 599,
+  "fields": {
+    "county": "Kitui",
+    "name": "Nguutani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 600,
+  "fields": {
+    "county": "Kitui",
+    "name": "Nuu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 601,
+  "fields": {
+    "county": "Kitui",
+    "name": "Nzambani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 602,
+  "fields": {
+    "county": "Kitui",
+    "name": "Tharaka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 603,
+  "fields": {
+    "county": "Kitui",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 604,
+  "fields": {
+    "county": "Kitui",
+    "name": "Tseikuru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 605,
+  "fields": {
+    "county": "Kitui",
+    "name": "Voo/Kyamatu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 606,
+  "fields": {
+    "county": "Kitui",
+    "name": "Waita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 607,
+  "fields": {
+    "county": "Kitui",
+    "name": "Zombe/Mwitika"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 608,
+  "fields": {
+    "county": "Kwale",
+    "name": "Chengoni/Samburu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 609,
+  "fields": {
+    "county": "Kwale",
+    "name": "Dzombo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 610,
+  "fields": {
+    "county": "Kwale",
+    "name": "Gombatobongwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 611,
+  "fields": {
+    "county": "Kwale",
+    "name": "Kasemeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 612,
+  "fields": {
+    "county": "Kwale",
+    "name": "Kinango"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 613,
+  "fields": {
+    "county": "Kwale",
+    "name": "Kinondo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 614,
+  "fields": {
+    "county": "Kwale",
+    "name": "Kubo South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 615,
+  "fields": {
+    "county": "Kwale",
+    "name": "Mackinnon-Road"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 616,
+  "fields": {
+    "county": "Kwale",
+    "name": "Mkongani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 617,
+  "fields": {
+    "county": "Kwale",
+    "name": "Mwavumbo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 618,
+  "fields": {
+    "county": "Kwale",
+    "name": "Mwereni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 619,
+  "fields": {
+    "county": "Kwale",
+    "name": "Nadavaya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 620,
+  "fields": {
+    "county": "Kwale",
+    "name": "Pongwekikoneni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 621,
+  "fields": {
+    "county": "Kwale",
+    "name": "Puma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 622,
+  "fields": {
+    "county": "Kwale",
+    "name": "Ramisi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 623,
+  "fields": {
+    "county": "Kwale",
+    "name": "Tiwi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 624,
+  "fields": {
+    "county": "Kwale",
+    "name": "Tsimba Golini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 625,
+  "fields": {
+    "county": "Kwale",
+    "name": "Ukunda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 626,
+  "fields": {
+    "county": "Kwale",
+    "name": "Vanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 627,
+  "fields": {
+    "county": "Kwale",
+    "name": "Waa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 628,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Igwamiti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 629,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Kinamba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 630,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Marmanet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 631,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Mukogondo East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 632,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Mukogondo West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 633,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Nanyuki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 634,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Ngobit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 635,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Olmoran"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 636,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Rumuruti Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 637,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Salama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 638,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Segera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 639,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Sosian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 640,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Thingithu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 641,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Tigithi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 642,
+  "fields": {
+    "county": "Laikipia",
+    "name": "Umande"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 643,
+  "fields": {
+    "county": "Lamu",
+    "name": "Bahari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 644,
+  "fields": {
+    "county": "Lamu",
+    "name": "Basuba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 645,
+  "fields": {
+    "county": "Lamu",
+    "name": "Faza"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 646,
+  "fields": {
+    "county": "Lamu",
+    "name": "Hindi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 647,
+  "fields": {
+    "county": "Lamu",
+    "name": "Hongwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 648,
+  "fields": {
+    "county": "Lamu",
+    "name": "Kiunga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 649,
+  "fields": {
+    "county": "Lamu",
+    "name": "Mkomani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 650,
+  "fields": {
+    "county": "Lamu",
+    "name": "Mkunumbi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 651,
+  "fields": {
+    "county": "Lamu",
+    "name": "Shella"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 652,
+  "fields": {
+    "county": "Lamu",
+    "name": "Witu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 653,
+  "fields": {
+    "county": "Machakos",
+    "name": "Athi River"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 654,
+  "fields": {
+    "county": "Machakos",
+    "name": "Ekalakala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 655,
+  "fields": {
+    "county": "Machakos",
+    "name": "Ikombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 656,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kalama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 657,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kangundo Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 658,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kangundo East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 659,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kangundo North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 660,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kangundo West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 661,
+  "fields": {
+    "county": "Machakos",
+    "name": "Katangi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 662,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kathiani Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 663,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kibauni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 664,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kinanie"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 665,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kithimani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 666,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kivaa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 667,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kola"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 668,
+  "fields": {
+    "county": "Machakos",
+    "name": "Kyeleni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 669,
+  "fields": {
+    "county": "Machakos",
+    "name": "Lower Kaewa/Kaani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 670,
+  "fields": {
+    "county": "Machakos",
+    "name": "Machakos Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 671,
+  "fields": {
+    "county": "Machakos",
+    "name": "Makutano/ Mwala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 672,
+  "fields": {
+    "county": "Machakos",
+    "name": "Masii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 673,
+  "fields": {
+    "county": "Machakos",
+    "name": "Masinga Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 674,
+  "fields": {
+    "county": "Machakos",
+    "name": "Matungulu East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 675,
+  "fields": {
+    "county": "Machakos",
+    "name": "Matungulu North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 676,
+  "fields": {
+    "county": "Machakos",
+    "name": "Matungulu West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 677,
+  "fields": {
+    "county": "Machakos",
+    "name": "Matuu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 678,
+  "fields": {
+    "county": "Machakos",
+    "name": "Mbiuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 679,
+  "fields": {
+    "county": "Machakos",
+    "name": "Mitaboni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 680,
+  "fields": {
+    "county": "Machakos",
+    "name": "Mua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 681,
+  "fields": {
+    "county": "Machakos",
+    "name": "Mumbuni North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 682,
+  "fields": {
+    "county": "Machakos",
+    "name": "Muthesya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 683,
+  "fields": {
+    "county": "Machakos",
+    "name": "Muthetheni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 684,
+  "fields": {
+    "county": "Machakos",
+    "name": "Muthwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 685,
+  "fields": {
+    "county": "Machakos",
+    "name": "Mutituni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 686,
+  "fields": {
+    "county": "Machakos",
+    "name": "Muvuti/Kiima-Kimwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 687,
+  "fields": {
+    "county": "Machakos",
+    "name": "Ndalani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 688,
+  "fields": {
+    "county": "Machakos",
+    "name": "Ndithini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 689,
+  "fields": {
+    "county": "Machakos",
+    "name": "Syokimau/Mulolongo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 690,
+  "fields": {
+    "county": "Machakos",
+    "name": "Tala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 691,
+  "fields": {
+    "county": "Machakos",
+    "name": "Upper Kaewa/Iveti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 692,
+  "fields": {
+    "county": "Machakos",
+    "name": "Wamunyu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 693,
+  "fields": {
+    "county": "Makueni",
+    "name": "Emali/Mulala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 694,
+  "fields": {
+    "county": "Makueni",
+    "name": "Ilima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 695,
+  "fields": {
+    "county": "Makueni",
+    "name": "Ivingoni/Nzambani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 696,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kalawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 697,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kasikeu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 698,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kathonzweni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 699,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kee"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 700,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kiima Kiu/Kalanzoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 701,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kikumbulyu North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 702,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kikumbulyu South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 703,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kilungu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 704,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kisau/Kiteta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 705,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kithungo/Kitundu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 706,
+  "fields": {
+    "county": "Makueni",
+    "name": "Kitise/Kithuki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 707,
+  "fields": {
+    "county": "Makueni",
+    "name": "Makindu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 708,
+  "fields": {
+    "county": "Makueni",
+    "name": "Masongaleni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 709,
+  "fields": {
+    "county": "Makueni",
+    "name": "Mavindini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 710,
+  "fields": {
+    "county": "Makueni",
+    "name": "Mbitini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 711,
+  "fields": {
+    "county": "Makueni",
+    "name": "Mbooni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 712,
+  "fields": {
+    "county": "Makueni",
+    "name": "Mtito Andei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 713,
+  "fields": {
+    "county": "Makueni",
+    "name": "Mukaa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 714,
+  "fields": {
+    "county": "Makueni",
+    "name": "Muvau/Kikuumini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 715,
+  "fields": {
+    "county": "Makueni",
+    "name": "Nguu/Masumba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 716,
+  "fields": {
+    "county": "Makueni",
+    "name": "Nguumo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 717,
+  "fields": {
+    "county": "Makueni",
+    "name": "Nzaui/Kilili/Kalamba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 718,
+  "fields": {
+    "county": "Makueni",
+    "name": "Thange"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 719,
+  "fields": {
+    "county": "Makueni",
+    "name": "Tulimani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 720,
+  "fields": {
+    "county": "Makueni",
+    "name": "Ukia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 721,
+  "fields": {
+    "county": "Makueni",
+    "name": "Waia/Kako"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 722,
+  "fields": {
+    "county": "Makueni",
+    "name": "Wote"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 723,
+  "fields": {
+    "county": "Mandera",
+    "name": "Alungo Gof"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 724,
+  "fields": {
+    "county": "Mandera",
+    "name": "Arabia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 725,
+  "fields": {
+    "county": "Mandera",
+    "name": "Ashabito"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 726,
+  "fields": {
+    "county": "Mandera",
+    "name": "Banissa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 727,
+  "fields": {
+    "county": "Mandera",
+    "name": "Bulla Mpya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 728,
+  "fields": {
+    "county": "Mandera",
+    "name": "Dandu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 729,
+  "fields": {
+    "county": "Mandera",
+    "name": "Derkhale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 730,
+  "fields": {
+    "county": "Mandera",
+    "name": "Elwak North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 731,
+  "fields": {
+    "county": "Mandera",
+    "name": "Elwak South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 732,
+  "fields": {
+    "county": "Mandera",
+    "name": "Fino"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 733,
+  "fields": {
+    "county": "Mandera",
+    "name": "Gither"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 734,
+  "fields": {
+    "county": "Mandera",
+    "name": "Guba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 735,
+  "fields": {
+    "county": "Mandera",
+    "name": "Guticha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 736,
+  "fields": {
+    "county": "Mandera",
+    "name": "Khalalio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 737,
+  "fields": {
+    "county": "Mandera",
+    "name": "Kiliwehiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 738,
+  "fields": {
+    "county": "Mandera",
+    "name": "Kutulo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 739,
+  "fields": {
+    "county": "Mandera",
+    "name": "Lafey"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 740,
+  "fields": {
+    "county": "Mandera",
+    "name": "Lag Sure"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 741,
+  "fields": {
+    "county": "Mandera",
+    "name": "Libehia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 742,
+  "fields": {
+    "county": "Mandera",
+    "name": "Malkamari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 743,
+  "fields": {
+    "county": "Mandera",
+    "name": "Morothile"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 744,
+  "fields": {
+    "county": "Mandera",
+    "name": "Neboi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 745,
+  "fields": {
+    "county": "Mandera",
+    "name": "Rhamu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 746,
+  "fields": {
+    "county": "Mandera",
+    "name": "Rhamu-Dimtu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 747,
+  "fields": {
+    "county": "Mandera",
+    "name": "Shimbir Fatuma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 748,
+  "fields": {
+    "county": "Mandera",
+    "name": "Takaba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 749,
+  "fields": {
+    "county": "Mandera",
+    "name": "Takaba South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 750,
+  "fields": {
+    "county": "Mandera",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 751,
+  "fields": {
+    "county": "Mandera",
+    "name": "Warankara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 752,
+  "fields": {
+    "county": "Mandera",
+    "name": "Wargudud"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 753,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Butiye"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 754,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Dukana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 755,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Golbo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 756,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Heilu-Manyatta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 757,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Illeret"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 758,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Karare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 759,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Kargi/South Horr"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 760,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Korr/Ngurunit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 761,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Laisamis"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 762,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Log Logo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 763,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Loiyangalani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 764,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Maikona"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 765,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Marsabit Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 766,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Moyale Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 767,
+  "fields": {
+    "county": "Marsabit",
+    "name": "North Horr"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 768,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Obbu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 769,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Sagante/Jaldesa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 770,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Sololo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 771,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Turbi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 772,
+  "fields": {
+    "county": "Marsabit",
+    "name": "Uran"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 773,
+  "fields": {
+    "county": "Meru",
+    "name": "Abogeta East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 774,
+  "fields": {
+    "county": "Meru",
+    "name": "Abogeta West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 775,
+  "fields": {
+    "county": "Meru",
+    "name": "Abothuguchi Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 776,
+  "fields": {
+    "county": "Meru",
+    "name": "Abothuguchi West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 777,
+  "fields": {
+    "county": "Meru",
+    "name": "Akachiu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 778,
+  "fields": {
+    "county": "Meru",
+    "name": "Akirang'ondu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 779,
+  "fields": {
+    "county": "Meru",
+    "name": "Akithii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 780,
+  "fields": {
+    "county": "Meru",
+    "name": "Amwathi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 781,
+  "fields": {
+    "county": "Meru",
+    "name": "Antuambui"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 782,
+  "fields": {
+    "county": "Meru",
+    "name": "Antubetwe Kiongo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 783,
+  "fields": {
+    "county": "Meru",
+    "name": "Athiru Gaiti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 784,
+  "fields": {
+    "county": "Meru",
+    "name": "Athiru Ruujine"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 785,
+  "fields": {
+    "county": "Meru",
+    "name": "Athwana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 786,
+  "fields": {
+    "county": "Meru",
+    "name": "Igembe East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 787,
+  "fields": {
+    "county": "Meru",
+    "name": "Igoji East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 788,
+  "fields": {
+    "county": "Meru",
+    "name": "Igoji West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 789,
+  "fields": {
+    "county": "Meru",
+    "name": "Kangeta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 790,
+  "fields": {
+    "county": "Meru",
+    "name": "Kanuni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 791,
+  "fields": {
+    "county": "Meru",
+    "name": "Karama"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 792,
+  "fields": {
+    "county": "Meru",
+    "name": "Kiagu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 793,
+  "fields": {
+    "county": "Meru",
+    "name": "Kianjai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 794,
+  "fields": {
+    "county": "Meru",
+    "name": "Kibirichia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 795,
+  "fields": {
+    "county": "Meru",
+    "name": "Kiegoi/Antubochiu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 796,
+  "fields": {
+    "county": "Meru",
+    "name": "Kiguchwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 797,
+  "fields": {
+    "county": "Meru",
+    "name": "Kiirua/Naari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 798,
+  "fields": {
+    "county": "Meru",
+    "name": "Kisima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 799,
+  "fields": {
+    "county": "Meru",
+    "name": "Maua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 800,
+  "fields": {
+    "county": "Meru",
+    "name": "Mbeu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 801,
+  "fields": {
+    "county": "Meru",
+    "name": "Mikinduri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 802,
+  "fields": {
+    "county": "Meru",
+    "name": "Mitunguu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 803,
+  "fields": {
+    "county": "Meru",
+    "name": "Municipality"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 804,
+  "fields": {
+    "county": "Meru",
+    "name": "Muthara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 805,
+  "fields": {
+    "county": "Meru",
+    "name": "Mwanganthia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 806,
+  "fields": {
+    "county": "Meru",
+    "name": "Naathu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 807,
+  "fields": {
+    "county": "Meru",
+    "name": "Njia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 808,
+  "fields": {
+    "county": "Meru",
+    "name": "Nkomo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 809,
+  "fields": {
+    "county": "Meru",
+    "name": "Nkuene"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 810,
+  "fields": {
+    "county": "Meru",
+    "name": "Ntima East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 811,
+  "fields": {
+    "county": "Meru",
+    "name": "Ntima West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 812,
+  "fields": {
+    "county": "Meru",
+    "name": "Ntunene"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 813,
+  "fields": {
+    "county": "Meru",
+    "name": "Nyaki East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 814,
+  "fields": {
+    "county": "Meru",
+    "name": "Nyaki West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 815,
+  "fields": {
+    "county": "Meru",
+    "name": "Ruiri/Rwarera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 816,
+  "fields": {
+    "county": "Meru",
+    "name": "Thangatha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 817,
+  "fields": {
+    "county": "Meru",
+    "name": "Timau"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 818,
+  "fields": {
+    "county": "Migori",
+    "name": "Bukira Centrl/Ikerege"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 819,
+  "fields": {
+    "county": "Migori",
+    "name": "Bukira East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 820,
+  "fields": {
+    "county": "Migori",
+    "name": "Central Kamagambo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 821,
+  "fields": {
+    "county": "Migori",
+    "name": "Central Kanyamkago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 822,
+  "fields": {
+    "county": "Migori",
+    "name": "Central Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 823,
+  "fields": {
+    "county": "Migori",
+    "name": "East Kamagambo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 824,
+  "fields": {
+    "county": "Migori",
+    "name": "East Kanyamkago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 825,
+  "fields": {
+    "county": "Migori",
+    "name": "God Jope"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 826,
+  "fields": {
+    "county": "Migori",
+    "name": "Gokeharaka/Getambwega"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 827,
+  "fields": {
+    "county": "Migori",
+    "name": "Got Kachola"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 828,
+  "fields": {
+    "county": "Migori",
+    "name": "Isibania"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 829,
+  "fields": {
+    "county": "Migori",
+    "name": "Kachien'g"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 830,
+  "fields": {
+    "county": "Migori",
+    "name": "Kakrao"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 831,
+  "fields": {
+    "county": "Migori",
+    "name": "Kaler"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 832,
+  "fields": {
+    "county": "Migori",
+    "name": "Kanyasa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 833,
+  "fields": {
+    "county": "Migori",
+    "name": "Kwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 834,
+  "fields": {
+    "county": "Migori",
+    "name": "Macalder/Kanyarwanda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 835,
+  "fields": {
+    "county": "Migori",
+    "name": "Makerero"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 836,
+  "fields": {
+    "county": "Migori",
+    "name": "Masaba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 837,
+  "fields": {
+    "county": "Migori",
+    "name": "Muhuru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 838,
+  "fields": {
+    "county": "Migori",
+    "name": "North Kadem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 839,
+  "fields": {
+    "county": "Migori",
+    "name": "North Kamagambo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 840,
+  "fields": {
+    "county": "Migori",
+    "name": "North Kanyamkago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 841,
+  "fields": {
+    "county": "Migori",
+    "name": "North Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 842,
+  "fields": {
+    "county": "Migori",
+    "name": "Ntimaru East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 843,
+  "fields": {
+    "county": "Migori",
+    "name": "Ntimaru West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 844,
+  "fields": {
+    "county": "Migori",
+    "name": "Nyabasi East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 845,
+  "fields": {
+    "county": "Migori",
+    "name": "Nyabasi West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 846,
+  "fields": {
+    "county": "Migori",
+    "name": "Nyamosense/Komosoko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 847,
+  "fields": {
+    "county": "Migori",
+    "name": "Ragana-Oruba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 848,
+  "fields": {
+    "county": "Migori",
+    "name": "South Kamagambo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 849,
+  "fields": {
+    "county": "Migori",
+    "name": "South Kanyamkago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 850,
+  "fields": {
+    "county": "Migori",
+    "name": "South Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 851,
+  "fields": {
+    "county": "Migori",
+    "name": "Suna Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 852,
+  "fields": {
+    "county": "Migori",
+    "name": "Tagare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 853,
+  "fields": {
+    "county": "Migori",
+    "name": "Wasimbete"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 854,
+  "fields": {
+    "county": "Migori",
+    "name": "Wasweta Ii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 855,
+  "fields": {
+    "county": "Migori",
+    "name": "West Kanyamkago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 856,
+  "fields": {
+    "county": "Migori",
+    "name": "West Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 857,
+  "fields": {
+    "county": "Migori",
+    "name": "Wiga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 858,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Airport"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 859,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Bamburi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 860,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Bofu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 861,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Chaani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 862,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Changamwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 863,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Frere Town"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 864,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Jomvu Kuu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 865,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Junda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 866,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Kadzandani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 867,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Kipevu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 868,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Kongowea"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 869,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Likoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 870,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Magogoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 871,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Majengo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 872,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mikindani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 873,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Miritini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 874,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mjambere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 875,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mji wa Kale/Makadara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 876,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mkomani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 877,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mtongwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 878,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mtopanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 879,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Mwakirunge"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 880,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Port Reitz"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 881,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Shanzu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 882,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Shika Adabu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 883,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Shimanzi/Ganjoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 884,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Timbwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 885,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Tononoka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 886,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Tudor"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 887,
+  "fields": {
+    "county": "Mombasa",
+    "name": "Ziwa la Ng'ombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 888,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Gaichanjiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 889,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Gatanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 890,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Gaturi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 891,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Gitugi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 892,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Ichagaki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 893,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Ithanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 894,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Ithiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 895,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kagundu-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 896,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kahumbu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 897,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kakuzi/Mitubiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 898,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kamacharia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 899,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kamahuha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 900,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kambiti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 901,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kangari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 902,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kanyenyaini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 903,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kariara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 904,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kigumo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 905,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kihumbu-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 906,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kimorori/Wempa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 907,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kinyona"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 908,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Kiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 909,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Makuyu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 910,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Mbiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 911,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Mugoiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 912,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Mugumo-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 913,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Muguru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 914,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Murarandia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 915,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Muruka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 916,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Muthithi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 917,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Ng'araria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 918,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Nginda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 919,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Ruchu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 920,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Rwathia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 921,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 922,
+  "fields": {
+    "county": "Murang'a",
+    "name": "Wangu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 923,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Airbase"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 924,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Baba Dogo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 925,
+  "fields": {
+    "county": "Nairobi",
+    "name": "California"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 926,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Claycity"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 927,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Dandora Area I"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 928,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Dandora Area Ii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 929,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Dandora Area Iii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 930,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Dandora Area Iv"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 931,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Eastleigh North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 932,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Eastleigh South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 933,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Embakasi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 934,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Gatina"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 935,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Githurai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 936,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Harambee"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 937,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Hospital"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 938,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Huruma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 939,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Imara Daima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 940,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kabiro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 941,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kahawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 942,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kahawa West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 943,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kangemi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 944,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Karen"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 945,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kariobangi North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 946,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kariobangi South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 947,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Karura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 948,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kasarani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 949,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kawangware"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 950,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kayole Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 951,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kayole North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 952,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kayole South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 953,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kiamaiko"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 954,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kitisuru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 955,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Komarock"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 956,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Korogocho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 957,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kwa Njenga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 958,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kwa Reuben"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 959,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Kware"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 960,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Laini Saba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 961,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Landimawe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 962,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Lindi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 963,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Lower Savannah"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 964,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Lucky Summer"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 965,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mabatini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 966,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Makina"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 967,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Makongeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 968,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Maringo/Hamza"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 969,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mathare North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 970,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Matopeni/Spring Valley"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 971,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mihango"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 972,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mlango Kubwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 973,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mountain View"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 974,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mowlem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 975,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mugumo-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 976,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mutuini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 977,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Mwiki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 978,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Nairobi Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 979,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Nairobi South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 980,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Nairobi West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 981,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Ngando"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 982,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Ngara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 983,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Ngei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 984,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Njiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 985,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Nyayo Highrise"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 986,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Pangani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 987,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Parklands/Highridge"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 988,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Pipeline"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 989,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Pumwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 990,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Riruta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 991,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Roysambu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 992,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Ruai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 993,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Sarangombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 994,
+  "fields": {
+    "county": "Nairobi",
+    "name": "South-C"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 995,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Umoja I"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 996,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Umoja Ii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 997,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Upper Savannah"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 998,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Utalii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 999,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Utawala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1000,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Uthiru/Ruthimitu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1001,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Viwandani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1002,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Waithaka"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1003,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Woodley/Kenyatta Golf Course"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1004,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Zimmerman"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1005,
+  "fields": {
+    "county": "Nairobi",
+    "name": "Ziwani/Kariokor"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1006,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Amalo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1007,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Bahati"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1008,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Barut"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1009,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Biashara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1010,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Dundori"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1011,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Elburgon"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1012,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Elementaita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1013,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Flamingo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1014,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Gilgil"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1015,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Hells Gate"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1016,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kabatini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1017,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kabazi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1018,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kamara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1019,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kapkures"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1020,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kaptembwo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1021,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Keringet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1022,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kiamaina"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1023,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kihingo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1024,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kiptagich"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1025,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kiptororo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1026,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Kivumbini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1027,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Lakeview"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1028,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Lanet/Umoja"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1029,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Lare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1030,
+  "fields": {
+    "county": "Nakuru",
+    "name": "London"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1031,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Maai-Mahiu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1032,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Maiella"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1033,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Malewa West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1034,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Mariashoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1035,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Mauche"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1036,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Maunarok"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1037,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Mbaruk/Eburu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1038,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Menengai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1039,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Menengai West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1040,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Molo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1041,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Mosop"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1042,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Murindati"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1043,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Naivasha East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1044,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Nakuru East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1045,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Nessuit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1046,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Njoro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1047,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Nyota"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1048,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Olkaria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1049,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Rhoda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1050,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Shaabab"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1051,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Sirikwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1052,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Soin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1053,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Solai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1054,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Subukia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1055,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Tinet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1056,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Turi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1057,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Visoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1058,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Viwandani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1059,
+  "fields": {
+    "county": "Nakuru",
+    "name": "Waseges"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1060,
+  "fields": {
+    "county": "Nandi",
+    "name": "Chemelil/Chemase"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1061,
+  "fields": {
+    "county": "Nandi",
+    "name": "Chemundu/Kapng'etuny"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1062,
+  "fields": {
+    "county": "Nandi",
+    "name": "Chepkumia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1063,
+  "fields": {
+    "county": "Nandi",
+    "name": "Chepkunyuk"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1064,
+  "fields": {
+    "county": "Nandi",
+    "name": "Chepterwai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1065,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kabisaga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1066,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kabiyet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1067,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kabwareng"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1068,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kapchorua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1069,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kapkangani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1070,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kapsabet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1071,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kapsimotwo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1072,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kaptel/Kamoiywo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1073,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kaptumo-Kaboi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1074,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kemeloi-Maraba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1075,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kilibwoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1076,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kipkaren"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1077,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kiptuya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1078,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kobujoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1079,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kosirai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1080,
+  "fields": {
+    "county": "Nandi",
+    "name": "Koyo-Ndurio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1081,
+  "fields": {
+    "county": "Nandi",
+    "name": "Kurgung/Surungai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1082,
+  "fields": {
+    "county": "Nandi",
+    "name": "Lelmokwo/Ngechek"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1083,
+  "fields": {
+    "county": "Nandi",
+    "name": "Nandi Hills"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1084,
+  "fields": {
+    "county": "Nandi",
+    "name": "Ndalat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1085,
+  "fields": {
+    "county": "Nandi",
+    "name": "Ol'lessos"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1086,
+  "fields": {
+    "county": "Nandi",
+    "name": "Sangalo/Kebulonik"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1087,
+  "fields": {
+    "county": "Nandi",
+    "name": "Songhor/Soba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1088,
+  "fields": {
+    "county": "Nandi",
+    "name": "Terik"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1089,
+  "fields": {
+    "county": "Nandi",
+    "name": "Tindiret"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1090,
+  "fields": {
+    "county": "Narok",
+    "name": "Angata Barikoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1091,
+  "fields": {
+    "county": "Narok",
+    "name": "Ildamat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1092,
+  "fields": {
+    "county": "Narok",
+    "name": "Ilkerin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1093,
+  "fields": {
+    "county": "Narok",
+    "name": "Ilmotiok"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1094,
+  "fields": {
+    "county": "Narok",
+    "name": "Kapsasian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1095,
+  "fields": {
+    "county": "Narok",
+    "name": "Keekonyokie"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1096,
+  "fields": {
+    "county": "Narok",
+    "name": "Keyian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1097,
+  "fields": {
+    "county": "Narok",
+    "name": "Kilgoris Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1098,
+  "fields": {
+    "county": "Narok",
+    "name": "Kimintet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1099,
+  "fields": {
+    "county": "Narok",
+    "name": "Loita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1100,
+  "fields": {
+    "county": "Narok",
+    "name": "Lolgorian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1101,
+  "fields": {
+    "county": "Narok",
+    "name": "Majimoto/Naroosura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1102,
+  "fields": {
+    "county": "Narok",
+    "name": "Mara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1103,
+  "fields": {
+    "county": "Narok",
+    "name": "Melelo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1104,
+  "fields": {
+    "county": "Narok",
+    "name": "Melili"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1105,
+  "fields": {
+    "county": "Narok",
+    "name": "Mogondo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1106,
+  "fields": {
+    "county": "Narok",
+    "name": "Mosiro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1107,
+  "fields": {
+    "county": "Narok",
+    "name": "Naikarra"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1108,
+  "fields": {
+    "county": "Narok",
+    "name": "Narok Town"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1109,
+  "fields": {
+    "county": "Narok",
+    "name": "Nkareta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1110,
+  "fields": {
+    "county": "Narok",
+    "name": "Olokurto"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1111,
+  "fields": {
+    "county": "Narok",
+    "name": "Ololmasani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1112,
+  "fields": {
+    "county": "Narok",
+    "name": "Ololulung'a"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1113,
+  "fields": {
+    "county": "Narok",
+    "name": "Olorropil"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1114,
+  "fields": {
+    "county": "Narok",
+    "name": "Olpusimoru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1115,
+  "fields": {
+    "county": "Narok",
+    "name": "Sagamian"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1116,
+  "fields": {
+    "county": "Narok",
+    "name": "Shankoe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1117,
+  "fields": {
+    "county": "Narok",
+    "name": "Siana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1118,
+  "fields": {
+    "county": "Narok",
+    "name": "Sogoo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1119,
+  "fields": {
+    "county": "Narok",
+    "name": "Suswa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1120,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Bogichora"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1121,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Bokeira"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1122,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Bomwagamo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1123,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Bonyamatuta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1124,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Bosamaro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1125,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Ekerenyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1126,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Esise"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1127,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Gachuba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1128,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Gesima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1129,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Itibo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1130,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Kemera"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1131,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Kiabonyoru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1132,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Magombo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1133,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Magwagwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1134,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Manga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1135,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Mekenene"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1136,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Nyamaiya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1137,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Nyansiongo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1138,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Rigoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1139,
+  "fields": {
+    "county": "Nyamira",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1140,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1141,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Charagita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1142,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Engineer"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1143,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Gathanji"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1144,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Gathara"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1145,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Gatimu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1146,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Geta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1147,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Githabai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1148,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Githioro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1149,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Kaimbaga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1150,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Kanjuiri Ridge"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1151,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Karau"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1152,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Kipipiri"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1153,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Kiriita"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1154,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Leshau Pondo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1155,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Magumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1156,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Mirangine"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1157,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Murungaru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1158,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Njabini\\Kiburu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1159,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "North Kinangop"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1160,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Nyakio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1161,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Rurii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1162,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Shamata"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1163,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Wanjohi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1164,
+  "fields": {
+    "county": "Nyandarua",
+    "name": "Weru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1165,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Aguthi/Gaaki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1166,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Chinga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1167,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Dedan Kimanthi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1168,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Gakawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1169,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Gatarakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1170,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Gatitu/Muruguru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1171,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Gikondi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1172,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Iria-Ini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1173,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Iriaini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1174,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Kabaru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1175,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Kamakwa/Mukaro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1176,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Karatina Town"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1177,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Karima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1178,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Kiganjo/Mathari"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1179,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Kirimukuyu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1180,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Konyu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1181,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Magutu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1182,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mahiga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1183,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mugunda"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1184,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mukurwe-Ini Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1185,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mukurwe-Ini West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1186,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mweiga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1187,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Mwiyogo/Endarasha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1188,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Naromoru Kiamathaga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1189,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Rugi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1190,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Ruguru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1191,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Ruring'u"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1192,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Rware"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1193,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Thegu River"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1194,
+  "fields": {
+    "county": "Nyeri",
+    "name": "Wamagana"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1195,
+  "fields": {
+    "county": "Samburu",
+    "name": "Angata Nanyokie"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1196,
+  "fields": {
+    "county": "Samburu",
+    "name": "Baawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1197,
+  "fields": {
+    "county": "Samburu",
+    "name": "El-Barta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1198,
+  "fields": {
+    "county": "Samburu",
+    "name": "Lodokejek"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1199,
+  "fields": {
+    "county": "Samburu",
+    "name": "Loosuk"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1200,
+  "fields": {
+    "county": "Samburu",
+    "name": "Maralal"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1201,
+  "fields": {
+    "county": "Samburu",
+    "name": "Nachola"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1202,
+  "fields": {
+    "county": "Samburu",
+    "name": "Ndoto"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1203,
+  "fields": {
+    "county": "Samburu",
+    "name": "Nyiro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1204,
+  "fields": {
+    "county": "Samburu",
+    "name": "Poro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1205,
+  "fields": {
+    "county": "Samburu",
+    "name": "Suguta Marmar"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1206,
+  "fields": {
+    "county": "Samburu",
+    "name": "Wamba East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1207,
+  "fields": {
+    "county": "Samburu",
+    "name": "Wamba North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1208,
+  "fields": {
+    "county": "Samburu",
+    "name": "Wamba West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1209,
+  "fields": {
+    "county": "Samburu",
+    "name": "Waso"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1210,
+  "fields": {
+    "county": "Siaya",
+    "name": "Central Alego"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1211,
+  "fields": {
+    "county": "Siaya",
+    "name": "Central Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1212,
+  "fields": {
+    "county": "Siaya",
+    "name": "Central Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1213,
+  "fields": {
+    "county": "Siaya",
+    "name": "East Asembo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1214,
+  "fields": {
+    "county": "Siaya",
+    "name": "East Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1215,
+  "fields": {
+    "county": "Siaya",
+    "name": "East Ugenya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1216,
+  "fields": {
+    "county": "Siaya",
+    "name": "North Alego"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1217,
+  "fields": {
+    "county": "Siaya",
+    "name": "North Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1218,
+  "fields": {
+    "county": "Siaya",
+    "name": "North Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1219,
+  "fields": {
+    "county": "Siaya",
+    "name": "North Ugenya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1220,
+  "fields": {
+    "county": "Siaya",
+    "name": "North Uyoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1221,
+  "fields": {
+    "county": "Siaya",
+    "name": "Siaya Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1222,
+  "fields": {
+    "county": "Siaya",
+    "name": "Sidindi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1223,
+  "fields": {
+    "county": "Siaya",
+    "name": "Sigomere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1224,
+  "fields": {
+    "county": "Siaya",
+    "name": "South East Alego"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1225,
+  "fields": {
+    "county": "Siaya",
+    "name": "South Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1226,
+  "fields": {
+    "county": "Siaya",
+    "name": "South Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1227,
+  "fields": {
+    "county": "Siaya",
+    "name": "South Uyoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1228,
+  "fields": {
+    "county": "Siaya",
+    "name": "Ugunja"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1229,
+  "fields": {
+    "county": "Siaya",
+    "name": "Ukwala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1230,
+  "fields": {
+    "county": "Siaya",
+    "name": "Usonga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1231,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Alego"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1232,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Asembo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1233,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Gem"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1234,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Sakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1235,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Ugenya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1236,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Uyoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1237,
+  "fields": {
+    "county": "Siaya",
+    "name": "West Yimbo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1238,
+  "fields": {
+    "county": "Siaya",
+    "name": "Yala Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1239,
+  "fields": {
+    "county": "Siaya",
+    "name": "Yimbo East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1240,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Bomeni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1241,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Bura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1242,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Chala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1243,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Chawia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1244,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Kaloleni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1245,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Kasigau"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1246,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mahoo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1247,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Marungu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1248,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mata"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1249,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mboghoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1250,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mbololo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1251,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mwanda/Mgange"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1252,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Mwatate"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1253,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Ngolia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1254,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Rong'e"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1255,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Sagalla"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1256,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Werugha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1257,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Wumingu/Kishushe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1258,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Wundanyi/Mbale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1259,
+  "fields": {
+    "county": "Taita-Taveta",
+    "name": "Wusi/Kishamba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1260,
+  "fields": {
+    "county": "Tana River",
+    "name": "Bangale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1261,
+  "fields": {
+    "county": "Tana River",
+    "name": "Bura"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1262,
+  "fields": {
+    "county": "Tana River",
+    "name": "Chewani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1263,
+  "fields": {
+    "county": "Tana River",
+    "name": "Chewele"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1264,
+  "fields": {
+    "county": "Tana River",
+    "name": "Garsen Central"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1265,
+  "fields": {
+    "county": "Tana River",
+    "name": "Garsen North"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1266,
+  "fields": {
+    "county": "Tana River",
+    "name": "Garsen South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1267,
+  "fields": {
+    "county": "Tana River",
+    "name": "Garsen West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1268,
+  "fields": {
+    "county": "Tana River",
+    "name": "Kinakomba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1269,
+  "fields": {
+    "county": "Tana River",
+    "name": "Kipini East"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1270,
+  "fields": {
+    "county": "Tana River",
+    "name": "Kipini West"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1271,
+  "fields": {
+    "county": "Tana River",
+    "name": "Madogo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1272,
+  "fields": {
+    "county": "Tana River",
+    "name": "Mikinduni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1273,
+  "fields": {
+    "county": "Tana River",
+    "name": "Sala"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1274,
+  "fields": {
+    "county": "Tana River",
+    "name": "Wayu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1275,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Chiakariga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1276,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Chogoria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1277,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Ganga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1278,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Gatunga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1279,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Igambang'ombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1280,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Karingani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1281,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Magumoni"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1282,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Mariani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1283,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Marimanti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1284,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Mitheru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1285,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Mugwe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1286,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Mukothima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1287,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Muthambi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1288,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Mwimbi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1289,
+  "fields": {
+    "county": "Tharaka-Nithi",
+    "name": "Nkondi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1290,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Bidii"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1291,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Chepchoina"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1292,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Chepsiro/Kiptoror"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1293,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Cherangany/Suwerwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1294,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Endebess"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1295,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Hospital"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1296,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Kaplamai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1297,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Kapomboi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1298,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Keiyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1299,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Kiminini"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1300,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Kinyoro"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1301,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Kwanza"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1302,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Machewa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1303,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Makutano"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1304,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Matisi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1305,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Matumbei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1306,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Motosiet"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1307,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Nabiswa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1308,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Saboti"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1309,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Sikhendu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1310,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Sinyerere"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1311,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Sirende"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1312,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Sitatunga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1313,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Tuwani"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1314,
+  "fields": {
+    "county": "Trans Nzoia",
+    "name": "Waitaluk"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1315,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kaaleng/Kaikor"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1316,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kaeris"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1317,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kakuma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1318,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kalapata"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1319,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kalobeyei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1320,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kalokol"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1321,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kanamkemer"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1322,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kang'atotha"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1323,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kapedo/Napeitom"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1324,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kaputir"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1325,
+  "fields": {
+    "county": "Turkana",
+    "name": "Katilia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1326,
+  "fields": {
+    "county": "Turkana",
+    "name": "Katilu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1327,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kerio Delta"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1328,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kibish"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1329,
+  "fields": {
+    "county": "Turkana",
+    "name": "Kotaruk/Lobei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1330,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lake Zone"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1331,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lapur"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1332,
+  "fields": {
+    "county": "Turkana",
+    "name": "Letea"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1333,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lobokat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1334,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lodwar Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1335,
+  "fields": {
+    "county": "Turkana",
+    "name": "Loima"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1336,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lokichar"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1337,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lokichoggio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1338,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lokiriama/Lorengippi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1339,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lokori/Kochodin"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1340,
+  "fields": {
+    "county": "Turkana",
+    "name": "Lopur"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1341,
+  "fields": {
+    "county": "Turkana",
+    "name": "Nakalale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1342,
+  "fields": {
+    "county": "Turkana",
+    "name": "Nanaam"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1343,
+  "fields": {
+    "county": "Turkana",
+    "name": "Songot"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1344,
+  "fields": {
+    "county": "Turkana",
+    "name": "Turkwel"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1345,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Ainabkoi/Olare"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1346,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Cheptiret/Kipchamo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1347,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Huruma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1348,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kamagut"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1349,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kapkures"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1350,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kapsaos"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1351,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kapsoya"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1352,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kaptagat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1353,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Karuna/Meibeki"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1354,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kimumu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1355,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kipkenyo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1356,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kiplombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1357,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kipsomba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1358,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Kuinet/Kapsuswa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1359,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Langas"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1360,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Megun"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1361,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Moi's Bridge"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1362,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Moiben"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1363,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Ngenyilel"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1364,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Ngeria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1365,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Racecourse"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1366,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Segero/Barsombe"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1367,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Sergoit"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1368,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Simat/Kapseret"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1369,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Soy"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1370,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Tapsagoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1371,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Tarakwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1372,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Tembelio"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1373,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Tulwet/Chuiyat"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1374,
+  "fields": {
+    "county": "Uasin Gishu",
+    "name": "Ziwa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1375,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Banja"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1376,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Busali"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1377,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Central Bunyore"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1378,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Central Maragoli"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1379,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Chavakali"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1380,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Emabungo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1381,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Gisambai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1382,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Jepkoyai"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1383,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Luanda South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1384,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Luanda Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1385,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Lugaga-Wamuluma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1386,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Lyaduywa/Izava"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1387,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Muhudu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1388,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Mungoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1389,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Mwibona"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1390,
+  "fields": {
+    "county": "Vihiga",
+    "name": "North East Bunyore"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1391,
+  "fields": {
+    "county": "Vihiga",
+    "name": "North Maragoli"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1392,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Shamakhokho"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1393,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Shiru"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1394,
+  "fields": {
+    "county": "Vihiga",
+    "name": "South Maragoli"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1395,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Tambua"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1396,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Wemilabi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1397,
+  "fields": {
+    "county": "Vihiga",
+    "name": "West Bunyore"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1398,
+  "fields": {
+    "county": "Vihiga",
+    "name": "West Sabatia"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1399,
+  "fields": {
+    "county": "Vihiga",
+    "name": "Wodanga"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1400,
+  "fields": {
+    "county": "Wajir",
+    "name": "Ademasajide"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1401,
+  "fields": {
+    "county": "Wajir",
+    "name": "Arbajahan"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1402,
+  "fields": {
+    "county": "Wajir",
+    "name": "Barwago"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1403,
+  "fields": {
+    "county": "Wajir",
+    "name": "Batalu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1404,
+  "fields": {
+    "county": "Wajir",
+    "name": "Benane"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1405,
+  "fields": {
+    "county": "Wajir",
+    "name": "Burder"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1406,
+  "fields": {
+    "county": "Wajir",
+    "name": "Bute"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1407,
+  "fields": {
+    "county": "Wajir",
+    "name": "Dadaja Bulla"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1408,
+  "fields": {
+    "county": "Wajir",
+    "name": "Danaba"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1409,
+  "fields": {
+    "county": "Wajir",
+    "name": "Della"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1410,
+  "fields": {
+    "county": "Wajir",
+    "name": "Diif"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1411,
+  "fields": {
+    "county": "Wajir",
+    "name": "Elben"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1412,
+  "fields": {
+    "county": "Wajir",
+    "name": "Eldas"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1413,
+  "fields": {
+    "county": "Wajir",
+    "name": "Elnur/Tula Tula"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1414,
+  "fields": {
+    "county": "Wajir",
+    "name": "Godoma"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1415,
+  "fields": {
+    "county": "Wajir",
+    "name": "Gurar"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1416,
+  "fields": {
+    "county": "Wajir",
+    "name": "Habasswein"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1417,
+  "fields": {
+    "county": "Wajir",
+    "name": "Hadado/Athibohol"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1418,
+  "fields": {
+    "county": "Wajir",
+    "name": "Ibrahim Ure"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1419,
+  "fields": {
+    "county": "Wajir",
+    "name": "Khorof/Harar"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1420,
+  "fields": {
+    "county": "Wajir",
+    "name": "Korondile"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1421,
+  "fields": {
+    "county": "Wajir",
+    "name": "Lagboghol South"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1422,
+  "fields": {
+    "county": "Wajir",
+    "name": "Lakoley South/Basir"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1423,
+  "fields": {
+    "county": "Wajir",
+    "name": "Malkagufu"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1424,
+  "fields": {
+    "county": "Wajir",
+    "name": "Sarman"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1425,
+  "fields": {
+    "county": "Wajir",
+    "name": "Tarbaj"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1426,
+  "fields": {
+    "county": "Wajir",
+    "name": "Township"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1427,
+  "fields": {
+    "county": "Wajir",
+    "name": "Wagalla/Ganyure"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1428,
+  "fields": {
+    "county": "Wajir",
+    "name": "Wagberi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1429,
+  "fields": {
+    "county": "Wajir",
+    "name": "Wargadud"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1430,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Alale"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1431,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Batei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1432,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Chepareria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1433,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Endugh"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1434,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Kapckok"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1435,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Kapenguria"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1436,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Kasei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1437,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Kiwawa"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1438,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Kodich"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1439,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Lelan"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1440,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Lomut"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1441,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Masool"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1442,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Mnagei"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1443,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Riwo"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1444,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Sekerr"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1445,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Siyoi"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1446,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Sook"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1447,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Suam"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1448,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Tapach"
+  }
+},
+{
+  "model": "bursary.ward",
+  "pk": 1449,
+  "fields": {
+    "county": "West Pokot",
+    "name": "Weiwei"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 1,
+  "fields": {
+    "name": "Alliance High School"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 2,
+  "fields": {
+    "name": "University of Nairobi"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 3,
+  "fields": {
+    "name": "Kenyatta University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 4,
+  "fields": {
+    "name": "Africa International University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 5,
+  "fields": {
+    "name": "Africa Nazarene University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 6,
+  "fields": {
+    "name": "African Leadership University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 7,
+  "fields": {
+    "name": "Alupe University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 8,
+  "fields": {
+    "name": "Catholic University of Eastern Africa"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 9,
+  "fields": {
+    "name": "Chuka University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 10,
+  "fields": {
+    "name": "Co-operative University of Kenya"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 11,
+  "fields": {
+    "name": "Daystar University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 12,
+  "fields": {
+    "name": "Dedan Kimathi University of Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 13,
+  "fields": {
+    "name": "Egerton University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 14,
+  "fields": {
+    "name": "Garissa University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 15,
+  "fields": {
+    "name": "Great Lakes University of Kisumu"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 16,
+  "fields": {
+    "name": "Gretsa University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 17,
+  "fields": {
+    "name": "Inoorero University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 18,
+  "fields": {
+    "name": "International Leadership University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 19,
+  "fields": {
+    "name": "Jaramogi Oginga Odinga University of Science and Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 20,
+  "fields": {
+    "name": "Jomo Kenyatta University of Agriculture and Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 21,
+  "fields": {
+    "name": "KAG East University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 22,
+  "fields": {
+    "name": "KCA University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 23,
+  "fields": {
+    "name": "Kabarak University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 24,
+  "fields": {
+    "name": "Kaimosi Friends University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 25,
+  "fields": {
+    "name": "Karatina University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 26,
+  "fields": {
+    "name": "Kenya Highlands Evangelical University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 27,
+  "fields": {
+    "name": "Kenya Methodist University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 28,
+  "fields": {
+    "name": "Kibabii University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 29,
+  "fields": {
+    "name": "Kirinyaga University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 30,
+  "fields": {
+    "name": "Kiriri Women's University of Science and Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 31,
+  "fields": {
+    "name": "Kisii University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 32,
+  "fields": {
+    "name": "Laikipia University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 33,
+  "fields": {
+    "name": "Lukenya University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 34,
+  "fields": {
+    "name": "Maasai Mara University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 35,
+  "fields": {
+    "name": "Machakos University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 36,
+  "fields": {
+    "name": "Marist International University College"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 37,
+  "fields": {
+    "name": "Maseno University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 38,
+  "fields": {
+    "name": "Masinde Muliro University of Science and Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 39,
+  "fields": {
+    "name": "Meru University of Science and Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 40,
+  "fields": {
+    "name": "Moi University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 41,
+  "fields": {
+    "name": "Mount Kenya University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 42,
+  "fields": {
+    "name": "Multimedia University of Kenya"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 43,
+  "fields": {
+    "name": "Murang'a University of Technology"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 44,
+  "fields": {
+    "name": "Pan Africa Christian University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 45,
+  "fields": {
+    "name": "Pioneer International University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 46,
+  "fields": {
+    "name": "Pwani University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 47,
+  "fields": {
+    "name": "Regina Pacis University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 48,
+  "fields": {
+    "name": "Riara University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 49,
+  "fields": {
+    "name": "Rongo University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 50,
+  "fields": {
+    "name": "Scott Christian University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 51,
+  "fields": {
+    "name": "South Eastern Kenya University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 52,
+  "fields": {
+    "name": "St Paul's University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 53,
+  "fields": {
+    "name": "Strathmore University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 54,
+  "fields": {
+    "name": "Taita Taveta University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 55,
+  "fields": {
+    "name": "Tangaza University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 56,
+  "fields": {
+    "name": "Technical University of Kenya"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 57,
+  "fields": {
+    "name": "Technical University of Mombasa"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 58,
+  "fields": {
+    "name": "The East African University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 59,
+  "fields": {
+    "name": "The Management University of Africa"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 60,
+  "fields": {
+    "name": "The Presbyterian University of East Africa"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 61,
+  "fields": {
+    "name": "Tom Mboya University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 62,
+  "fields": {
+    "name": "Umma University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 63,
+  "fields": {
+    "name": "United States International University Africa"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 64,
+  "fields": {
+    "name": "University of Eastern Africa, Baraton"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 65,
+  "fields": {
+    "name": "University of Eldoret"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 66,
+  "fields": {
+    "name": "University of Embu"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 67,
+  "fields": {
+    "name": "University of Kabianga"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 68,
+  "fields": {
+    "name": "Uzima University"
+  }
+},
+{
+  "model": "bursary.institution",
+  "pk": 69,
+  "fields": {
+    "name": "Zetech University"
+  }
+}
+]
