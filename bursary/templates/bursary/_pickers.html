@@ -1,0 +1,83 @@
+<script>
+/* Makes the county / ward / school lists easier to use:
+   - the ward list shows only the wards of the chosen county
+   - the ward and school lists get a "type to search" box
+   - "type your school" only appears when "not listed" is picked */
+(function () {
+  var county = document.getElementById('id_county');
+  var ward = document.getElementById('id_ward');
+  var inst = document.getElementById('id_institution');
+  var other = document.getElementById('id_institution_other');
+
+  function snapshot(sel) {
+    var out = [];
+    Array.prototype.forEach.call(sel.querySelectorAll('option'), function (o) {
+      var g = o.parentNode.tagName === 'OPTGROUP' ? o.parentNode.label : '';
+      out.push({ value: o.value, text: o.textContent, group: g });
+    });
+    return out;
+  }
+  function addSearch(sel, label) {
+    var box = document.createElement('input');
+    box.type = 'search'; box.placeholder = label; box.autocomplete = 'off';
+    box.setAttribute('aria-label', label);
+    box.style.marginBottom = '6px';
+    sel.parentNode.insertBefore(box, sel);
+    return box;
+  }
+  function fill(sel, items, keep, placeholder) {
+    sel.innerHTML = '';
+    var first = document.createElement('option');
+    first.value = ''; first.textContent = placeholder; sel.appendChild(first);
+    items.forEach(function (it) {
+      var o = document.createElement('option');
+      o.value = it.value; o.textContent = it.text; sel.appendChild(o);
+    });
+    if (keep && Array.prototype.some.call(sel.options, function (o) { return o.value === keep; })) sel.value = keep;
+  }
+
+  if (ward) {
+    var allWards = snapshot(ward).filter(function (w) { return w.value; });
+    if (allWards.length && allWards.some(function (w) { return w.group; })) {
+      var wardBox = addSearch(ward, 'Type to search your ward');
+      var refreshWards = function () {
+        var c = county ? county.value : '';
+        var q = wardBox.value.trim().toLowerCase();
+        var keep = ward.value;
+        var list = allWards.filter(function (w) {
+          return c && w.group === c && (!q || w.text.toLowerCase().indexOf(q) > -1);
+        });
+        fill(ward, list, keep, c ? 'Select your ward (' + list.length + ')' : 'Select your county first');
+        wardBox.disabled = !c;
+      };
+      if (county) county.addEventListener('change', function () { wardBox.value = ''; ward.value = ''; refreshWards(); });
+      wardBox.addEventListener('input', refreshWards);
+      var initial = ward.value; refreshWards(); if (initial) ward.value = initial;
+    }
+  }
+
+  if (inst) {
+    var all = snapshot(inst).filter(function (o) { return o.value; });
+    if (all.length > 1) {
+      var notListed = all[all.length - 1];           /* last option = "not listed" */
+      var schools = all.slice(0, -1);
+      var instBox = addSearch(inst, 'Type to search your school / college');
+      var refreshInst = function () {
+        var q = instBox.value.trim().toLowerCase();
+        var keep = inst.value;
+        var list = schools.filter(function (s) { return !q || s.text.toLowerCase().indexOf(q) > -1; });
+        list.push(notListed);
+        fill(inst, list, keep, 'Select your school / college');
+      };
+      instBox.addEventListener('input', refreshInst);
+      var keepNow = inst.value; refreshInst(); if (keepNow) inst.value = keepNow;
+      var toggle = function () {
+        if (!other) return;
+        var show = inst.value === notListed.value;
+        other.closest('p').style.display = show ? '' : 'none';
+      };
+      inst.addEventListener('change', toggle); toggle();
+    }
+  }
+})();
+</script>
