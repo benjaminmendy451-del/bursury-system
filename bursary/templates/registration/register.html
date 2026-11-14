@@ -3,7 +3,12 @@
 {% block content %}
 <div class="narrow">
 <h1>Create a student account</h1>
+<div class="notice-box">
+  <strong>Who can register?</strong> Kenyan students who need help with school or college fees.<br>
+  <strong>Parent or guardian?</strong> Create the account with your child&rsquo;s details, and use your own phone number and email so updates reach you.
+</div>
 <div class="card">
+  <p class="muted" style="margin-top:0">Fields marked <span style="color:#b42318">*</span> are required.</p>
   <form method="post" novalidate>
     {% csrf_token %}
     {{ form.non_field_errors }}
@@ -14,4 +19,12 @@
 </div>
 </div>
 {% include "bursary/_pickers.html" %}
+<script>
+  // Show the consent tick box and its sentence on one line.
+  (function () {
+    var box = document.getElementById('id_consent');
+    var label = box && document.querySelector('label[for=id_consent]');
+    if (box && label) { label.style.display = 'inline'; label.parentNode.insertBefore(box, label); }
+  })();
+</script>
 {% endblock %}

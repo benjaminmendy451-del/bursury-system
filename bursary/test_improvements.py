@@ -38,7 +38,7 @@ class PasswordResetTests(TestCase):
 class DuplicateRegistrationTests(TestCase):
     def _data(self, national_id, username):
         return {"username": username, "email": f"{username}@example.com", "password1": "Str0ngPass!word",
-                "password2": "Str0ngPass!word", "full_name": "Test Student", "national_id": national_id,
+                "password2": "Str0ngPass!word", "consent": "on", "full_name": "Test Student", "national_id": national_id,
                 "phone": "0712345678", "county": "Nairobi", "ward": "", "institution": "Test University",
                 "admission_number": "ADM001", "course_or_form": "Course", "year_of_study": 1}
 
@@ -166,7 +166,7 @@ class LockoutLoginTests(TestCase):
 class InputValidationTests(TestCase):
     def _data(self, **extra):
         data = {"username": "newstudent", "email": "new@example.com", "password1": "Str0ngPass!word",
-                "password2": "Str0ngPass!word", "full_name": "New Student", "national_id": "12345678",
+                "password2": "Str0ngPass!word", "consent": "on", "full_name": "New Student", "national_id": "12345678",
                 "phone": "0712345678", "county": "Nairobi", "ward": "", "institution": "Test University",
                 "admission_number": "ADM777", "course_or_form": "Course", "year_of_study": 1}
         data.update(extra)

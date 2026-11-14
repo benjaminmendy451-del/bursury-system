@@ -41,6 +41,31 @@
   </div>
 
   <div class="card">
+    <h2>Why we may use it</h2>
+    <p>We use your information because you agree to it when you register, and because the committee needs it to run the bursary fairly. We do not sell it or share it with other organisations unless the law requires it.</p>
+  </div>
+
+  <div class="card">
+    <h2>How long we keep it</h2>
+    <p>Application records are kept while they are needed to decide your application and for the committee&rsquo;s own audit of the round. After that the committee can delete them. You can also ask for earlier deletion, see below.</p>
+  </div>
+
+  <div class="card">
+    <h2>Your rights</h2>
+    <ul>
+      <li><strong>See</strong> the information we hold about you. Your dashboard and application pages show most of it.</li>
+      <li><strong>Correct</strong> it. Use <em>Edit my details</em> on your dashboard, or ask the committee.</li>
+      <li><strong>Delete</strong> it. Ask the committee, and they will check who you are before deleting your account.</li>
+    </ul>
+    {% if contact_email %}
+    <p><a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to={{ contact_email|urlencode }}&su=Data%20request%20-%20BursaryNexa" target="_blank" rel="noopener">Ask for a correction or deletion</a>
+       <a class="btn secondary" href="mailto:{{ contact_email }}?subject=Data%20request%20-%20BursaryNexa">Open mail app</a></p>
+    {% else %}
+    <p class="muted">Please visit the bursary office to ask for a correction or deletion.</p>
+    {% endif %}
+  </div>
+
+  <div class="card">
     <h2>Your choices</h2>
     <p>You can change your details from your dashboard. To ask the committee to correct or remove your information, use the contact details on the <a href="{% url 'home' %}#contact">home page</a>. The design follows the ideas of the Kenya Data Protection Act, 2019, such as collecting only what is needed and keeping it secure.</p>
   </div>

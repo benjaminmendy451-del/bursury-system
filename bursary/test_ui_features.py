@@ -146,3 +146,37 @@ class ReportChartTests(TestCase):
         page = self.client.get(reverse("reports"), {"round": self.round.pk})
         self.assertContains(page, "Status at a glance")
         self.assertContains(page, "class=\"donut\"")
+
+
+class RegistrationNoticeTests(TestCase):
+    def data(self, **extra):
+        values = {"username": "kim", "email": "kim@example.com", "password1": "Str0ng-pass-99",
+                  "password2": "Str0ng-pass-99", "full_name": "Kim Otieno", "national_id": "12345678",
+                  "phone": "0712345678", "county": "Nairobi", "institution": "Any School",
+                  "admission_number": "A1", "course_or_form": "Form 4", "year_of_study": 1, "consent": "on"}
+        values.update(extra)
+        return values
+
+    def test_page_shows_guardian_notice_hints_and_consent_box(self):
+        page = self.client.get(reverse("register"))
+        self.assertContains(page, "Parent or guardian?")
+        self.assertContains(page, "8 digits")
+        self.assertContains(page, "privacy notice")
+        self.assertContains(page, 'id="id_consent"')
+        self.assertContains(page, 'class="req"')
+
+    def test_registration_needs_the_consent_box(self):
+        response = self.client.post(reverse("register"), self.data(consent=""))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Please tick this box")
+        self.assertFalse(User.objects.filter(username="kim").exists())
+
+    def test_registration_works_when_consent_is_given(self):
+        response = self.client.post(reverse("register"), self.data())
+        self.assertRedirects(response, reverse("dashboard"))
+        self.assertTrue(User.objects.filter(username="kim").exists())
+
+    def test_privacy_page_explains_rights_and_data_requests(self):
+        page = self.client.get(reverse("privacy"))
+        self.assertContains(page, "Your rights")
+        self.assertContains(page, "How long we keep it")

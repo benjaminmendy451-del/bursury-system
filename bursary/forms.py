@@ -4,6 +4,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db import transaction
+from django.urls import reverse
+from django.utils.html import format_html
 
 from .counties import COUNTY_CHOICES
 from .models import Application, Document, Institution, StudentProfile, Ward
@@ -24,6 +26,12 @@ class StudentRegistrationForm(UserCreationForm):
     admission_number = forms.CharField(max_length=50)
     course_or_form = forms.CharField(max_length=120, label="Course or class/form")
     year_of_study = forms.IntegerField(min_value=1, max_value=10, initial=1)
+    consent = forms.BooleanField(
+        label="I confirm that the information I have given is accurate and complete, and I agree to it "
+              "being collected and used to decide my bursary application.",
+        error_messages={"required": "Please tick this box to create your account."})
+
+    required_css_class = "req"   # the page shows a red star next to required fields
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -33,6 +41,12 @@ class StudentRegistrationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        # Short hints under the fields that people most often get wrong.
+        self.fields["national_id"].help_text = "Your national ID number (8 digits) or birth certificate number."
+        self.fields["phone"].help_text = "For example 0712 345 678."
+        self.fields["email"].help_text = "We send application updates to this address."
+        self.fields["consent"].help_text = format_html(
+            'Read the <a href="{}" target="_blank" rel="noopener">privacy notice</a>.', reverse("privacy"))
         # Wards: a dropdown grouped by county, once the committee has loaded the list.
         wards = {}
         for county, name in Ward.objects.values_list("county", "name"):
@@ -111,6 +125,8 @@ class StudentRegistrationForm(UserCreationForm):
 
 class StudentDetailsForm(forms.Form):
     """Lets a student correct the details they typed when registering."""
+
+    required_css_class = "req"
 
     full_name = forms.CharField(max_length=150)
     email = forms.EmailField()

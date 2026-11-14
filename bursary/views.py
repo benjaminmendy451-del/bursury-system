@@ -328,7 +328,7 @@ def verify_award(request, token):
 
 
 def privacy(request):
-    return render(request, "bursary/privacy.html")
+    return render(request, "bursary/privacy.html", {"contact_email": _contact_email()})
 
 
 @login_required
