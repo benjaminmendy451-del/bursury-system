@@ -65,6 +65,9 @@ class LockoutLoginView(LoginView):
 
 
 def home(request):
+    # Visitors without an account only see the log in and register pages.
+    if not request.user.is_authenticated:
+        return redirect("login")
     rounds = [r for r in BursaryRound.objects.filter(is_active=True) if r.is_open]
     stats = {
         "open_rounds": len(rounds),

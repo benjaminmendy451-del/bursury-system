@@ -159,8 +159,8 @@
     <a class="brand" href="{% url 'home' %}">{% include "bursary/_logo.html" %}<span>BursaryNexa</span></a>
     <nav>
       {% with n=request.resolver_match.url_name %}
-      <a class="tab {% if n == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
       {% if user.is_authenticated %}
+        <a class="tab {% if n == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
         {% if not user.is_staff %}<a class="tab {% if n == 'dashboard' or n == 'apply' or n == 'application_detail' %}active{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>{% endif %}
         {% if user.is_staff %}
           <a class="tab" href="{% url 'admin:index' %}">Committee</a>
@@ -183,7 +183,7 @@
   {% block content %}{% endblock %}
 </main>
 <footer>
-  <div class="links"><a href="{% url 'home' %}">Home</a><a href="{% url 'home' %}#how">How it works</a><a href="{% url 'home' %}#contact">Contact</a><a href="{% url 'privacy' %}">Privacy</a></div>
+  <div class="links">{% if user.is_authenticated %}<a href="{% url 'home' %}">Home</a><a href="{% url 'home' %}#how">How it works</a><a href="{% url 'home' %}#contact">Contact</a>{% endif %}<a href="{% url 'privacy' %}">Privacy</a></div>
   &copy; 2026 BursaryNexa &middot; Bursary management system &middot; Apply, upload and follow your decision online
 </footer>
 <script>

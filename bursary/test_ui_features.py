@@ -17,7 +17,27 @@ S = Application.Status
 
 
 class LayoutTests(TestCase):
+    def test_visitors_without_an_account_are_sent_to_the_login_page(self):
+        self.assertRedirects(self.client.get(reverse("home")), reverse("login"))
+
+    def test_login_register_and_privacy_pages_stay_public(self):
+        for name in ("login", "register", "privacy"):
+            self.assertEqual(self.client.get(reverse(name)).status_code, 200)
+        self.assertNotContains(self.client.get(reverse("login")), "Open bursary rounds")
+
+    def test_logged_in_users_see_the_home_page(self):
+        make_student(1, "Nairobi")
+        self.client.login(username="student1", password="pass12345")
+        self.assertEqual(self.client.get(reverse("home")).status_code, 200)
+
+    def test_logging_out_lands_on_the_login_page(self):
+        make_student(1, "Nairobi")
+        self.client.login(username="student1", password="pass12345")
+        self.assertRedirects(self.client.post(reverse("logout")), reverse("login"))
+
     def test_home_page_has_theme_button_and_footer_links(self):
+        make_student(1, "Nairobi")
+        self.client.login(username="student1", password="pass12345")
         page = self.client.get(reverse("home"))
         self.assertContains(page, 'id="theme-toggle"')
         self.assertContains(page, reverse("privacy"))
