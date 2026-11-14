@@ -7,6 +7,15 @@ from django.db.models.functions import Lower, Trim
 from .models import Application, BursaryRound
 
 ZERO = Decimal("0")
+
+# Colours for the status chart (the same family as the labels in the committee list).
+STATUS_CHART_COLOURS = {
+    Application.Status.SUBMITTED: "#98a2b3",
+    Application.Status.UNDER_REVIEW: "#f2b705",
+    Application.Status.APPROVED: "#1d7a43",
+    Application.Status.WAITLISTED: "#3b6fd4",
+    Application.Status.REJECTED: "#c0392b",
+}
 APPROVED = Application.Status.APPROVED
 
 
@@ -54,6 +63,30 @@ def totals(rows):
         "requested": sum((row["requested"] for row in rows), ZERO),
         "awarded": sum((row["awarded"] for row in rows), ZERO),
     }
+
+
+def build_charts(statuses, counties):
+    """Data for the two charts on the reports page.
+
+    statuses: list of (label, count) in the order of Application.Status.choices.
+    counties: rows from breakdown().
+    """
+    total = sum(count for _, count in statuses)
+    legend, stops, start = [], [], 0.0
+    for (value, _), (label, count) in zip(Application.Status.choices, statuses):
+        colour = STATUS_CHART_COLOURS[value]
+        percent = count * 100 / total if total else 0.0
+        legend.append({"label": label, "count": count, "colour": colour, "percent": round(percent)})
+        if count:
+            stops.append(f"{colour} {start:.2f}% {start + percent:.2f}%")
+            start += percent
+    gradient = f"conic-gradient({', '.join(stops)})" if stops else "conic-gradient(#e5ebe7 0 100%)"
+
+    top = sorted(counties, key=lambda row: (-row["applications"], row["label"]))[:8]
+    biggest = max((row["applications"] for row in top), default=0)
+    bars = [{"label": row["label"], "count": row["applications"],
+             "width": round(row["applications"] * 100 / biggest) if biggest else 0} for row in top]
+    return {"total": total, "legend": legend, "gradient": gradient, "bars": bars}
 
 
 def county_options():
@@ -109,6 +142,7 @@ def build_report(bursary_round=None, county="", status=""):
     percent_used = float(spent / budget * 100) if budget else 0.0
 
     return {
+        "charts": build_charts(statuses, counties),
         "filtered": bool(county or status),
         "summary": {
             "applications": sum(count for _, count in statuses),

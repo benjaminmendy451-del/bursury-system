@@ -1,6 +1,7 @@
 Django>=5.2,<6.0
 Pillow>=10.0
 whitenoise>=6.6
+segno>=1.6
 # Needed only for MySQL (pip install mysqlclient), or PostgreSQL / gunicorn:
 # mysqlclient>=2.2
 # psycopg[binary]>=3.1

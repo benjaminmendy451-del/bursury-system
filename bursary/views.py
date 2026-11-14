@@ -8,12 +8,15 @@ from django.contrib.admin.models import CHANGE, LogEntry
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core import signing
 from django.core.cache import cache
 from django.core.paginator import Paginator
 from django.db import IntegrityError
 from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
 from django.utils import timezone
+from django.utils.safestring import mark_safe
 
 from .forms import ApplicationForm, DocumentForm, StudentDetailsForm, StudentRegistrationForm
 from .models import Application, BursaryRound, Document, StudentProfile
@@ -227,9 +230,45 @@ def application_detail(request, pk):
             doc.save()
             messages.success(request, "Document uploaded.")
             return redirect("application_detail", pk=application.pk)
+    checklist, docs_percent = _checklist(application)
     return render(request, "bursary/application_detail.html", {
         "application": application, "doc_form": doc_form, "can_edit": can_edit,
+        "timeline": _timeline(application), "checklist": checklist, "docs_percent": docs_percent,
     })
+
+
+def _timeline(application):
+    """The steps an application goes through, for the progress timeline.
+
+    Each step is (title, note, when, state) where state is done, current or todo.
+    """
+    S = Application.Status
+    status = application.status
+    decided = status in (S.APPROVED, S.WAITLISTED, S.REJECTED)
+    steps = [("Application submitted", "We received your application.", application.submitted_at, "done")]
+    if decided:
+        steps.append(("Reviewed by the committee", "The committee has looked at your application.", None, "done"))
+        steps.append((f"Decision: {application.get_status_display()}",
+                      "Open the award letter below." if status == S.APPROVED else "See the committee feedback.",
+                      application.reviewed_at, "done"))
+    else:
+        steps.append(("Review by the committee",
+                      "The committee is reviewing your application." if status == S.UNDER_REVIEW
+                      else "Waiting for the committee to start reviewing.",
+                      None, "current"))
+        steps.append(("Decision", "You will be told by email when a decision is made.", None, "todo"))
+    return steps
+
+
+def _checklist(application):
+    """What the student has done and what is still missing. Returns (items, percent of documents done)."""
+    labels = dict(Document.Kind.choices)
+    required = [kind for kind in labels if kind != Document.Kind.OTHER]
+    have = {document.kind for document in application.documents.all()}
+    items = [{"label": "Application form submitted", "done": True}]
+    items += [{"label": f"{labels[kind]} uploaded", "done": kind in have} for kind in required]
+    done = sum(1 for kind in required if kind in have)
+    return items, round(done * 100 / len(required))
 
 
 @login_required
@@ -241,9 +280,55 @@ def award_letter(request, pk):
         raise Http404
     if application.status != Application.Status.APPROVED:
         raise Http404
+    verify_url = settings.SITE_URL.rstrip("/") + reverse("verify_award", args=[_verify_token(application)])
     return render(request, "bursary/award_letter.html", {
         "application": application, "issued_on": timezone.localdate(),
+        "verify_url": verify_url, "qr_svg": _qr_svg(verify_url),
     })
+
+
+VERIFY_SALT = "award-verify"
+
+
+def _verify_token(application):
+    """A signed, tamper-proof code that identifies one award letter."""
+    return signing.dumps(application.pk, salt=VERIFY_SALT)
+
+
+def _qr_svg(text):
+    """A QR code image (inline SVG) for the text, or "" if the optional 'segno' package is missing."""
+    try:
+        import segno
+        return mark_safe(segno.make(text, error="m").svg_inline(scale=4, dark="#14532d", border=2))
+    except Exception:
+        return ""
+
+
+def _short_name(full_name):
+    """'Amina Wanjiru Kamau' -> 'Amina K.' so the public check page shows little personal data."""
+    parts = full_name.split()
+    if len(parts) < 2:
+        return full_name
+    return f"{parts[0]} {parts[-1][0]}."
+
+
+def verify_award(request, token):
+    """Public page that confirms an award letter is genuine. Open to anyone who has the link."""
+    try:
+        pk = signing.loads(token, salt=VERIFY_SALT)
+    except signing.BadSignature:
+        raise Http404
+    application = (Application.objects.select_related("student", "bursary_round")
+                   .filter(pk=pk, status=Application.Status.APPROVED).first())
+    if application is None:
+        return render(request, "bursary/verify_award.html", {"valid": False}, status=404)
+    return render(request, "bursary/verify_award.html", {
+        "valid": True, "application": application, "short_name": _short_name(application.student.full_name),
+    })
+
+
+def privacy(request):
+    return render(request, "bursary/privacy.html")
 
 
 @login_required

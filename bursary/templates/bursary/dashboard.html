@@ -22,7 +22,7 @@
 </div>
 
 {% if available_rounds %}
-<div class="panel">
+<div class="panel" id="open">
   <h2>Open bursaries</h2>
   <div class="tiles">
   {% for r in available_rounds %}
@@ -65,7 +65,9 @@
   </p>
   {% endif %}
   {% else %}
-    <p class="muted">You have not applied for any bursary yet.</p>
+    <div class="empty"><div class="ico">&#128221;</div>
+      <p><strong>No applications yet.</strong><br>When you apply, you can follow your progress here.</p>
+      {% if available_rounds %}<a class="btn" href="#open">See open bursaries</a>{% else %}<p>No bursary round is open right now. Please check back soon.</p>{% endif %}</div>
   {% endif %}
 </div>
 {% endblock %}

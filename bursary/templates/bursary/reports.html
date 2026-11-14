@@ -60,6 +60,26 @@
      ({{ report.summary.percent_used|floatformat:0 }}%)</p>
 </div>
 
+<div class="charts">
+  <div class="card">
+    <h2>Status at a glance</h2>
+    <div class="donut-wrap">
+      <div class="donut" style="background:{{ report.charts.gradient }}" role="img" aria-label="Applications by status"><b>{{ report.charts.total }}<small>applications</small></b></div>
+      <ul class="legend">
+        {% for item in report.charts.legend %}<li><i style="background:{{ item.colour }}"></i>{{ item.label }}: <strong>{{ item.count }}</strong> <span class="muted">({{ item.percent }}%)</span></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Applications by county <span class="muted" style="font-weight:400;font-size:.9rem">(top 8)</span></h2>
+    <div class="bars">
+      {% for bar in report.charts.bars %}
+        <div class="row"><span title="{{ bar.label }}">{{ bar.label }}</span><div class="track"><div class="fill" style="width:{{ bar.width }}%"></div></div><span>{{ bar.count }}</span></div>
+      {% empty %}<p class="muted">No applications to chart yet.</p>{% endfor %}
+    </div>
+  </div>
+</div>
+
 <div class="card">
   <h2>Applications by status</h2>
   <p>{% for label, count in report.statuses %}<span class="badge">{{ label }}: {{ count }}</span> {% endfor %}</p>

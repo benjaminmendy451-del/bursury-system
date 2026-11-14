@@ -37,7 +37,7 @@
   <div class="stat"><b>{{ stats.applications|floatformat:"0g" }}</b>Applications received</div>
 </div>{% endif %}
 
-<div class="panel">
+<div class="panel" id="how">
   <h2>How it works</h2>
   <div class="how">
     <div class="step"><span class="num">1</span><b>Create your account</b><span>Register with your details and your institution. It takes about two minutes.</span></div>
@@ -84,7 +84,7 @@
     <h2>Who can apply</h2>
     <p>Students who need financial help with school fees. Applications are scored on family income, orphan status, number of dependants, disability and the fee balance owed. The committee then decides within the round&rsquo;s budget.</p>
   </div>
-  <div class="panel">
+  <div class="panel" id="contact">
     <h2>Contact and help</h2>
     {% if contact_email %}<p>Questions about your application? Email <strong>{{ contact_email }}</strong>.</p>
       <p><a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to={{ contact_email|urlencode }}&su=BursaryNexa%20question" target="_blank" rel="noopener">Write to us in Gmail</a> <a class="btn secondary" href="mailto:{{ contact_email }}">Open mail app</a></p>{% else %}<p>Questions about your application? Please visit the bursary office.</p>{% endif %}

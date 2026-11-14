@@ -15,6 +15,26 @@
 {% endif %}
 
 <div class="card">
+  <h2>Progress</h2>
+  <ol class="timeline">
+    {% for title, note, when, state in timeline %}
+      <li class="{{ state }}"><span class="dot"></span>
+        <div class="tl-title">{{ title }}{% if when %} <span class="muted" style="font-weight:400">&middot; {{ when|date:"j M Y" }}</span>{% endif %}</div>
+        <div class="tl-note">{{ note }}</div></li>
+    {% endfor %}
+  </ol>
+</div>
+
+<div class="card">
+  <h2>Application checklist <span class="muted" style="font-weight:400;font-size:.9rem">&middot; documents {{ docs_percent }}% complete</span></h2>
+  <div class="progress" role="progressbar" aria-valuenow="{{ docs_percent }}" aria-valuemin="0" aria-valuemax="100"><div style="width:{{ docs_percent }}%"></div></div>
+  <ul class="checklist">
+    {% for item in checklist %}<li class="{% if item.done %}done{% endif %}"><span class="box">{% if item.done %}&#10003;{% else %}&#9675;{% endif %}</span>{{ item.label }}</li>{% endfor %}
+  </ul>
+  {% if can_edit and docs_percent < 100 %}<p class="muted" style="margin-bottom:0">Upload the missing documents in the box further down this page.</p>{% endif %}
+</div>
+
+<div class="card">
   <h2>Your application</h2>
   {% if application.status == "submitted" %}<p><a class="btn secondary" href="{% url 'edit_application' application.pk %}">Edit my application</a>
     <span class="muted">You can change it until the committee starts reviewing.</span></p>{% endif %}

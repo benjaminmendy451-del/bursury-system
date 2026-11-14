@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}BursaryNexa{% endblock %}</title>
+  <script>
+    /* Apply the saved light/dark choice before the page is drawn, so it does not flash. */
+    try { var t = localStorage.getItem('bn-theme');
+      if (t === 'dark' || (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {}
+  </script>
   <style>
     :root { --ink:#17211b; --muted:#5f6c65; --line:#e1e7e3; --brand:#14532d; --brand-2:#1d7a43; --brand-soft:#e8f4ed; --bg:#f3f6f4; --nav:#10231a; --gold:#f2b705;
             --shadow-sm:0 1px 2px rgba(16,35,26,.06); --shadow:0 1px 2px rgba(16,35,26,.05),0 10px 28px rgba(16,35,26,.07); --radius:16px; }
@@ -82,6 +88,57 @@
     footer { background:var(--nav); color:#b8cdc0; text-align:center; font-size:.9rem; padding:26px 20px 34px; margin-top:20px; border-top:3px solid var(--brand-2); }
     .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); }
     .grid .panel { margin-bottom:0; }
+    /* ---- Theme button, toast messages, footer links ---- */
+    .theme-toggle { background:transparent; border:1px solid rgba(255,255,255,.4); color:#fff; font:inherit; font-size:1rem; cursor:pointer; width:36px; height:36px; border-radius:50%; margin-left:6px; line-height:1; padding:0; transition:all .15s; }
+    .theme-toggle:hover { background:#fff; color:var(--nav); }
+    .toasts { position:fixed; right:18px; bottom:18px; z-index:50; max-width:min(380px,calc(100vw - 36px)); margin:0; padding:0; list-style:none; }
+    .toasts li { display:flex; gap:10px; align-items:flex-start; justify-content:space-between; margin:0 0 8px; box-shadow:var(--shadow); animation:toast-in .25s ease; }
+    .toasts li button { background:none; border:0; color:inherit; font-size:1.1rem; cursor:pointer; line-height:1; padding:0 2px; opacity:.7; }
+    @keyframes toast-in { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+    footer .links { margin-bottom:8px; } footer .links a { color:#cfe3d7; margin:0 10px; text-decoration:none; font-weight:600; } footer .links a:hover { color:#fff; text-decoration:underline; }
+    /* ---- Empty states, checklist, timeline ---- */
+    .empty { text-align:center; padding:26px 12px; } .empty .ico { font-size:2.4rem; line-height:1; margin-bottom:8px; } .empty p { margin:0 0 14px; color:var(--muted); }
+    .progress { background:#e5ebe7; border-radius:999px; height:12px; overflow:hidden; } .progress > div { background:linear-gradient(90deg,var(--brand-2),var(--gold)); height:12px; }
+    .checklist { list-style:none; padding:0; margin:14px 0 0; } .checklist li { display:flex; gap:10px; align-items:center; padding:7px 0; border-bottom:1px solid var(--line); }
+    .checklist .box { width:24px; height:24px; border-radius:50%; flex:none; display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800; background:#e5ebe7; color:#5f6c65; }
+    .checklist .done .box { background:var(--brand-2); color:#fff; }
+    .timeline { list-style:none; margin:6px 0 0; padding:0 0 0 6px; }
+    .timeline li { position:relative; padding:0 0 18px 30px; } .timeline li:last-child { padding-bottom:0; }
+    .timeline li::before { content:""; position:absolute; left:8px; top:20px; bottom:-2px; width:2px; background:var(--line); } .timeline li:last-child::before { display:none; }
+    .timeline .dot { position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; background:#e5ebe7; border:2px solid var(--line); }
+    .timeline .done .dot { background:var(--brand-2); border-color:var(--brand-2); } .timeline .current .dot { background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 5px rgba(242,183,5,.25); }
+    .timeline .tl-title { font-weight:700; } .timeline .tl-note { color:var(--muted); font-size:.9rem; }
+    /* ---- Charts on the Reports page (pure CSS, no libraries) ---- */
+    .charts { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+    .donut-wrap { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
+    .donut { width:150px; height:150px; border-radius:50%; position:relative; flex:none; }
+    .donut::after { content:""; position:absolute; inset:30px; border-radius:50%; background:var(--panel-bg,#fff); }
+    .donut b { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1; font-size:1.5rem; line-height:1.1; } .donut b small { font-size:.7rem; font-weight:600; color:var(--muted); }
+    .legend { list-style:none; margin:0; padding:0; } .legend li { display:flex; align-items:center; gap:8px; padding:2px 0; font-size:.92rem; } .legend i { width:12px; height:12px; border-radius:3px; display:inline-block; flex:none; }
+    .bars .row { display:grid; grid-template-columns:110px 1fr 38px; gap:10px; align-items:center; margin:7px 0; font-size:.92rem; }
+    .bars .track { background:#e5ebe7; border-radius:999px; height:14px; overflow:hidden; } .bars .fill { background:linear-gradient(90deg,var(--brand-2),var(--brand)); height:14px; border-radius:999px; }
+    .bars .row span:first-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .bars .row span:last-child { text-align:right; font-weight:700; }
+    /* ---- Dark mode ---- */
+    :root[data-theme="dark"] { --ink:#e6eee9; --muted:#a3b5aa; --line:#2b3b32; --brand-soft:#173325; --bg:#0c1511; --panel-bg:#15211b; --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow:0 8px 24px rgba(0,0,0,.35); color-scheme:dark; }
+    :root[data-theme="dark"] body { background:radial-gradient(1200px 500px at 85% -10%, #14281d 0%, rgba(20,40,29,0) 60%), var(--bg); }
+    :root[data-theme="dark"] .card, :root[data-theme="dark"] .panel, :root[data-theme="dark"] .tile, :root[data-theme="dark"] .stat, :root[data-theme="dark"] .how .step, :root[data-theme="dark"] .welcome { background:var(--panel-bg); }
+    :root[data-theme="dark"] thead th { background:#1b2a22; } :root[data-theme="dark"] tbody tr:hover { background:#1a2820; }
+    :root[data-theme="dark"] input[type=text], :root[data-theme="dark"] input[type=email], :root[data-theme="dark"] input[type=password], :root[data-theme="dark"] input[type=number], :root[data-theme="dark"] input[type=date], :root[data-theme="dark"] input[type=search], :root[data-theme="dark"] select, :root[data-theme="dark"] textarea { background:#101b15; border-color:#3a4d42; color:var(--ink); }
+    :root[data-theme="dark"] main a:not(.btn) { color:#7fd1a0; }
+    :root[data-theme="dark"] .tile .t, :root[data-theme="dark"] .stat b, :root[data-theme="dark"] .pw-toggle { color:#7fd1a0; }
+    :root[data-theme="dark"] .btn.secondary { color:#9be0b8; border-color:#2c5440; } :root[data-theme="dark"] .btn.secondary:hover { background:#1f4430; color:#c7f0d8; }
+    :root[data-theme="dark"] .badge { background:#25332b; color:#d5e2da; }
+    :root[data-theme="dark"] .badge.approved { background:#124d2a; color:#b9f0cf; } :root[data-theme="dark"] .badge.rejected { background:#5a1f1d; color:#ffc7c4; }
+    :root[data-theme="dark"] .badge.under_review { background:#4d3a0b; color:#ffe39a; } :root[data-theme="dark"] .badge.waitlisted { background:#1e2c5c; color:#c9d5ff; }
+    :root[data-theme="dark"] .notice { background:#3a3014; border-color:#6b5a1e; } :root[data-theme="dark"] .due { color:#f2c34d; }
+    :root[data-theme="dark"] .messages li { border-color:#2c5440; } :root[data-theme="dark"] .messages li.error { background:#4a1f1d; border-color:#7a2e2b; }
+    :root[data-theme="dark"] .errorlist { color:#ff9b97; }
+    :root[data-theme="dark"] .steps span, :root[data-theme="dark"] .progress, :root[data-theme="dark"] .bars .track, :root[data-theme="dark"] .checklist .box, :root[data-theme="dark"] .timeline .dot { background:#25332b; }
+    :root[data-theme="dark"] .steps.s1 span:nth-child(-n+1), :root[data-theme="dark"] .steps.s2 span:nth-child(-n+2), :root[data-theme="dark"] .steps.s3 span { background:var(--brand); }
+    :root[data-theme="dark"] .checklist .done .box, :root[data-theme="dark"] .timeline .done .dot { background:var(--brand-2); } :root[data-theme="dark"] .timeline .current .dot { background:var(--gold); }
+    @media (max-width:640px) {
+      .toasts { left:12px; right:12px; bottom:12px; max-width:none; }
+    }
     @media (max-width:640px) {
       header .bar { padding:10px 14px; } nav a.tab { padding:7px 11px; font-size:.9rem; }
       .hero { padding:34px 22px; border-radius:16px; } .hero h1 { font-size:1.8rem; } .hero svg { width:64px; height:64px; }
@@ -113,14 +170,37 @@
         <a class="tab {% if n == 'register' %}active{% endif %}" href="{% url 'register' %}">Register</a>
       {% endif %}
       {% endwith %}
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" title="Light / dark mode">&#9790;</button>
     </nav>
   </div>
 </header>
 <main>
-  {% if messages %}<ul class="messages">{% for m in messages %}<li class="{{ m.tags }}">{{ m }}</li>{% endfor %}</ul>{% endif %}
+  {% if messages %}<ul class="messages toasts" role="status" aria-live="polite">{% for m in messages %}<li class="{{ m.tags }}"><span>{{ m }}</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()">&times;</button></li>{% endfor %}</ul>{% endif %}
   {% block content %}{% endblock %}
 </main>
-<footer>&copy; 2026 BursaryNexa &middot; Bursary management system &middot; Apply, upload and follow your decision online</footer>
+<footer>
+  <div class="links"><a href="{% url 'home' %}">Home</a><a href="{% url 'home' %}#how">How it works</a><a href="{% url 'home' %}#contact">Contact</a><a href="{% url 'privacy' %}">Privacy</a></div>
+  &copy; 2026 BursaryNexa &middot; Bursary management system &middot; Apply, upload and follow your decision online
+</footer>
+<script>
+  // Light / dark mode button. The choice is remembered in this browser only.
+  (function () {
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    function paint() { button.innerHTML = document.documentElement.getAttribute('data-theme') === 'dark' ? '&#9728;' : '&#9790;'; }
+    paint();
+    button.addEventListener('click', function () {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (dark) { document.documentElement.removeAttribute('data-theme'); } else { document.documentElement.setAttribute('data-theme', 'dark'); }
+      try { localStorage.setItem('bn-theme', dark ? 'light' : 'dark'); } catch (e) {}
+      paint();
+    });
+  })();
+  // Pop-up messages fade away by themselves (errors stay a little longer).
+  document.querySelectorAll('.toasts li').forEach(function (item) {
+    setTimeout(function () { if (item.parentNode) item.remove(); }, item.classList.contains('error') ? 12000 : 6000);
+  });
+</script>
 <script>
   // Adds a Show/Hide button under every password box (login, register, reset, change).
   document.querySelectorAll('input[type=password]').forEach(function (input) {

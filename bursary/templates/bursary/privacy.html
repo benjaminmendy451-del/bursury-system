@@ -1,0 +1,48 @@
+{% extends "bursary/base.html" %}
+{% block title %}Privacy{% endblock %}
+{% block content %}
+<div class="narrow" style="max-width:760px">
+  <h1>Privacy</h1>
+  <p class="muted">How BursaryNexa handles your information.</p>
+
+  <div class="card">
+    <h2>A demonstration system</h2>
+    <p>BursaryNexa is a student project that shows how a bursary system can work. Please enter <strong>test information only</strong> while it is running as a demonstration.</p>
+  </div>
+
+  <div class="card">
+    <h2>What we collect</h2>
+    <ul>
+      <li>Your name, ID or birth certificate number, phone number and email address.</li>
+      <li>Your county, ward, school or college and admission number.</li>
+      <li>The facts used to score need: family income, number of dependants, parental status, disability and fees.</li>
+      <li>The documents you upload (ID, fee statement, admission letter, proof of income).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Why we collect it</h2>
+    <p>Only to decide your bursary application, to tell you the result, and to give the committee totals for planning. Scores are a guide, and the committee makes the decision.</p>
+  </div>
+
+  <div class="card">
+    <h2>Who can see it</h2>
+    <ul>
+      <li>You can see your own application and documents.</li>
+      <li>Committee members can see applications and documents so they can review them. Every change they make is recorded in an audit log.</li>
+      <li>Uploaded documents are never public. They open only after login, for the owner or the committee.</li>
+      <li>Public pages show no personal details. The award check page shows only a first name and the first letter of the last name.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How it is protected</h2>
+    <p>Pages are served over HTTPS, passwords are stored in a scrambled (hashed) form, repeated failed logins are slowed down, and secret settings are kept out of the code.</p>
+  </div>
+
+  <div class="card">
+    <h2>Your choices</h2>
+    <p>You can change your details from your dashboard. To ask the committee to correct or remove your information, use the contact details on the <a href="{% url 'home' %}#contact">home page</a>. The design follows the ideas of the Kenya Data Protection Act, 2019, such as collecting only what is needed and keeping it secure.</p>
+  </div>
+</div>
+{% endblock %}

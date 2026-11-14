@@ -1,0 +1,27 @@
+{% extends "bursary/base.html" %}
+{% block title %}Award check{% endblock %}
+{% block content %}
+<div class="narrow">
+{% if valid %}
+  <div class="card" style="text-align:center">
+    <div style="font-size:3rem;line-height:1">&#9989;</div>
+    <h1>This award letter is genuine</h1>
+    <p class="muted">Issued by the BursaryNexa committee.</p>
+    <table style="text-align:left;margin-top:14px">
+      <tr><th>Reference</th><td>BN-{{ application.pk|stringformat:"05d" }}</td></tr>
+      <tr><th>Student</th><td>{{ short_name }}</td></tr>
+      <tr><th>Bursary</th><td>{{ application.bursary_round.name }}</td></tr>
+      <tr><th>Amount awarded</th><td>KES {{ application.amount_awarded|floatformat:"0g" }}</td></tr>
+      <tr><th>Decision date</th><td>{{ application.reviewed_at|date:"j F Y"|default:"-" }}</td></tr>
+    </table>
+    <p class="muted" style="margin-top:14px">For privacy only the student's first name and the first letter of the last name are shown. Compare these details with the letter you were given.</p>
+  </div>
+{% else %}
+  <div class="card" style="text-align:center">
+    <div style="font-size:3rem;line-height:1">&#10060;</div>
+    <h1>We could not verify this award</h1>
+    <p class="muted">The award may have been changed or withdrawn. Please contact the bursary office.</p>
+  </div>
+{% endif %}
+</div>
+{% endblock %}
