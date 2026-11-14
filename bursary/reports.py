@@ -56,11 +56,31 @@ def totals(rows):
     }
 
 
-def build_report(bursary_round=None):
-    """Everything the reports page shows. bursary_round=None means all rounds."""
-    applications = Application.objects.all()
+def county_options():
+    """County names for the filter box, grouped ignoring capital letters and extra spaces."""
+    keys = (Application.objects.annotate(key=Lower(Trim("student__county")))
+            .order_by().values_list("key", flat=True).distinct())
+    return sorted({_label([key]) for key in keys if key and key.strip()})
+
+
+def build_report(bursary_round=None, county="", status=""):
+    """Everything the reports page shows. bursary_round=None means all rounds.
+
+    county and status are optional extra filters. The budget figures always cover the
+    whole round, because the money is shared by every county.
+    """
+    scope = Application.objects.all()
     if bursary_round is not None:
-        applications = applications.filter(bursary_round=bursary_round)
+        scope = scope.filter(bursary_round=bursary_round)
+    applications = scope
+    county = (county or "").strip().lower()
+    if county:
+        applications = applications.annotate(
+            filter_county=Lower(Trim("student__county"))).filter(filter_county=county)
+    if status in dict(Application.Status.choices):
+        applications = applications.filter(status=status)
+    else:
+        status = ""
 
     counties = breakdown(applications, {"county_key": "student__county"})
     wards = breakdown(applications, {"county_key": "student__county", "ward_key": "student__ward"})
@@ -84,15 +104,19 @@ def build_report(bursary_round=None):
     else:
         budget = BursaryRound.objects.aggregate(total=Sum("budget"))["total"] or ZERO
     awarded = sums["awarded"] or ZERO
-    percent_used = float(awarded / budget * 100) if budget else 0.0
+    # Money already approved across the whole round (not only the filtered rows).
+    spent = scope.aggregate(awarded=Sum("amount_awarded", filter=Q(status=APPROVED)))["awarded"] or ZERO
+    percent_used = float(spent / budget * 100) if budget else 0.0
 
     return {
+        "filtered": bool(county or status),
         "summary": {
             "applications": sum(count for _, count in statuses),
             "requested": sums["requested"] or ZERO,
             "awarded": awarded,
             "budget": budget,
-            "remaining": budget - awarded,
+            "spent": spent,
+            "remaining": budget - spent,
             "percent_used": percent_used,
             "bar_width": max(0.0, min(percent_used, 100.0)),
         },

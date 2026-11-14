@@ -47,3 +47,12 @@ Uploaded documents are private: they are never served from a public folder, only
 login-protected page. They live in the `media` folder, which Git ignores, so back it up
 yourself together with the database (`backup.ps1` on Windows, or `mysqldump` on a server).
 Keep backups off GitHub.
+
+## 8. Reminder emails (optional)
+`python manage.py send_reminders` emails students about rounds that close in 3, 1 or 0 days:
+those who have not applied yet, and those who applied but still have documents missing.
+Because it only sends on those days, you can run it once a day without repeating the same
+email. Try `python manage.py send_reminders --dry-run` first to see how many would go out.
+On PythonAnywhere, use the Tasks tab to run it daily (the free plan allows one scheduled task),
+for example: `/home/YOURNAME/.virtualenvs/bursary/bin/python /home/YOURNAME/bursury-system/manage.py send_reminders`.
+Email must be set up first (see `.env.example`).

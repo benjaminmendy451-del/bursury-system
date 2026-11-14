@@ -18,7 +18,7 @@ from django.utils import timezone
 from .forms import ApplicationForm, DocumentForm, StudentDetailsForm, StudentRegistrationForm
 from .models import Application, BursaryRound, Document, StudentProfile
 from .notifications import notify_submitted
-from .reports import build_report
+from .reports import build_report, county_options
 
 EDITABLE_STATUSES = (Application.Status.SUBMITTED, Application.Status.UNDER_REVIEW)
 
@@ -272,14 +272,26 @@ def _report_scope(request):
     return rounds, None, "all"
 
 
+def _report_filters(request):
+    """The optional county and status filters from the page address. Returns (county, status)."""
+    county = request.GET.get("county", "").strip()[:80]
+    status = request.GET.get("status", "")
+    if status not in dict(Application.Status.choices):
+        status = ""
+    return county, status
+
+
 @login_required
 @permission_required("bursary.view_application", raise_exception=True)
 def reports(request):
     """Totals for the committee. Students do not have this permission, so they get a 403."""
     rounds, selected_round, round_param = _report_scope(request)
+    county, status = _report_filters(request)
     return render(request, "bursary/reports.html", {
         "rounds": rounds, "selected_round": selected_round, "round_param": round_param,
-        "report": build_report(selected_round),
+        "county": county, "status": status,
+        "county_options": county_options(), "status_choices": Application.Status.choices,
+        "report": build_report(selected_round, county, status),
     })
 
 
@@ -287,12 +299,16 @@ def reports(request):
 @permission_required("bursary.view_application", raise_exception=True)
 def reports_csv(request):
     _, selected_round, _ = _report_scope(request)
-    report = build_report(selected_round)
+    county, status = _report_filters(request)
+    report = build_report(selected_round, county, status)
 
     response = HttpResponse(content_type="text/csv")
     response["Content-Disposition"] = 'attachment; filename="bursary-report.csv"'
     writer = csv.writer(response)
     writer.writerow(["Bursary report", selected_round.name if selected_round else "All rounds"])
+    if report["filtered"]:
+        writer.writerow(["Filters", f"County: {county or 'all'}",
+                         f"Status: {dict(Application.Status.choices).get(status, 'all')}"])
     summary = report["summary"]
     writer.writerow(["Applications", summary["applications"]])
     writer.writerow(["Requested (KES)", summary["requested"]])

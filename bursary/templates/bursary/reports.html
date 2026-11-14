@@ -14,9 +14,34 @@
         {% endfor %}
       </select>
     </p>
+    <p style="margin:0;flex:1;min-width:180px">
+      <label for="county">County</label>
+      <select name="county" id="county">
+        <option value="">All counties</option>
+        {% for c in county_options %}
+          <option value="{{ c }}"{% if county and c|lower == county|lower %} selected{% endif %}>{{ c }}</option>
+        {% endfor %}
+      </select>
+    </p>
+    <p style="margin:0;flex:1;min-width:180px">
+      <label for="status">Status</label>
+      <select name="status" id="status">
+        <option value="">Any status</option>
+        {% for value, label in status_choices %}
+          <option value="{{ value }}"{% if value == status %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </p>
     <button class="btn" type="submit">Show</button>
-    <a class="btn secondary" href="{% url 'reports_csv' %}?round={{ round_param }}">Download CSV</a>
+    <a class="btn secondary" href="{% url 'reports' %}">Clear filters</a>
+    <a class="btn secondary" href="{% url 'reports_csv' %}?round={{ round_param }}&amp;county={{ county|urlencode }}&amp;status={{ status|urlencode }}">Download CSV</a>
   </form>
+  {% if report.filtered %}
+    <p class="muted" style="margin:10px 0 0">Filtered:
+      {% if county %}<span class="badge">County: {{ county }}</span>{% endif %}
+      {% if status %}<span class="badge">Status: {{ status }}</span>{% endif %}
+      The budget figures below still cover the whole round.</p>
+  {% endif %}
 </div>
 
 <div class="grid">
@@ -31,7 +56,7 @@
   <div style="background:#eef1f4;border-radius:999px;height:14px;overflow:hidden">
     <div style="background:var(--brand);height:14px;width:{{ report.summary.bar_width|floatformat:1 }}%"></div>
   </div>
-  <p class="muted">KES {{ report.summary.awarded|floatformat:"0g" }} of KES {{ report.summary.budget|floatformat:"0g" }}
+  <p class="muted">KES {{ report.summary.spent|floatformat:"0g" }} of KES {{ report.summary.budget|floatformat:"0g" }}
      ({{ report.summary.percent_used|floatformat:0 }}%)</p>
 </div>
 

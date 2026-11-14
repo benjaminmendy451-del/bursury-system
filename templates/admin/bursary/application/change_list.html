@@ -1,0 +1,15 @@
+{% extends "admin/change_list.html" %}
+{% comment %}Adds a summary strip above the applications table: how many applications the current filters show, and the money involved.{% endcomment %}
+{% block result_list %}
+{% if summary %}
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 12px">
+  <div style="background:var(--darkened-bg,#f8f8f8);border:1px solid var(--hairline-color,#ddd);border-radius:10px;padding:8px 14px">
+    <div style="font-size:12px;opacity:.75">Showing</div><strong style="font-size:18px">{{ summary.count }}</strong> application{{ summary.count|pluralize }}</div>
+  <div style="background:var(--darkened-bg,#f8f8f8);border:1px solid var(--hairline-color,#ddd);border-radius:10px;padding:8px 14px">
+    <div style="font-size:12px;opacity:.75">Requested</div><strong style="font-size:18px">KES {{ summary.requested|floatformat:"0g" }}</strong></div>
+  <div style="background:var(--darkened-bg,#f8f8f8);border:1px solid var(--hairline-color,#ddd);border-radius:10px;padding:8px 14px">
+    <div style="font-size:12px;opacity:.75">Awarded (approved)</div><strong style="font-size:18px">KES {{ summary.awarded|floatformat:"0g" }}</strong></div>
+</div>
+{% endif %}
+{{ block.super }}
+{% endblock %}

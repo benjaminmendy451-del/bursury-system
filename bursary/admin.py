@@ -2,6 +2,7 @@ import csv
 
 from django.contrib import admin, messages
 from django.contrib.admin.models import LogEntry
+from django.db.models import Count, Q, Sum
 from django.db.models.functions import Coalesce
 from django.http import HttpResponse
 from django.utils import timezone
@@ -37,6 +38,78 @@ class ScoreBandFilter(admin.SimpleListFilter):
         return scored.filter(band_score__isnull=True)
 
 
+# The four documents every application needs ("Other" is optional).
+REQUIRED_DOC_KINDS = [kind for kind, _ in Document.Kind.choices if kind != Document.Kind.OTHER]
+
+# Colours for the status labels in the applications list: (text, background).
+STATUS_COLOURS = {
+    Application.Status.SUBMITTED: ("#344054", "#eaecf0"),
+    Application.Status.UNDER_REVIEW: ("#b54708", "#fef0c7"),
+    Application.Status.APPROVED: ("#05603a", "#d1fadf"),
+    Application.Status.WAITLISTED: ("#175cd3", "#d1e9ff"),
+    Application.Status.REJECTED: ("#b42318", "#fee4e2"),
+}
+
+
+class AmountRequestedFilter(admin.SimpleListFilter):
+    """Filter by how much money the student asked for."""
+    title = "amount requested"
+    parameter_name = "amount"
+
+    def lookups(self, request, model_admin):
+        return [("low", "Under KES 20,000"), ("mid", "KES 20,000 to 50,000"), ("high", "Over KES 50,000")]
+
+    def queryset(self, request, queryset):
+        value = self.value()
+        if value == "low":
+            return queryset.filter(amount_requested__lt=20000)
+        if value == "mid":
+            return queryset.filter(amount_requested__gte=20000, amount_requested__lte=50000)
+        if value == "high":
+            return queryset.filter(amount_requested__gt=50000)
+        return queryset
+
+
+class DocumentsFilter(admin.SimpleListFilter):
+    """Find applications whose supporting documents are complete or still missing."""
+    title = "supporting documents"
+    parameter_name = "docs"
+
+    def lookups(self, request, model_admin):
+        return [("complete", "All required documents uploaded"),
+                ("missing", "Some required documents missing"),
+                ("none", "No required documents yet")]
+
+    def queryset(self, request, queryset):
+        value = self.value()
+        if value not in ("complete", "missing", "none"):
+            return queryset
+        counted = queryset.annotate(kinds_uploaded=Count(
+            "documents__kind", filter=Q(documents__kind__in=REQUIRED_DOC_KINDS), distinct=True))
+        if value == "complete":
+            return counted.filter(kinds_uploaded__gte=len(REQUIRED_DOC_KINDS))
+        if value == "missing":
+            return counted.filter(kinds_uploaded__lt=len(REQUIRED_DOC_KINDS))
+        return counted.filter(kinds_uploaded=0)
+
+
+class DecisionFilter(admin.SimpleListFilter):
+    """Waiting for the committee, or already decided."""
+    title = "decision"
+    parameter_name = "decision"
+    WAITING = [Application.Status.SUBMITTED, Application.Status.UNDER_REVIEW]
+
+    def lookups(self, request, model_admin):
+        return [("awaiting", "Awaiting decision"), ("decided", "Decided")]
+
+    def queryset(self, request, queryset):
+        if self.value() == "awaiting":
+            return queryset.filter(status__in=self.WAITING)
+        if self.value() == "decided":
+            return queryset.exclude(status__in=self.WAITING)
+        return queryset
+
+
 @admin.register(BursaryRound)
 class BursaryRoundAdmin(admin.ModelAdmin):
     list_display = ("name", "opens_on", "closes_on", "budget", "total_awarded", "remaining_budget", "is_active")
@@ -68,10 +141,12 @@ class InstitutionAdmin(admin.ModelAdmin):
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ("student", "bursary_round", "status", "suggested_score", "need_score",
+    list_display = ("student", "bursary_round", "status_badge", "suggested_score", "need_score",
                     "amount_requested", "amount_awarded", "submitted_at")
-    list_filter = ("status", "bursary_round", ScoreBandFilter, "orphan_status", "has_disability",
-                   "student__county")
+    list_filter = (DecisionFilter, "status", "bursary_round", ("submitted_at", admin.DateFieldListFilter),
+                   "student__county", ("student__institution", admin.AllValuesFieldListFilter),
+                   AmountRequestedFilter, DocumentsFilter, ScoreBandFilter, "orphan_status",
+                   "has_disability")
     search_fields = ("student__full_name", "student__national_id", "student__institution",
                      "student__admission_number", "student__ward", "student__county", "student__phone")
     list_per_page = 50
@@ -94,6 +169,32 @@ class ApplicationAdmin(admin.ModelAdmin):
                                             "amount_awarded", "committee_notes",
                                             "reviewed_by", "reviewed_at")}),
     )
+
+    @admin.display(description="Status", ordering="status")
+    def status_badge(self, obj):
+        colour, background = STATUS_COLOURS.get(obj.status, ("#344054", "#eaecf0"))
+        return format_html(
+            "<span style='background:{};color:{};padding:2px 10px;border-radius:999px;"
+            "font-weight:600;font-size:12px;white-space:nowrap'>{}</span>",
+            background, colour, obj.get_status_display())
+
+    def changelist_view(self, request, extra_context=None):
+        """Add a one-line summary (how many, how much) for whatever the filters currently show."""
+        response = super().changelist_view(request, extra_context)
+        try:
+            change_list = response.context_data["cl"]
+        except (AttributeError, KeyError, TypeError):
+            return response  # e.g. a redirect for an invalid filter
+        shown = Application.objects.filter(pk__in=change_list.queryset.order_by().values("pk"))
+        totals = shown.aggregate(
+            count=Count("id"), requested=Sum("amount_requested"),
+            awarded=Sum("amount_awarded", filter=Q(status=Application.Status.APPROVED)))
+        response.context_data["summary"] = {
+            "count": totals["count"] or 0,
+            "requested": totals["requested"] or 0,
+            "awarded": totals["awarded"] or 0,
+        }
+        return response
 
     @admin.display(description="Supporting documents")
     def documents_summary(self, obj):
