@@ -200,3 +200,8 @@ class RegistrationNoticeTests(TestCase):
         page = self.client.get(reverse("privacy"))
         self.assertContains(page, "Your rights")
         self.assertContains(page, "How long we keep it")
+
+
+class LiveBackgroundTests(TestCase):
+    def test_background_canvas_on_login_page(self):
+        self.assertContains(self.client.get(reverse("login")), 'id="bg-live"')

@@ -302,7 +302,7 @@ def _qr_svg(text):
     """A QR code image (inline SVG) for the text, or "" if the optional 'segno' package is missing."""
     try:
         import segno
-        return mark_safe(segno.make(text, error="m").svg_inline(scale=4, dark="#14532d", border=2))
+        return mark_safe(segno.make(text, error="m").svg_inline(scale=4, dark="#3730a3", border=2))
     except Exception:
         return ""
 
