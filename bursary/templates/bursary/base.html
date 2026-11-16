@@ -33,7 +33,7 @@
     nav a.tab:hover { background:rgba(255,255,255,.1); color:#fff; }
     nav a.tab.active { background:rgba(255,255,255,.16); color:#fff; box-shadow:inset 0 -2px 0 var(--gold); }
     .userchip { display:inline-flex; align-items:center; gap:8px; color:#fff; font-weight:600; padding-left:10px; border-left:1px solid rgba(255,255,255,.22); margin-left:8px; }
-    .avatar { width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,var(--brand-2),var(--brand)); border:2px solid rgba(255,255,255,.85); display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; text-transform:uppercase; }
+    .avatar { width:38px; height:38px; letter-spacing:.02em; font-weight:700; border-radius:50%; background:linear-gradient(135deg,var(--brand-2),var(--brand)); border:2px solid rgba(255,255,255,.85); display:inline-flex; align-items:center; justify-content:center; font-size:.88rem; text-transform:uppercase; }
     nav .logout { background:transparent; border:1px solid rgba(255,255,255,.4); color:#fff; font:inherit; font-weight:600; font-size:.92rem; cursor:pointer; padding:7px 16px; border-radius:999px; transition:all .15s; }
     nav .logout:hover { background:#fff; color:var(--nav); }
     main { max-width:1140px; margin:28px auto; padding:0 20px 56px; }
@@ -173,7 +173,7 @@
           <a class="tab {% if n == 'reports' %}active{% endif %}" href="{% url 'reports' %}">Reports</a>
           <a class="tab {% if n == 'analytics' %}active{% endif %}" href="{% url 'analytics' %}">Analytics</a>
         {% endif %}
-        <span class="userchip"><span class="avatar">{{ user.username|slice:":1" }}</span>{{ user.username }}</span>
+        <span class="userchip" title="{{ display_name }}" aria-label="Signed in as {{ display_name }}"><span class="avatar">{{ initials }}</span></span>
         <form method="post" action="{% url 'logout' %}" onsubmit="return confirm('Are you sure you want to log out?');">{% csrf_token %}<button class="logout" type="submit">Log out</button></form>
       {% else %}
         <a class="tab {% if n == 'login' %}active{% endif %}" href="{% url 'login' %}">Log in</a>

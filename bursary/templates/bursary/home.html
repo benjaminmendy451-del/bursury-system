@@ -19,7 +19,7 @@
   <div class="welcome">
     {% include "bursary/_logo.html" %}
     <div>
-      <h1>Welcome to BursaryNexa{% if user.is_authenticated %}, {{ user.first_name|default:user.username }}{% endif %}! &#128075;</h1>
+      <h1>Welcome to BursaryNexa{% if user.is_authenticated %}, {{ first_name }}{% endif %}! &#128075;</h1>
       <p>Apply for a bursary online, upload your documents and follow your decision from one place.</p>
       {% if user.is_authenticated %}
         <a class="btn" href="{% url 'dashboard' %}">Go to my dashboard</a>

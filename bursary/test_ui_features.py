@@ -205,3 +205,26 @@ class RegistrationNoticeTests(TestCase):
 class LiveBackgroundTests(TestCase):
     def test_background_canvas_on_login_page(self):
         self.assertContains(self.client.get(reverse("login")), 'id="bg-live"')
+
+
+class RealNameTests(TestCase):
+    def test_initials_and_names(self):
+        from .context_processors import initials
+        self.assertEqual(initials("Amina Wanjiru Kamau"), "AK")
+        self.assertEqual(initials("amina"), "A")
+        self.assertEqual(initials("Mary-Jane Otieno"), "MO")
+
+    def test_header_shows_initials_with_real_name(self):
+        profile = make_student(7, "Nairobi")
+        profile.full_name = "Amina Wanjiru Kamau"
+        profile.save()
+        self.client.force_login(profile.user)
+        page = self.client.get(reverse("dashboard"))
+        self.assertContains(page, 'class="avatar">AK<')
+        self.assertContains(page, 'title="Amina Wanjiru Kamau"')
+        self.assertNotContains(page, ">student7<")
+
+    def test_staff_without_profile_uses_username(self):
+        admin = User.objects.create_user("registrar", password="x", is_staff=True)
+        self.client.force_login(admin)
+        self.assertContains(self.client.get(reverse("home")), 'class="avatar">R<')
