@@ -72,7 +72,7 @@ class ReportAccessTests(TestCase):
         self.client.login(username="boss", password="pass12345")
         page = self.client.get(reverse("reports"))
         self.assertEqual(page.status_code, 200)
-        self.assertContains(page, "Reports")
+        self.assertContains(page, "Dashboard")
         csv_response = self.client.get(reverse("reports_csv"))
         self.assertEqual(csv_response.status_code, 200)
         self.assertEqual(csv_response["Content-Type"], "text/csv")
@@ -131,20 +131,25 @@ class ReferenceListTests(TestCase):
         self.assertEqual(ok.cleaned_data["institution"], "Small Academy")
 
 
-class AnalyticsPageTests(TestCase):
-    def test_access_rules(self):
-        self.assertEqual(self.client.get(reverse("analytics")).status_code, 302)
-        make_student(1, "Nairobi")
-        self.client.login(username="student1", password="pass12345")
-        self.assertEqual(self.client.get(reverse("analytics")).status_code, 403)
+class DashboardPageTests(TestCase):
+    """The old Analytics page was removed; the Reports page is now the committee Dashboard."""
 
-    def test_committee_sees_setup_help_then_the_embed(self):
-        from django.test import override_settings
+    def setUp(self):
         User.objects.create_superuser("boss", "boss@example.com", "pass12345")
         self.client.login(username="boss", password="pass12345")
-        page = self.client.get(reverse("analytics"))
-        self.assertContains(page, "not connected yet")
+
+    def test_analytics_page_is_gone(self):
+        self.assertEqual(self.client.get("/analytics/").status_code, 404)
+
+    def test_committee_menu_has_one_dashboard_and_no_analytics(self):
+        page = self.client.get(reverse("reports"))
+        self.assertContains(page, "<h1>Dashboard</h1>")
+        self.assertNotContains(page, "Analytics")
+
+    def test_power_bi_report_shows_on_the_dashboard_only_when_set(self):
+        from django.test import override_settings
+        self.assertNotContains(self.client.get(reverse("reports")), "<iframe")
         with override_settings(POWERBI_EMBED_URL="https://app.powerbi.com/view?r=abc"):
-            self.assertContains(self.client.get(reverse("analytics")), "<iframe")
+            self.assertContains(self.client.get(reverse("reports")), "<iframe")
         with override_settings(POWERBI_EMBED_URL="http://insecure.example.com"):
-            self.assertContains(self.client.get(reverse("analytics")), "not connected yet")
+            self.assertNotContains(self.client.get(reverse("reports")), "<iframe")

@@ -1,7 +1,7 @@
 {% extends "bursary/base.html" %}
-{% block title %}Reports{% endblock %}
+{% block title %}Dashboard{% endblock %}
 {% block content %}
-<h1>Reports</h1>
+<h1>Dashboard</h1>
 
 <div class="card">
   <form method="get" style="display:flex;gap:12px;align-items:end;flex-wrap:wrap">
@@ -91,4 +91,14 @@
 
 <p class="muted">Counties, wards and institutions are grouped ignoring capital letters and extra spaces, so
 "Nairobi" and "nairobi " count together. Awarded amounts include approved applications only.</p>
+
+{% if embed_url %}
+<h2>Power BI report</h2>
+<p class="muted">Shows the data as of the last time the report was published.
+   <a href="{{ embed_url }}" target="_blank" rel="noopener">Open in a new tab</a></p>
+<div class="card" style="padding:0;overflow:hidden">
+  <iframe title="BursaryNexa Power BI dashboard" src="{{ embed_url }}"
+          style="width:100%;height:70vh;min-height:480px;border:0" allowfullscreen="true"></iframe>
+</div>
+{% endif %}
 {% endblock %}

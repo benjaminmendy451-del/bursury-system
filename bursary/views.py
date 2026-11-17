@@ -372,10 +372,14 @@ def _report_filters(request):
 @login_required
 @permission_required("bursary.view_application", raise_exception=True)
 def reports(request):
-    """Totals for the committee. Students do not have this permission, so they get a 403."""
+    """The committee dashboard: live totals, filters and charts, plus the optional Power BI report. Students get a 403."""
     rounds, selected_round, round_param = _report_scope(request)
     county, status = _report_filters(request)
+    embed_url = settings.POWERBI_EMBED_URL
+    if not embed_url.startswith("https://"):
+        embed_url = ""  # only ever embed secure addresses
     return render(request, "bursary/reports.html", {
+        "embed_url": embed_url,
         "rounds": rounds, "selected_round": selected_round, "round_param": round_param,
         "county": county, "status": status,
         "county_options": county_options(), "status_choices": Application.Status.choices,
@@ -419,13 +423,3 @@ def reports_csv(request):
         writer.writerow(["Total", total["applications"], total["approved"],
                          total["requested"], total["awarded"]])
     return response
-
-
-@login_required
-@permission_required("bursary.view_application", raise_exception=True)
-def analytics(request):
-    """Committee-only page that shows the Power BI report inside the site."""
-    url = settings.POWERBI_EMBED_URL
-    if not url.startswith("https://"):
-        url = ""  # only ever embed secure addresses
-    return render(request, "bursary/analytics.html", {"embed_url": url})

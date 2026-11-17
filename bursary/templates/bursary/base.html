@@ -116,7 +116,7 @@
     .timeline .dot { position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; background:#e3e3ed; border:2px solid var(--line); }
     .timeline .done .dot { background:var(--brand-2); border-color:var(--brand-2); } .timeline .current .dot { background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 5px rgba(242,183,5,.25); }
     .timeline .tl-title { font-weight:700; } .timeline .tl-note { color:var(--muted); font-size:.9rem; }
-    /* ---- Charts on the Reports page (pure CSS, no libraries) ---- */
+    /* ---- Charts on the committee Dashboard page (pure CSS, no libraries) ---- */
     .charts { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
     .donut-wrap { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
     .donut { width:150px; height:150px; border-radius:50%; position:relative; flex:none; }
@@ -170,8 +170,7 @@
         {% if not user.is_staff %}<a class="tab {% if n == 'dashboard' or n == 'apply' or n == 'application_detail' %}active{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>{% endif %}
         {% if user.is_staff %}
           <a class="tab" href="{% url 'admin:index' %}">Committee</a>
-          <a class="tab {% if n == 'reports' %}active{% endif %}" href="{% url 'reports' %}">Reports</a>
-          <a class="tab {% if n == 'analytics' %}active{% endif %}" href="{% url 'analytics' %}">Analytics</a>
+          <a class="tab {% if n == 'reports' %}active{% endif %}" href="{% url 'reports' %}">Dashboard</a>
         {% endif %}
         <span class="userchip" title="{{ display_name }}" aria-label="Signed in as {{ display_name }}"><span class="avatar">{{ initials }}</span></span>
         <form method="post" action="{% url 'logout' %}" onsubmit="return confirm('Are you sure you want to log out?');">{% csrf_token %}<button class="logout" type="submit">Log out</button></form>
@@ -241,7 +240,7 @@
   })();
 </script>
 <script>
-  // Live background: soft green dots drifting and linking up on every page. Pauses when the tab is hidden and stays still for people who prefer less motion.
+  // Live background: soft indigo, teal and pink dots drifting and linking up on every page. Pauses when the tab is hidden and stays still for people who prefer less motion.
   (function () {
     var c = document.getElementById('bg-live');
     if (!c || !c.getContext) return;
